@@ -56,7 +56,6 @@ bot.on("message", msg => {
         for (var i = 0; i < members.length; i++) {
             array.push([members[i],lineCounts[msg.guild.id][members[i]]]);
         }
-        console.log(array);
         array.sort(function(a,b){
             if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
             else {return b[1].lineCount - a[1].lineCount;}
