@@ -7,6 +7,10 @@ var bot = new Discord.Client();
 var fs = require("fs");
 bot.login(pass);
 var console_chan_id = "263901361127686159";
+
+var console_chan = bot.channels.get(console_chan_id);
+
+
 var lineCounts = JSON.parse(fs.readFileSync('lines.json', 'utf8'));
 
 
@@ -39,6 +43,11 @@ bot.on("message", msg => {
     fs.writeFile('lines.json', JSON.stringify(lineCounts), console.error);
 });
 
+bot.on("message", function(msg)
+{
+    double_console("ye it is");
+})
+
 bot.on("message", msg => {
     if (msg.content.startsWith("ping")) {
         msg.channel.sendMessage("pong!");
@@ -46,4 +55,13 @@ bot.on("message", msg => {
 
 });
 
+<<<<<<< HEAD
 bot.on('error', e => { console.error(e); });
+=======
+bot.on('error', e => 
+    { 
+        console.error(e); 
+        console_chan.sendMessage(e);
+
+    });
+>>>>>>> f20232cd20571435e2178621f12210e202b0fa39
