@@ -1,6 +1,6 @@
 require("env.js");
 
-var user = process.ENV.username; //no idea if i did this right
+var pass = process.ENV.pass; //no idea if i did this right
 //===============================
 var Discord = require("discord.js");
 var bot = new Discord.Client();
@@ -15,4 +15,4 @@ bot.on("message", msg => {
     }
 });
 
-bot.login("");
+bot.login(pass);
