@@ -13,7 +13,7 @@ var console_chan = bot.channels.get(console_chan_id);
 
 var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 
-
+var act_tok = "(";
 var bot_activation_token_start = "(";
 var bot_activation_token_stop = ")";
 
@@ -21,22 +21,25 @@ var bot_activation_token_stop = ")";
 function double_console(text)
 {
     console.log(text);
-    bot.channels.get(console_chan_id).sendMessage("```" + text + "```");
+    bot.channels.get(console_chan_id).sendMessage("``` " + text + " ```");
 }
 
 
-bot.on('ready', () => {
+bot.on('ready', () => 
+{
   double_console('I am ready!');
 });
 
-bot.on("message", msg => {
+bot.on("message", msg => 
+{
     
     if (msg.channel.id !== console_chan_id)
     {
         double_console(msg);
         if(msg.author.bot) return;
         var lineCount = lineCounts[msg.author.id];
-        if (lineCount == undefined) {
+        if (lineCount == undefined) 
+        {
             lineCount = 0;
         }
         lineCount++;
@@ -66,7 +69,7 @@ bot.on("message", msg => {
 
 bot.on('error', e => 
 { 
-        console.error("error: " + e); 
+        console.error(e); 
         bot.channels.get(console_chan_id).sendMessage(e);
 
 });
