@@ -1,6 +1,10 @@
 require("./env.js");
 
+<<<<<<< HEAD
 var pass = process.ENV.pass;
+=======
+var pass = process.ENV.pass; //no idea if i did this right
+>>>>>>> 7b588c3efc9b4c33859c88a1ef92531a48dc3865
 //===============================
 var Discord = require("discord.js");
 var bot = new Discord.Client();
