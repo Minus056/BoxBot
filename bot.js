@@ -32,30 +32,35 @@ bot.on('ready', () =>
 bot.on("message", msg => {
     if(msg.author.bot) return;
     
-    var userData = lineCounts[msg.author.id];
+    var serverData = lineCounts[msg.guild.id];
+    if (serverData == undefined) {
+        lineCounts[msg.guild.id] = {};
+    }
+    var userData = lineCounts[msg.guild.id][msg.author.id];
     if (userData == undefined) {
-        lineCounts[msg.author.id] = {"lineCount":0,"wpl":1};
+        lineCounts[msg.guild.id][msg.author.id] = {"lineCount":0,"wpl":1};
         userData = {"lineCount":0,"wpl":1};
     }
     userData.wpl = ((userData.wpl*userData.lineCount)+(msg.content.split(" ").length))/(userData.lineCount+1);
     userData.lineCount++;
-    lineCounts[msg.author.id]["lineCount"] = userData.lineCount;
-    lineCounts[msg.author.id]["wpl"] = userData.wpl;
+    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
     fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
 //LEADERBOARD
 bot.on("message", msg => {
-    var array = [];
-    var members = Object.keys(lineCounts);
-    for (var i = 0; i < members.length; i++) {
-        array.push([members[i],lineCounts[members[i]]]);
-    }
-    array.sort(function(a,b){
-        if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
-        else {return b[1].lineCount - a[1].lineCount;}
-    });
-    if (msg.content == "&leaderboard" && msg.member.roles.has(adminRoleID)) {
+    if (msg.content == "&leaderboard") { //&& msg.member.roles.has(adminRoleID)
+        var array = [];
+        var members = Object.keys(lineCounts[msg.guild.id]);
+        for (var i = 0; i < members.length; i++) {
+            array.push([members[i],lineCounts[msg.guild.id][members[i]]]);
+        }
+        console.log(array);
+        array.sort(function(a,b){
+            if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
+            else {return b[1].lineCount - a[1].lineCount;}
+        });
         var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
         if (array.length < 10) {max = array.length;}
@@ -63,7 +68,7 @@ bot.on("message", msg => {
             leaderboardText += bot.users.get(array[i][0])+" | "+array[i][1].lineCount+" | "+array[i][1].wpl+"\n";
         }
         msg.channel.sendMessage(leaderboardText);
-     }
+    }
 });
 /*=========================================================================*/
 //COMMAND RESPONSES
