@@ -7,15 +7,13 @@ var bot = new Discord.Client();
 var fs = require("fs");
 bot.login(pass);
 
+var adminRoleID = "179005319370768384"; //change this
+
 var console_chan_id = "263901361127686159";
 var console_chan = bot.channels.get(console_chan_id);
 
 var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
-
-var act_tok = "&";
-var bot_activation_token_start = "((";
-var bot_activation_token_stop = "))";
 
 /*=========================================================================*/
 function double_console(text)
@@ -46,7 +44,7 @@ bot.on("message", msg => {
     fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
-//JSON ORGANIZER
+//LEADERBOARD
 bot.on("message", msg => {
     var array = [];
     var members = Object.keys(lineCounts);
@@ -57,7 +55,8 @@ bot.on("message", msg => {
         if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
         else {return b[1].lineCount - a[1].lineCount;}
     });
-    if (msg.content == "&leaderboard") {
+    console.log(msg.member.roles.has(adminRoleID));
+    if (msg.content == "&leaderboard" && msg.member.roles.has(adminRoleID)) {
         var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
         if (array.length < 10) {max = array.length;}
