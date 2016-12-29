@@ -22,7 +22,7 @@ function double_console(text)
 
 
 bot.on('ready', () => {
-  console.log('I am ready!');
+  double_console('I am ready!');
 });
 
 bot.on("message", msg => {
