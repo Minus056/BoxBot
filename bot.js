@@ -68,6 +68,11 @@ bot.on("message", msg => {
         }
         msg.channel.sendMessage(leaderboardText);
     }
+    if (msg.content == "&resetlb") {
+        lineCounts[msg.guild.id] = {};
+        fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
+        msg.channel.sendMessage("leaderboard reset");
+    }
 });
 /*=========================================================================*/
 //COMMAND RESPONSES

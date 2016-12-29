@@ -1,4 +1,4 @@
 {
-  "&ping": "pong",
-  "&boxbot": "I'm a box that is conscious and wishes it weren’t a box."
+  "ping": "pong",
+  "boxbot": "I'm a box that is conscious and wishes it weren’t a box."
 }
