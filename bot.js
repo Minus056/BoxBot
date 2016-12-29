@@ -47,24 +47,24 @@ bot.on("message", msg => {
 });
 /*=========================================================================*/
 //JSON ORGANIZER
-var array = [];
 bot.on("message", msg => {
-     for (var i = 0; i < lineCounts.length; i++) {
-         array.push(lineCounts[i], lineCounts[i].lineCount, lineCounts[i].wpl);
-     }
-     array.sort(function(a,b){
-         return b[1] - a[1];
-     });
-     if (msg.content == "&leaderboard") {
-        if (array.length > 10) {
-            for (var i = 0; i < 10; i++) {
-                console.log(array[i], array[i][1], array[i][2]);
-            }
-        } else {
-            for (var i = 0; i < array.length; i++) {
-                console.log(array[i], array[i][1], array[i][2]);
-            }
+    var array = [];
+    var members = Object.keys(lineCounts);
+    for (var i = 0; i < members.length; i++) {
+        array.push([members[i],lineCounts[members[i]]]);
+    }
+    array.sort(function(a,b){
+        if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
+        else {return b[1].lineCount - a[1].lineCount;}
+    });
+    if (msg.content == "&leaderboard") {
+        var leaderboardText = "```name | linecount | words/line\n";
+        var max = 10;
+        if (array.length < 10) {max = array.length;}
+        for (var i = 0; i < max; i++) {
+            leaderboardText += +array[i][0]+" | "+array[i][1].lineCount+" | "+array[i][1].wpl+"\n";
         }
+        msg.channel.sendMessage(leaderboardText+"```");
      }
 });
 /*=========================================================================*/
