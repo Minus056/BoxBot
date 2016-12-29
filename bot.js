@@ -31,22 +31,16 @@ bot.on('ready', () => {
 
 bot.on("message", msg => {
     if(msg.author.bot) return;
-    let lineCount = lineCounts[msg.author.id];
+    var lineCount = lineCounts[msg.author.id];
     double_console(lineCount);
-    if (!lineCount) {
+    if (lineCount == undefined) {
+        double_console(lineCount == undefined);
         lineCount = 0;
-        double_console(lineCount);
     }
-
     lineCount++;
     double_console(lineCount)
     fs.writeFile('lines.json', JSON.stringify(lineCounts), console.error);
 });
-
-bot.on("message", function(msg)
-{
-    double_console("ye it is");
-})
 
 bot.on("message", msg => {
     if (msg.content.startsWith("ping")) {
@@ -55,13 +49,10 @@ bot.on("message", msg => {
 
 });
 
-<<<<<<< HEAD
-bot.on('error', e => { console.error(e); });
-=======
 bot.on('error', e => 
     { 
         console.error(e); 
         console_chan.sendMessage(e);
 
     });
->>>>>>> f20232cd20571435e2178621f12210e202b0fa39
+
