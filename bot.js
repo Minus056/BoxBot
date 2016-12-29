@@ -11,7 +11,7 @@ var console_chan_id = "263901361127686159";
 var console_chan = bot.channels.get(console_chan_id);
 
 
-var lineCounts = JSON.parse(fs.readFileSync('lines.json', 'utf8'));
+var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 
 
 var bot_activation_token_start = "(";
@@ -32,14 +32,12 @@ bot.on('ready', () => {
 bot.on("message", msg => {
     if(msg.author.bot) return;
     var lineCount = lineCounts[msg.author.id];
-    double_console(lineCount);
     if (lineCount == undefined) {
-        double_console(lineCount == undefined);
         lineCount = 0;
     }
     lineCount++;
-    double_console(lineCount)
-    fs.writeFile('lines.json', JSON.stringify(lineCounts), console.error);
+    lineCounts[msg.author.id] = lineCount;
+    fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
 });
 
 bot.on("message", msg => {
