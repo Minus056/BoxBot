@@ -15,4 +15,12 @@ bot.on("message", msg => {
     }
 });
 
+bot.on("message", msg => {
+    if (msg.content.startsWith("ping")) {
+        msg.channel.sendMessage("pong!");
+    }
+});
+
+bot.on('error', e => { console.error(e); });
+
 bot.login("MjYzODI1MTY1Mzg3ODI1MTUz.C0YAsA.u_eQETAWuHQfMu2ot957ZepDAx8");
