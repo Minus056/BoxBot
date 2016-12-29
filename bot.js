@@ -14,11 +14,14 @@ bot.on('ready', () => {
 
 bot.on("message", msg => {
     if(msg.author.bot) return;
-    if (lineCounts[msg.author.id]) {
-        lineCounts[msg.author.id] = 1;
+    let lineCount = lineCounts[msg.author.id];
+    console.log(lineCount);
+    if (!lineCount) {
+        lineCount = 0;
+        console.log(lineCount);
     }
-    lineCounts[msg.author.id]++;
-    console.log(lineCounts[msg.author.id])
+    lineCount++;
+    console.log(lineCount)
     fs.writeFile('lines.json', JSON.stringify(lineCounts), console.error);
 });
 
