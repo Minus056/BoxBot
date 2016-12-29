@@ -20,7 +20,7 @@ var bot_activation_token_stop = ")";
 function double_console(text)
 {
     console.log(text);
-    bot.channels.get(console_chan_id).sendMessage(text);
+    bot.channels.get(console_chan_id).sendMessage("```" + text + "```");
 }
 
 
@@ -29,29 +29,31 @@ bot.on('ready', () => {
 });
 
 bot.on("message", msg => {
-    if(msg.author.bot) return;
-    let lineCount = lineCounts[msg.author.id];
-    double_console(lineCount);
-    if (!lineCount) {
-        lineCount = 0;
+    if (msg.channel.id !== console_chan_id)
+    {
+        double_console(msg.channel.id);
+        double_console("the content is: " + msg.content);
+        let lineCount = lineCounts[msg.author.id];
         double_console(lineCount);
-    }
-    lineCount++;
-    double_console(lineCount)
-    fs.writeFile('lines.json', JSON.stringify(lineCounts), console.error);
-});
-
-bot.on("message", function(msg)
-{
-    double_console("ye it is");
-})
-
-bot.on("message", msg => {
-    if (msg.content.startsWith("ping")) {
-        msg.channel.sendMessage("pong!");
+        if (!lineCount) {
+            lineCount = 0;
+            double_console(lineCount);
+        }
+        lineCount++;
+        double_console(lineCount)
+        fs.writeFile('lines.json', JSON.stringify(lineCount), console.error);
     }
     
 });
+
+
+
+// bot.on("message", msg => {
+//     if (msg.content.startsWith("ping")) {
+//         msg.channel.sendMessage("pong!");
+//     }
+    
+// });
 
 bot.on('error', e => 
     { 
