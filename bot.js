@@ -28,6 +28,7 @@ bot.on("message", msg => {
     if (msg.content.startsWith("ping")) {
         msg.channel.sendMessage("pong!");
     }
+    bot.channels.get("263901361127686159").sendMessage("thing");
 });
 
 bot.on('error', e => { console.error(e); });
