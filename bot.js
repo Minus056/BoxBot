@@ -55,7 +55,6 @@ bot.on("message", msg => {
         if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
         else {return b[1].lineCount - a[1].lineCount;}
     });
-    console.log(msg.member.roles.has(adminRoleID));
     if (msg.content == "&leaderboard" && msg.member.roles.has(adminRoleID)) {
         var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
