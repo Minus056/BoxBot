@@ -31,12 +31,16 @@ bot.on('ready', () => {
 
 bot.on("message", msg => {
     if(msg.author.bot) return;
-    var lineCount = lineCounts[msg.author.id];
-    if (lineCount == undefined) {
-        lineCount = 0;
+    
+    var userData = lineCounts[msg.author.id];
+    if (userData == undefined) {
+        lineCounts[msg.author.id] = {"lineCount":0,"wpl":1};
+        userData = {"lineCount":0,"wpl":1};
     }
-    lineCount++;
-    lineCounts[msg.author.id] = lineCount;
+    userData.wpl = ((userData.wpl*userData.lineCount)+(msg.content.split(" ").length))/(userData.lineCount+1);
+    userData.lineCount++;
+    lineCounts[msg.author.id]["lineCount"] = userData.lineCount;
+    lineCounts[msg.author.id]["wpl"] = userData.wpl;
     fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
 });
 
@@ -51,6 +55,4 @@ bot.on('error', e =>
     { 
         console.error(e); 
         console_chan.sendMessage(e);
-
     });
-
