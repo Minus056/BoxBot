@@ -8,7 +8,7 @@ var bot = new Discord.Client({
     autorun: true
 });
  
-bot.on('ready', function() {
+bot.on('ready', function() { //what does this do?
     console.log(bot.username + " - (" + bot.id + ")");
 });
  
