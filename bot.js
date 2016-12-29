@@ -58,13 +58,13 @@ bot.on("message", msg => {
         else {return b[1].lineCount - a[1].lineCount;}
     });
     if (msg.content == "&leaderboard") {
-        var leaderboardText = "```name | linecount | words/line\n";
+        var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
         if (array.length < 10) {max = array.length;}
         for (var i = 0; i < max; i++) {
-            leaderboardText += +array[i][0]+" | "+array[i][1].lineCount+" | "+array[i][1].wpl+"\n";
+            leaderboardText += bot.users.get(array[i][0])+" | "+array[i][1].lineCount+" | "+array[i][1].wpl+"\n";
         }
-        msg.channel.sendMessage(leaderboardText+"```");
+        msg.channel.sendMessage(leaderboardText);
      }
 });
 /*=========================================================================*/
