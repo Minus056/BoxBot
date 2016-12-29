@@ -21,7 +21,7 @@ bot.on("message", msg => {
         console.log(lineCount);
     }
     lineCounts[msg.author.id] = lineCount++;
-    console.log(lineCount++)
+    bot.channels.get("263901361127686159").sendMessage(lineCount++, lineCounts[msg.author.id]);
     fs.writeFile('lines.json', JSON.stringify(lineCounts), console.error);
 });
 
@@ -29,7 +29,6 @@ bot.on("message", msg => {
     if (msg.content.startsWith("ping")) {
         msg.channel.sendMessage("pong!");
     }
-    bot.channels.get("263901361127686159").sendMessage("thing");
 });
 
 bot.on('error', e => { console.error(e); });
