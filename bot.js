@@ -24,13 +24,13 @@ function double_console(text)
     bot.channels.get(console_chan_id).sendMessage("``` " + text + " ```");
 }
 /*=========================================================================*/
-
+//BOT READY
 bot.on('ready', () => 
 {
   double_console('I am ready!');
 });
 /*=========================================================================*/
-
+//LINE AND WPL COUNTER
 bot.on("message", msg => {
     if(msg.author.bot) return;
     
@@ -46,7 +46,29 @@ bot.on("message", msg => {
     fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
-
+//JSON ORGANIZER
+var array = [];
+bot.on("message", msg => {
+     for (var i = 0; i < lineCounts.length; i++) {
+         array.push(lineCounts[i], lineCounts[i].lineCount, lineCounts[i].wpl);
+     }
+     array.sort(function(a,b){
+         return b[1] - a[1];
+     });
+     if (msg.content == "&leaderboard") {
+        if (array.length > 10) {
+            for (var i = 0; i < 10; i++) {
+                console.log(array[i], array[i][1], array[i][2]);
+            }
+        } else {
+            for (var i = 0; i < array.length; i++) {
+                console.log(array[i], array[i][1], array[i][2]);
+            }
+        }
+     }
+});
+/*=========================================================================*/
+//COMMAND RESPONSES
 bot.on("message", msg => {
      if (commands[msg.content]) {
          msg.channel.sendMessage(commands[msg.content]);
