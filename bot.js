@@ -64,7 +64,7 @@ bot.on("message", msg => {
         var max = 10;
         if (array.length < 10) {max = array.length;}
         for (var i = 0; i < max; i++) {
-            leaderboardText += bot.users.get(array[i][0])+" | "+array[i][1].lineCount+" | "+array[i][1].wpl+"\n";
+            leaderboardText += bot.users.get(array[i][0]).username+" | "+array[i][1].lineCount+" | "+(Math.round((array[i][1].wpl*100))/100)+"\n";
         }
         msg.channel.sendMessage(leaderboardText);
     }
@@ -77,6 +77,7 @@ bot.on("message", msg => {
 /*=========================================================================*/
 //COMMAND RESPONSES
 bot.on("message", msg => {
+    if(msg.author.bot) return;
      if (commands[msg.content]) {
          msg.channel.sendMessage(commands[msg.content]);
      }
