@@ -1,0 +1,22 @@
+{
+  "name": "boxbot",
+  "version": "1.0.0",
+  "description": "Discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Minus056/BoxBot.git"
+  },
+  "author": "Shawn Gu, Kaushik Katta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Minus056/BoxBot/issues"
+  },
+  "homepage": "https://github.com/Minus056/BoxBot#readme",
+  "dependencies": {
+    "discord.io": "^2.3.0"
+  }
+}
