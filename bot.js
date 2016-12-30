@@ -10,6 +10,7 @@ bot.login(pass);
 
 var adminRoleID = "225382371627761684";
 var SSRoleID = "225385390679261184";
+var mmmModRole = "141243323003174912";
 
 /*=========================================================================*/
 //DETERMINE TIME
@@ -242,7 +243,7 @@ bot.on("message", function(msg)
 
 bot.on("message", function(msg)
 {
-    if (msg.content == "&leaderboard" && (msg.member.roles.has(adminRoleID) || msg.member.roles.has(SSRoleID)))
+    if (msg.content == (act_tok+"leaderboard") && (msg.member.roles.has(adminRoleID) || msg.member.roles.has(SSRoleID) || msg.member.roles.has(mmmModRole)))
     { 
         var array = [];
         var members = Object.keys(lineCounts[msg.guild.id]);
@@ -268,7 +269,7 @@ bot.on("message", function(msg)
         msg.channel.sendMessage(leaderboardText);
     }
 
-    if (msg.content == act_tok+"resetlb" && msg.member.roles.has(adminRoleID)) {
+    if (msg.content == act_tok+"resetlb" && (msg.member.roles.has(adminRoleID) || msg.member.roles.has(mmmModRole))) {
 
         lineCounts[msg.guild.id] = {};
         fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
