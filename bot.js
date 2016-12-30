@@ -106,7 +106,6 @@ bot.on("message", function(msg)
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
-    console.log(msg.content.startsWith(act_tok + "ability"))
     if (msg.content.startsWith(act_tok + "ability"))
     {
         var args = msg.content.split(" ");
