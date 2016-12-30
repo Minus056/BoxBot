@@ -70,7 +70,7 @@ bot.on("message", msg => {
                 data += (stats[i]+": "+poke.baseStats[stats[i]]);
                 if (!(i == 5)) {data+=" | ";}
             }
-            data+="\nhttp://www.smogon.com/dex/sm/pokemon/"+args[1]+"/```";
+            data+="```\nhttp://www.smogon.com/dex/sm/pokemon/"+args[1]+"/";
             data+="\nhttp://www.smogon.com/dex/media/sprites/xyicons/"+args[1]+".png";
             
             msg.channel.sendMessage(data);
