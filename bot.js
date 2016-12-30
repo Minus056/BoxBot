@@ -16,6 +16,10 @@ var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
 
+
+var itemList = require("./data/items.js");
+
+
 var act_tok = "(";
 
 /*=========================================================================*/
@@ -122,6 +126,35 @@ bot.on("message", function(msg)
         }
     }
 });
+
+// @@@@@@@@ items
+
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
+    
+    if (msg.content.startsWith(act_tok + "item"))
+    {
+
+        items = itemList.BattleItems;
+        var args = msg.content.split(" ");
+        double_console(args[1])
+        double_console(items[args[1]]);
+        if (!(items[args[1]] == undefined))
+        {
+            var item = items[args[1]];
+            var data = "```\n";
+            data  += item.name + "\n" + item.desc + "\n```";
+            msg.channel.sendMessage(data);
+        }
+        else
+        {
+            msg.channel.sendMessage("I can't seem to find that Item :box:\nTry writing it without spaces.");
+        }
+    }
+});
+
+
 /*=========================================================================*/
 //MOVES COMMAND
 bot.on("message", msg => {
@@ -147,33 +180,33 @@ bot.on("message", msg => {
 });
 /*=========================================================================*/
 //LINE AND WPL COUNTER
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
+// bot.on("message", function(msg)
+// {
+//     if (msg.author.bot) return;
 
-    var serverData = lineCounts[msg.guild.id];
-    if (serverData == undefined)
-    {
-        lineCounts[msg.guild.id] = {};
-    }
-    var userData = lineCounts[msg.guild.id][msg.author.id];
-    if (userData == undefined)
-    {
-        lineCounts[msg.guild.id][msg.author.id] = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-        userData = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-    }
-    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    userData.lineCount++;
-    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
-});
+//     var serverData = lineCounts[msg.guild.id];
+//     if (serverData == undefined)
+//     {
+//         lineCounts[msg.guild.id] = {};
+//     }
+//     var userData = lineCounts[msg.guild.id][msg.author.id];
+//     if (userData == undefined)
+//     {
+//         lineCounts[msg.guild.id][msg.author.id] = {
+//             "lineCount": 0,
+//             "wpl": 1
+//         };
+//         userData = {
+//             "lineCount": 0,
+//             "wpl": 1
+//         };
+//     }
+//     userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+//     userData.lineCount++;
+//     lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+//     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+//     fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
+// });
 /*=========================================================================*/
 //LEADERBOARD
 
