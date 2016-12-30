@@ -18,7 +18,7 @@ var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
 
-var act_tok = "!";
+var act_tok = "(";
 
 /*=========================================================================*/
 function double_console(text)
@@ -141,7 +141,7 @@ bot.on("message", msg => {
 /*=========================================================================*/
 //LEADERBOARD
 bot.on("message", msg => {
-    if (msg.content == "&leaderboard") { //&& msg.member.roles.has(adminRoleID)
+    if (msg.content == act_tok+"leaderboard") { //&& msg.member.roles.has(adminRoleID)
         var array = [];
         var members = Object.keys(lineCounts[msg.guild.id]);
         for (var i = 0; i < members.length; i++) {
@@ -159,7 +159,7 @@ bot.on("message", msg => {
         }
         msg.channel.sendMessage(leaderboardText);
     }
-    if (msg.content == "&resetlb") {
+    if (msg.content == act_tok+"resetlb") {
         lineCounts[msg.guild.id] = {};
         fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
         msg.channel.sendMessage("leaderboard reset");
