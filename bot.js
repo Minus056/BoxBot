@@ -16,12 +16,24 @@ var SSRoleID = "225385390679261184";
 var day = 30;
 var month = 12;
 var d = new Date();
-var n1 = 0;
+var n1 = 17165;
 var n2;
 bot.on("message", function(msg)
 {
     n2 = Math.floor((d.getTime())/86400000);
-    if (n1 < n2) {day++;n1=n2;}
+    if (n1 < n2) {
+        if ((month == 1 && day == 31) || (month == 2 && day == 28) || (month == 3 && day == 31) || (month == 4 && day == 30) || (month == 5 && day == 31)
+        || (month == 6 && day == 30) || (month == 7 && day == 31) || (month == 8 && day == 31) || (month == 9 && day == 30) || (month == 10 && day == 31)
+        || (month == 11 && day == 30) || (month == 12 && day == 31)) {
+            day = 0;
+            month++;
+            if (month == 13) {
+                month = 1;
+            }
+        } 
+        day++;
+        n1=n2;
+    }
 });
 /*=========================================================================*/
 
@@ -152,7 +164,7 @@ bot.on("message", function(msg)
     if (msg.content.startsWith(act_tok + "item"))
     {
 
-        items = itemList.BattleItems;
+        var items = itemList.BattleItems;
         var args = msg.content.split(" ");
         double_console(args[1])
         double_console(items[args[1]]);
