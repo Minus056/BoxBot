@@ -7,13 +7,14 @@ var bot = new Discord.Client();
 var fs = require("fs");
 bot.login(pass);
 
-var adminRoleID = "179005319370768384"; //change this
+var adminRoleID = ""; //change this
 
 var console_chan_id = "263901361127686159";
 var console_chan = bot.channels.get(console_chan_id);
 
 var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
+var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 
 /*=========================================================================*/
 function double_console(text)
@@ -26,6 +27,19 @@ function double_console(text)
 bot.on('ready', () => 
 {
   double_console('I am ready!');
+});
+/*=========================================================================*/
+//!POKEMON COMMAND
+bot.on("message", msg => {
+    if(msg.author.bot) return;
+    
+    if (msg.content.startsWith("!pokemon")) {
+        var args = msg.content.split(" ");
+        if (!(pokemonList[args[1]] == undefined)) {
+            var poke = pokemonList[args[1]]
+            msg.channel.sendMessage(poke.species);
+        }
+    }
 });
 /*=========================================================================*/
 //LINE AND WPL COUNTER
@@ -64,7 +78,7 @@ bot.on("message", msg => {
         var max = 10;
         if (array.length < 10) {max = array.length;}
         for (var i = 0; i < max; i++) {
-            leaderboardText += bot.users.get(array[i][0]).username+" | "+array[i][1].lineCount+" | "+(Math.round((array[i][1].wpl*100))/100)+"\n";
+            leaderboardText += bot.users.get(array[i][0]).username+"  |  "+array[i][1].lineCount+"  |  "+(Math.round((array[i][1].wpl*100))/100)+"\n";
         }
         msg.channel.sendMessage(leaderboardText);
     }
