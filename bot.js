@@ -10,9 +10,6 @@ bot.login(pass);
 var adminRoleID = "225382371627761684";
 var SSRoleID = "225385390679261184";
 
-var console_chan_id = "263901361127686159";
-var console_chan = bot.channels.get(console_chan_id);
-
 var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
@@ -25,7 +22,6 @@ var act_tok = "(";
 function double_console(text)
 {
     console.log(text);
-    bot.channels.get(console_chan_id).sendMessage("``` " + text + " ```");
 }
 /*=========================================================================*/
 //BOT READY
