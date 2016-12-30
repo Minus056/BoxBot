@@ -33,7 +33,7 @@ bot.on('ready', () =>
 bot.on("message", msg => {
     if(msg.author.bot) return;
     
-    if (msg.content.startsWith("!pokemon")) {
+    if (msg.content.startsWith("!pkmn")) {
         var args = msg.content.split(" ");
         if (!(pokemonList[args[1]] == undefined)) {
             var poke = pokemonList[args[1]];
@@ -52,7 +52,7 @@ bot.on("message", msg => {
                 data += (stats[i]+": "+poke.baseStats[stats[i]]);
                 if (!(i == 5)) {data+=" | ";}
             }
-            data+="\nhttp://www.smogon.com/dex/xy/pokemon/"+args[1]+"/```";
+            data+="\nhttp://www.smogon.com/dex/sm/pokemon/"+args[1]+"/```";
             data+="\nhttp://www.smogon.com/dex/media/sprites/xyicons/"+args[1]+".png";
             
             msg.channel.sendMessage(data);
