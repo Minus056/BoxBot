@@ -7,10 +7,26 @@ var bot = new Discord.Client();
 var fs = require("fs");
 bot.login(pass);
 
+
 var adminRoleID = "225382371627761684";
 var SSRoleID = "225385390679261184";
 
-var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
+/*=========================================================================*/
+//DETERMINE TIME
+var day = 30;
+var month = 12;
+var d = new Date();
+var n1 = 0;
+var n2;
+bot.on("message", function(msg)
+{
+    n2 = Math.floor((d.getTime())/86400000);
+    if (n1 < n2) {day++;n1=n2;}
+});
+/*=========================================================================*/
+
+var lineFile = './Lines/'+month+'/'+day+'.json';
+var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
@@ -178,42 +194,44 @@ bot.on("message", msg => {
         }
     }
 });
+
 /*=========================================================================*/
 //LINE AND WPL COUNTER
-// bot.on("message", function(msg)
-// {
-//     if (msg.author.bot) return;
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
 
-//     var serverData = lineCounts[msg.guild.id];
-//     if (serverData == undefined)
-//     {
-//         lineCounts[msg.guild.id] = {};
-//     }
-//     var userData = lineCounts[msg.guild.id][msg.author.id];
-//     if (userData == undefined)
-//     {
-//         lineCounts[msg.guild.id][msg.author.id] = {
-//             "lineCount": 0,
-//             "wpl": 1
-//         };
-//         userData = {
-//             "lineCount": 0,
-//             "wpl": 1
-//         };
-//     }
-//     userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-//     userData.lineCount++;
-//     lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-//     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-//     fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
-// });
+    var serverData = lineCounts[msg.guild.id];
+    if (serverData == undefined)
+    {
+        lineCounts[msg.guild.id] = {};
+    }
+    var userData = lineCounts[msg.guild.id][msg.author.id];
+    if (userData == undefined)
+    {
+        lineCounts[msg.guild.id][msg.author.id] = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+        userData = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+    }
+    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+    userData.lineCount++;
+    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+    //fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
+    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
+});
 /*=========================================================================*/
 //LEADERBOARD
 
 bot.on("message", function(msg)
 {
-    if (msg.content == "&leaderboard")
-    { //&& msg.member.roles.has(adminRoleID)
+    if (msg.content == "&leaderboard" && (msg.member.roles.has(adminRoleID) || msg.member.roles.has(SSRoleID)))
+    { 
         var array = [];
         var members = Object.keys(lineCounts[msg.guild.id]);
         for (var i = 0; i < members.length; i++)
@@ -241,7 +259,7 @@ bot.on("message", function(msg)
     if (msg.content == act_tok+"resetlb" && msg.member.roles.has(adminRoleID)) {
 
         lineCounts[msg.guild.id] = {};
-        fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
+        fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
         msg.channel.sendMessage("leaderboard reset");
     }
 });
