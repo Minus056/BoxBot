@@ -16,6 +16,7 @@ var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
+var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
 
 var act_tok = "!";
 
@@ -82,8 +83,7 @@ bot.on("message", msg => {
 //ABILITY COMMAND
 bot.on("message", msg => {
     if(msg.author.bot) return;
-    console.log(msg.content.startsWith(act_tok+"ability"))
-    if (msg.content.startsWith("!ability")) {
+    if (msg.content.startsWith(act_tok+"ability")) {
         var args = msg.content.split(" ");
         if (!(abilityList[args[1]] == undefined)) {
             var ability = abilityList[args[1]];
@@ -92,6 +92,29 @@ bot.on("message", msg => {
             msg.channel.sendMessage(data);
         } else {
             msg.channel.sendMessage("I can't seem to find that Ability :box:\nTry writing it without spaces.");
+        }
+    }
+});
+/*=========================================================================*/
+//MOVES COMMAND
+bot.on("message", msg => {
+    if(msg.author.bot) return;
+    if (msg.content.startsWith(act_tok+"move")) {
+        var args = msg.content.split(" ");
+        if (!(movesList[args[1]] == undefined)) {
+            var move = movesList[args[1]];
+            var data = "```\n";
+            data += move.name+"\n"
+            if (move.category == "Status") {
+                data+=move.desc+"\nType: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
+                      ", Priority: "+move.priority+" || Category: "+move.category+"```";
+            } else {
+                data +="Type: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
+                      ", Priority: "+move.priority+" || Category: "+move.category+"\n"+move.desc+"```";
+            }
+            msg.channel.sendMessage(data);
+        } else {
+            msg.channel.sendMessage("I can't seem to find that Move :box:\nTry writing it without spaces.");
         }
     }
 });
