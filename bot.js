@@ -7,7 +7,8 @@ var bot = new Discord.Client();
 var fs = require("fs");
 bot.login(pass);
 
-var adminRoleID = ""; //change this
+var adminRoleID = "225382371627761684";
+var SSRoleID = "225385390679261184";
 
 var console_chan_id = "263901361127686159";
 var console_chan = bot.channels.get(console_chan_id);
@@ -16,8 +17,9 @@ var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
+var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
 
-var act_tok = "!";
+var act_tok = "(";
 
 /*=========================================================================*/
 function double_console(text)
@@ -88,6 +90,7 @@ bot.on("message", function(msg)
                     data  += " | ";
                 }
             }
+
             data += "```";
             data += "\n Analysis: ";
             data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + args[1] + "/";
@@ -103,6 +106,7 @@ bot.on("message", function(msg)
 });
 /*=========================================================================*/
 //ABILITY COMMAND
+<<<<<<< HEAD
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
@@ -120,6 +124,29 @@ bot.on("message", function(msg)
         else
         {
             msg.channel.sendMessage("I can't seem to find that Ability :box:\nTry writing it without spaces.");
+        }
+    }
+});
+/*=========================================================================*/
+//MOVES COMMAND
+bot.on("message", msg => {
+    if(msg.author.bot) return;
+    if (msg.content.startsWith(act_tok+"move")) {
+        var args = msg.content.split(" ");
+        if (!(movesList[args[1]] == undefined)) {
+            var move = movesList[args[1]];
+            var data = "```\n";
+            data += move.name+"\n"
+            if (move.category == "Status") {
+                data+=move.desc+"\nType: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
+                      ", Priority: "+move.priority+" || Category: "+move.category+"```";
+            } else {
+                data +="Type: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
+                      ", Priority: "+move.priority+" || Category: "+move.category+"\n"+move.desc+"```";
+            }
+            msg.channel.sendMessage(data);
+        } else {
+            msg.channel.sendMessage("I can't seem to find that Move :box:\nTry writing it without spaces.");
         }
     }
 });
@@ -154,6 +181,7 @@ bot.on("message", function(msg)
 });
 /*=========================================================================*/
 //LEADERBOARD
+
 bot.on("message", function(msg)
 {
     if (msg.content == "&leaderboard")
@@ -164,16 +192,10 @@ bot.on("message", function(msg)
         {
             array.push([members[i], lineCounts[msg.guild.id][members[i]]]);
         }
-        array.sort(function(a, b)
-        {
-            if (b[1].lineCount - a[1].lineCount == 0)
-            {
-                return b[1].wpl - a[1].wpl;
-            }
-            else
-            {
-                return b[1].lineCount - a[1].lineCount;
-            }
+
+        array.sort(function(a,b){
+            return (b[1].lineCount*b[1].wpl) - (a[1].lineCount*a[1].wpl);
+
         });
         var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
@@ -187,8 +209,9 @@ bot.on("message", function(msg)
         }
         msg.channel.sendMessage(leaderboardText);
     }
-    if (msg.content == "&resetlb")
-    {
+
+    if (msg.content == act_tok+"resetlb" && msg.member.roles.has(adminRoleID)) {
+
         lineCounts[msg.guild.id] = {};
         fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
         msg.channel.sendMessage("leaderboard reset");
