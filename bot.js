@@ -29,6 +29,20 @@ bot.on('ready', () =>
   double_console('I am ready!');
 });
 /*=========================================================================*/
+//COMMANDS WITH ARGS
+bot.on("message", msg => {
+    if (msg.content.startsWith("!fx")) {
+        var args = msg.content.split(" ");
+        var person1 = args[1];
+        var person2;
+        if (args[2] == undefined) {person2 = "me"}
+        else {person2 = args[2];}
+        msg.channel.sendMessage("hey "+person1+" can you stop being a fucking asshole every time you talk to "
+        +person2+" . fuck you cant talk to "+person2+" without belittling "+person2
+        +" for no reason i dont give 2 shits if youre joking. you need to learn your limit asshole");
+    }
+});
+/*=========================================================================*/
 //!POKEMON COMMAND
 bot.on("message", msg => {
     if(msg.author.bot) return;
