@@ -92,7 +92,7 @@ bot.on("message", function(msg)
             }
 
             data += "```";
-            data += "\n Analysis: ";
+            data += "\nAnalysis: ";
             data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + args[1] + "/";
             data += "\nhttp://www.smogon.com/dex/media/sprites/xyicons/" + args[1] + ".png";
 
@@ -106,7 +106,7 @@ bot.on("message", function(msg)
 });
 /*=========================================================================*/
 //ABILITY COMMAND
-<<<<<<< HEAD
+
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
