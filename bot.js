@@ -123,9 +123,8 @@ bot.on("message", function(msg)
             data += "```";
             data += "\nAnalysis: ";
             data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + args[1] + "/";
-            data += "\nhttp://www.smogon.com/dex/media/sprites/xyicons/" + args[1] + ".png";
 
-            msg.channel.sendMessage(data);
+            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + args[1] + ".png", "bisharp.png", data);
         }
         else
         {
@@ -235,7 +234,6 @@ bot.on("message", function(msg)
     userData.lineCount++;
     lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    //fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
     fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
@@ -244,7 +242,7 @@ bot.on("message", function(msg)
 bot.on("message", function(msg)
 {
     if (msg.content == (act_tok+"leaderboard") && (msg.member.roles.has(adminRoleID) || msg.member.roles.has(SSRoleID) || msg.member.roles.has(mmmModRole)))
-    { 
+    {
         var array = [];
         var members = Object.keys(lineCounts[msg.guild.id]);
         for (var i = 0; i < members.length; i++)
@@ -256,7 +254,8 @@ bot.on("message", function(msg)
             return (b[1].lineCount*b[1].wpl) - (a[1].lineCount*a[1].wpl);
 
         });
-        var leaderboardText = "```name | linecount | words/line\n```";
+        var leaderboardText = "```name | linecount | words/line\n";
+        leaderboardText += "ordered by number of words\n```"
         var max = 10;
         if (array.length < 10)
         {
