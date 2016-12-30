@@ -27,89 +27,126 @@ function double_console(text)
 }
 /*=========================================================================*/
 //BOT READY
-bot.on('ready', () => 
+bot.on('ready', function()
 {
-  double_console('I am ready!');
+    double_console('I am ready!');
 });
 /*=========================================================================*/
 //COMMANDS WITH ARGS
-bot.on("message", msg => {
-    if (msg.content.startsWith(act_tok+"fx")) {
+bot.on("message", function(msg)
+{
+    if (msg.content.startsWith(act_tok + "fx"))
+    {
         var args = msg.content.split(" ");
         var person1 = args[1];
         var person2;
-        if (args[2] == undefined) {person2 = "me"}
-        else {person2 = args[2];}
-        msg.channel.sendMessage("hey "+person1+" can you stop being a fucking asshole every time you talk to "
-        +person2+" . fuck you cant talk to "+person2+" without belittling "+person2
-        +" for no reason i dont give 2 shits if youre joking. you need to learn your limit asshole");
+        if (args[2] == undefined)
+        {
+            person2 = "me"
+        }
+        else
+        {
+            person2 = args[2];
+        }
+        msg.channel.sendMessage("hey " + person1 + " can you stop being a fucking asshole every time you talk to "  + 
+            person2 + " . fuck you cant talk to " + person2 + " without belittling " + person2  + 
+            " for no reason i dont give 2 shits if youre joking. you need to learn your limit asshole");
     }
 });
 /*=========================================================================*/
 //!POKEMON COMMAND
-bot.on("message", msg => {
-    if(msg.author.bot) return;
-    
-    if (msg.content.startsWith(act_tok+"pkmn")) {
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
+
+    if (msg.content.startsWith(act_tok + "pkmn"))
+    {
         var args = msg.content.split(" ");
-        if (!(pokemonList[args[1]] == undefined)) {
+        if (!(pokemonList[args[1]] == undefined))
+        {
             var poke = pokemonList[args[1]];
             var data = "```\n";
-            data += poke.species+"\n"+poke.types+"\n";
-           
+            data  += poke.species + "\n" + poke.types + "\n";
+
             var abilities = Object.keys(poke.abilities);
-            for (var i = 0; i < abilities.length; i++) {
-                data += (poke.abilities[abilities[i]]);
-                if (!(i == abilities.length-1)) {data+=" | ";}
+            for (var i = 0; i < abilities.length; i++)
+            {
+                data  += (poke.abilities[abilities[i]]);
+                if (!(i == abilities.length - 1))
+                {
+                    data  += " | ";
+                }
             }
-            data += "\n";
-            
+            data  += "\n";
+
             var stats = Object.keys(poke.baseStats);
-            for (var i = 0; i<6; i++) {
-                data += (stats[i]+": "+poke.baseStats[stats[i]]);
-                if (!(i == 5)) {data+=" | ";}
+            for (var i = 0; i < 6; i++)
+            {
+                data  += (stats[i] + ": " + poke.baseStats[stats[i]]);
+                if (!(i == 5))
+                {
+                    data  += " | ";
+                }
             }
-            data+="\nhttp://www.smogon.com/dex/sm/pokemon/"+args[1]+"/```";
-            data+="\nhttp://www.smogon.com/dex/media/sprites/xyicons/"+args[1]+".png";
-            
+            data += "```";
+            data += "\n Analysis: ";
+            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + args[1] + "/";
+            data += "\nhttp://www.smogon.com/dex/media/sprites/xyicons/" + args[1] + ".png";
+
             msg.channel.sendMessage(data);
-        } else {
+        }
+        else
+        {
             msg.channel.sendMessage("I can't seem to find that Pokemon :box:\nTry writing it like 'landorustherian' or 'aerodactylmega' instead.");
         }
     }
 });
 /*=========================================================================*/
 //ABILITY COMMAND
-bot.on("message", msg => {
-    if(msg.author.bot) return;
-    console.log(msg.content.startsWith(act_tok+"ability"))
-    if (msg.content.startsWith("!ability")) {
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
+    console.log(msg.content.startsWith(act_tok + "ability"))
+    if (msg.content.startsWith(act_tok + "ability"))
+    {
         var args = msg.content.split(" ");
-        if (!(abilityList[args[1]] == undefined)) {
+        if (!(abilityList[args[1]] == undefined))
+        {
             var ability = abilityList[args[1]];
             var data = "```\n";
-            data += ability.name+"\n"+ability.desc+"\n```";
+            data  += ability.name + "\n" + ability.desc + "\n```";
             msg.channel.sendMessage(data);
-        } else {
+        }
+        else
+        {
             msg.channel.sendMessage("I can't seem to find that Ability :box:\nTry writing it without spaces.");
         }
     }
 });
 /*=========================================================================*/
 //LINE AND WPL COUNTER
-bot.on("message", msg => {
-    if(msg.author.bot) return;
-    
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
+
     var serverData = lineCounts[msg.guild.id];
-    if (serverData == undefined) {
+    if (serverData == undefined)
+    {
         lineCounts[msg.guild.id] = {};
     }
     var userData = lineCounts[msg.guild.id][msg.author.id];
-    if (userData == undefined) {
-        lineCounts[msg.guild.id][msg.author.id] = {"lineCount":0,"wpl":1};
-        userData = {"lineCount":0,"wpl":1};
+    if (userData == undefined)
+    {
+        lineCounts[msg.guild.id][msg.author.id] = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+        userData = {
+            "lineCount": 0,
+            "wpl": 1
+        };
     }
-    userData.wpl = ((userData.wpl*userData.lineCount)+(msg.content.split(" ").length))/(userData.lineCount+1);
+    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
     userData.lineCount++;
     lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
@@ -117,26 +154,41 @@ bot.on("message", msg => {
 });
 /*=========================================================================*/
 //LEADERBOARD
-bot.on("message", msg => {
-    if (msg.content == "&leaderboard") { //&& msg.member.roles.has(adminRoleID)
+bot.on("message", function(msg)
+{
+    if (msg.content == "&leaderboard")
+    { //&& msg.member.roles.has(adminRoleID)
         var array = [];
         var members = Object.keys(lineCounts[msg.guild.id]);
-        for (var i = 0; i < members.length; i++) {
-            array.push([members[i],lineCounts[msg.guild.id][members[i]]]);
+        for (var i = 0; i < members.length; i++)
+        {
+            array.push([members[i], lineCounts[msg.guild.id][members[i]]]);
         }
-        array.sort(function(a,b){
-            if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
-            else {return b[1].lineCount - a[1].lineCount;}
+        array.sort(function(a, b)
+        {
+            if (b[1].lineCount - a[1].lineCount == 0)
+            {
+                return b[1].wpl - a[1].wpl;
+            }
+            else
+            {
+                return b[1].lineCount - a[1].lineCount;
+            }
         });
         var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
-        if (array.length < 10) {max = array.length;}
-        for (var i = 0; i < max; i++) {
-            leaderboardText += bot.users.get(array[i][0]).username+"  |  "+array[i][1].lineCount+"  |  "+(Math.round((array[i][1].wpl*100))/100)+"\n";
+        if (array.length < 10)
+        {
+            max = array.length;
+        }
+        for (var i = 0; i < max; i++)
+        {
+            leaderboardText  += bot.users.get(array[i][0]).username + "  |  " + array[i][1].lineCount + "  |  " + (Math.round((array[i][1].wpl * 100)) / 100) + "\n";
         }
         msg.channel.sendMessage(leaderboardText);
     }
-    if (msg.content == "&resetlb") {
+    if (msg.content == "&resetlb")
+    {
         lineCounts[msg.guild.id] = {};
         fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
         msg.channel.sendMessage("leaderboard reset");
@@ -144,16 +196,18 @@ bot.on("message", msg => {
 });
 /*=========================================================================*/
 //COMMAND RESPONSES
-bot.on("message", msg => {
-    if(msg.author.bot) return;
-     if (commands[msg.content]) {
-         msg.channel.sendMessage(commands[msg.content]);
-     }
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
+    if (commands[msg.content])
+    {
+        msg.channel.sendMessage(commands[msg.content]);
+    }
 });
 /*=========================================================================*/
 
-bot.on('error', e => 
-{ 
-        console.error(e); 
-        console_chan.sendMessage(e);
-    });
+bot.on('error', function(e)
+{
+    console.error(e);
+    console_chan.sendMessage(e);
+});
