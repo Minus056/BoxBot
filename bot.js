@@ -7,7 +7,8 @@ var bot = new Discord.Client();
 var fs = require("fs");
 bot.login(pass);
 
-var adminRoleID = ""; //change this
+var adminRoleID = "225382371627761684";
+var SSRoleID = "225385390679261184";
 
 var console_chan_id = "263901361127686159";
 var console_chan = bot.channels.get(console_chan_id);
@@ -141,15 +142,14 @@ bot.on("message", msg => {
 /*=========================================================================*/
 //LEADERBOARD
 bot.on("message", msg => {
-    if (msg.content == act_tok+"leaderboard") { //&& msg.member.roles.has(adminRoleID)
+    if (msg.content == act_tok+"leaderboard" && (msg.member.roles.has(SSRoleID) || msg.member.roles.has(adminRoleID))) {
         var array = [];
         var members = Object.keys(lineCounts[msg.guild.id]);
         for (var i = 0; i < members.length; i++) {
             array.push([members[i],lineCounts[msg.guild.id][members[i]]]);
         }
         array.sort(function(a,b){
-            if (b[1].lineCount - a[1].lineCount == 0) { return b[1].wpl - a[1].wpl;}
-            else {return b[1].lineCount - a[1].lineCount;}
+            return (b[1].lineCount*b[1].wpl) - (a[1].lineCount*a[1].wpl);
         });
         var leaderboardText = "```name | linecount | words/line\n```";
         var max = 10;
@@ -159,7 +159,7 @@ bot.on("message", msg => {
         }
         msg.channel.sendMessage(leaderboardText);
     }
-    if (msg.content == act_tok+"resetlb") {
+    if (msg.content == act_tok+"resetlb" && msg.member.roles.has(adminRoleID)) {
         lineCounts[msg.guild.id] = {};
         fs.writeFile('./lines.json', JSON.stringify(lineCounts), console.error);
         msg.channel.sendMessage("leaderboard reset");
