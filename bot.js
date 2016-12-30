@@ -36,8 +36,28 @@ bot.on("message", msg => {
     if (msg.content.startsWith("!pokemon")) {
         var args = msg.content.split(" ");
         if (!(pokemonList[args[1]] == undefined)) {
-            var poke = pokemonList[args[1]]
-            msg.channel.sendMessage(poke.species);
+            var poke = pokemonList[args[1]];
+            var data = "```\n";
+            data += poke.species+"\n"+poke.types+"\n";
+           
+            var abilities = Object.keys(poke.abilities);
+            for (var i = 0; i < abilities.length; i++) {
+                data += (poke.abilities[abilities[i]]);
+                if (!(i == abilities.length-1)) {data+=" | ";}
+            }
+            data += "\n";
+            
+            var stats = Object.keys(poke.baseStats);
+            for (var i = 0; i<6; i++) {
+                data += (stats[i]+": "+poke.baseStats[stats[i]]);
+                if (!(i == 5)) {data+=" | ";}
+            }
+            data+="\nhttp://www.smogon.com/dex/xy/pokemon/"+args[1]+"/```";
+            data+="\nhttp://www.smogon.com/dex/media/sprites/xyicons/"+args[1]+".png";
+            
+            msg.channel.sendMessage(data);
+        } else {
+            msg.channel.sendMessage("I can't seem to find that Pokemon :box:\nTry writing it like 'landorustherian' or 'aerodactylmega' instead.");
         }
     }
 });
