@@ -17,6 +17,8 @@ var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
 
+var act_tok = "!";
+
 /*=========================================================================*/
 function double_console(text)
 {
@@ -32,7 +34,7 @@ bot.on('ready', () =>
 /*=========================================================================*/
 //COMMANDS WITH ARGS
 bot.on("message", msg => {
-    if (msg.content.startsWith("!fx")) {
+    if (msg.content.startsWith(act_tok+"fx")) {
         var args = msg.content.split(" ");
         var person1 = args[1];
         var person2;
@@ -48,7 +50,7 @@ bot.on("message", msg => {
 bot.on("message", msg => {
     if(msg.author.bot) return;
     
-    if (msg.content.startsWith("!pkmn")) {
+    if (msg.content.startsWith(act_tok+"pkmn")) {
         var args = msg.content.split(" ");
         if (!(pokemonList[args[1]] == undefined)) {
             var poke = pokemonList[args[1]];
@@ -80,7 +82,7 @@ bot.on("message", msg => {
 //ABILITY COMMAND
 bot.on("message", msg => {
     if(msg.author.bot) return;
-    console.log(msg.content.startsWith("!ability"))
+    console.log(msg.content.startsWith(act_tok+"ability"))
     if (msg.content.startsWith("!ability")) {
         var args = msg.content.split(" ");
         if (!(abilityList[args[1]] == undefined)) {
