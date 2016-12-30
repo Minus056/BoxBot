@@ -15,6 +15,7 @@ var console_chan = bot.channels.get(console_chan_id);
 var lineCounts = JSON.parse(fs.readFileSync('./lines.json', 'utf8'));
 var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
+var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
 
 /*=========================================================================*/
 function double_console(text)
@@ -72,6 +73,23 @@ bot.on("message", msg => {
             msg.channel.sendMessage(data);
         } else {
             msg.channel.sendMessage("I can't seem to find that Pokemon :box:\nTry writing it like 'landorustherian' or 'aerodactylmega' instead.");
+        }
+    }
+});
+/*=========================================================================*/
+//ABILITY COMMAND
+bot.on("message", msg => {
+    if(msg.author.bot) return;
+    console.log(msg.content.startsWith("!ability"))
+    if (msg.content.startsWith("!ability")) {
+        var args = msg.content.split(" ");
+        if (!(abilityList[args[1]] == undefined)) {
+            var ability = abilityList[args[1]];
+            var data = "```\n";
+            data += ability.name+"\n"+ability.desc+"\n```";
+            msg.channel.sendMessage(data);
+        } else {
+            msg.channel.sendMessage("I can't seem to find that Ability :box:\nTry writing it without spaces.");
         }
     }
 });
