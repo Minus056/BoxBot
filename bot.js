@@ -17,6 +17,7 @@ var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
 
 
+
 var itemList = require("./data/items.js");
 
 
