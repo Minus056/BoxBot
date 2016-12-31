@@ -50,6 +50,21 @@ var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
 var itemList = require("./data/items.js");
 
 
+// var usage_data = require("./data/gen7ou-1825.json");
+// double_console(usage_data.data.Weavile.Items);
+
+var test_url = "http://www.smogon.com/stats/2016-11/moveset/gen7ou-1825.txt";
+
+var request = require("request");
+request(
+{
+    url: test_url,
+    json: true
+}, function(e, res, body)
+{
+    console.log(body);
+})
+
 var act_tok = "(";
 
 /*=========================================================================*/
@@ -210,33 +225,33 @@ bot.on("message", msg => {
 
 /*=========================================================================*/
 //LINE AND WPL COUNTER
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
+// bot.on("message", function(msg)
+// {
+//     if (msg.author.bot) return;
 
-    var serverData = lineCounts[msg.guild.id];
-    if (serverData == undefined)
-    {
-        lineCounts[msg.guild.id] = {};
-    }
-    var userData = lineCounts[msg.guild.id][msg.author.id];
-    if (userData == undefined)
-    {
-        lineCounts[msg.guild.id][msg.author.id] = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-        userData = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-    }
-    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    userData.lineCount++;
-    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
-});
+//     var serverData = lineCounts[msg.guild.id];
+//     if (serverData == undefined)
+//     {
+//         lineCounts[msg.guild.id] = {};
+//     }
+//     var userData = lineCounts[msg.guild.id][msg.author.id];
+//     if (userData == undefined)
+//     {
+//         lineCounts[msg.guild.id][msg.author.id] = {
+//             "lineCount": 0,
+//             "wpl": 1
+//         };
+//         userData = {
+//             "lineCount": 0,
+//             "wpl": 1
+//         };
+//     }
+//     userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+//     userData.lineCount++;
+//     lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+//     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+//     fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
+// });
 /*=========================================================================*/
 //LEADERBOARD
 
