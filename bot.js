@@ -17,6 +17,11 @@ var mmmModRole = "141243323003174912";
 var d = new Date();
 var day = d.getDate();
 var month = d.getMonth()+1;
+bot.on("message", function(msg)
+{
+    day = d.getDate();
+    month = d.getMonth()+1;
+});
 /*=========================================================================*/
 
 var lineFile = './Lines/'+month+'/'+day+'.json';
@@ -29,17 +34,11 @@ var itemList = require("./data/items.js");
 
 
 var act_tok = "(";
-
-/*=========================================================================*/
-function double_console(text)
-{
-    console.log(text);
-}
 /*=========================================================================*/
 //BOT READY
 bot.on('ready', function()
 {
-    double_console('I am ready!');
+    console.log('I am ready!');
 });
 /*=========================================================================*/
 //COMMANDS WITH ARGS
@@ -145,8 +144,6 @@ bot.on("message", function(msg)
 
         var items = itemList.BattleItems;
         var args = msg.content.split(" ");
-        double_console(args[1])
-        double_console(items[args[1]]);
         if (!(items[args[1]] == undefined))
         {
             var item = items[args[1]];
@@ -171,7 +168,7 @@ bot.on("message", msg => {
         if (!(movesList[args[1]] == undefined)) {
             var move = movesList[args[1]];
             var data = "```\n";
-            data += move.name+"\n"
+            data += move.name+"\n";
             if (move.category == "Status") {
                 data+=move.desc+"\nType: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
                       ", Priority: "+move.priority+" || Category: "+move.category+"```";
