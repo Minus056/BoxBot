@@ -14,28 +14,9 @@ var mmmModRole = "141243323003174912";
 
 /*=========================================================================*/
 //DETERMINE TIME
-var day = 30;
-var month = 12;
 var d = new Date();
-var n1 = 17165;
-var n2;
-bot.on("message", function(msg)
-{
-    n2 = Math.floor((d.getTime())/86400000);
-    if (n1 < n2) {
-        if ((month == 1 && day == 31) || (month == 2 && day == 28) || (month == 3 && day == 31) || (month == 4 && day == 30) || (month == 5 && day == 31)
-        || (month == 6 && day == 30) || (month == 7 && day == 31) || (month == 8 && day == 31) || (month == 9 && day == 30) || (month == 10 && day == 31)
-        || (month == 11 && day == 30) || (month == 12 && day == 31)) {
-            day = 0;
-            month++;
-            if (month == 13) {
-                month = 1;
-            }
-        } 
-        day++;
-        n1=n2;
-    }
-});
+var day = d.getDate();
+var month = d.getMonth()+1;
 /*=========================================================================*/
 
 var lineFile = './Lines/'+month+'/'+day+'.json';
@@ -44,8 +25,6 @@ var commands = JSON.parse(fs.readFileSync('./commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./moves.json', 'utf8'));
-
-
 var itemList = require("./data/items.js");
 
 
@@ -255,7 +234,7 @@ bot.on("message", function(msg)
 
         });
         var leaderboardText = "```name | linecount | words/line\n";
-        leaderboardText += "ordered by number of words\n```"
+        leaderboardText += "ordered by number of words\n```";
         var max = 10;
         if (array.length < 10)
         {
