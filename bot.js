@@ -61,12 +61,12 @@ var db = mongoose.connection;
 var entrySchema = mongoose.Schema(
 {
     _id: String,
-    user:
-    {
-        id: String,
+    users:
+    [{
+        _id: String,
         lineCount: Number,
         wpl: Number
-    }
+    }]
     
 });
 
@@ -97,11 +97,13 @@ bot.on("message", function(msg)
             {
 
                 _id: msg.guild.id,
-                user:
-                {
-                    id: msg.author.id,
+                users:
+                [{
+
+                    _id: msg.author.id,
                     lineCount: 1
-                }
+                    
+                }]
                 
             });
             // save it, callback is just info
@@ -117,7 +119,7 @@ bot.on("message", function(msg)
             Entry.findOne(
             {
                 
-                "user.id": msg.author.id
+                "users._id": msg.author.id
                 
             }, function(e, entry)
             {
@@ -125,28 +127,50 @@ bot.on("message", function(msg)
                 if (entry === null)
                 {
                     console.log("adding new user")
-                    var ent = new Entry(
+                    var user = 
                     {
 
-                        _id: msg.guild.id,
-                        user:
-                        {
-                            id: msg.author.id,
-                            lineCount: 1
-                        }
+                        _id: msg.author.id,
+                        lineCount: 1
                         
-                    });
+                        
+                        
+                    }
+                    Entry.update({_id: msg.guild.id},
+                        {$push: {users: user}}, function(e, data) {});
+                    // var ent = new Entry(
+                    // {
 
-                    ent.save(function(e, ent)
-                    {
-                        if (e) return console.error(e);
-                        console.log("new user added");
-                    })
+                    //     _id: msg.guild.id,
+                    //     user:
+                    //     {
+                    //         id: msg.author.id,
+                    //         lineCount: 1
+                    //     }
+                        
+                    // });
+
+                    // ent.save(function(e, ent)
+                    // {
+                    //     if (e) return console.error(e);
+                    //     console.log("new user added");
+                    // })
                 }
                 else
                 {
+                    console.log(typeof(entry.users));
                     // basically here you would recalc wpl and such
-                    entry.user.lineCount += 1;
+                    for (var i = 0; i < entry.users.length; i++)
+                    {   
+                        console.log(entry.users[i]);
+                        if (entry.users[i]._id === msg.author.id)
+                        {
+                            entry.users[i].lineCount += 1;
+                            break;
+                        }
+                    }
+                    
+                    // entry.users.user._id.lineCount += 1;
                     entry.save(function(e, ent)
                     {
                         if (e) return console.error(e);
