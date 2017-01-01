@@ -103,7 +103,8 @@ bot.on("message", function(msg)
                 [{
 
                     _id: msg.author.id,
-                    lineCount: 1
+                    lineCount: 1,
+                    wpl: msg.content.split(" ").length
                     
                 }]
                 
@@ -132,33 +133,15 @@ bot.on("message", function(msg)
                     var user = 
                     {
                         _id: msg.author.id,
-                        lineCount: 1
+                        lineCount: 1,
+                        wpl: msg.content.split(" ").length
                     };
 
                     Entry.update({_id: msg.guild.id},
                         {$push: {users: user}}, function(e, data) {});
-                    // var ent = new Entry(
-                    // {
-
-                    //     _id: msg.guild.id,
-                    //     user:
-                    //     {
-                    //         id: msg.author.id,
-                    //         lineCount: 1
-                    //     }
-                        
-                    // });
-
-                    // ent.save(function(e, ent)
-                    // {
-                    //     if (e) return console.error(e);
-                    //     console.log("new user added");
-                    // })
                 }
                 else
                 {
-                    
-                    
                     // find the right user to increment
                     for (var i = 0; i < entry.users.length; i++)
                     {   
@@ -166,7 +149,8 @@ bot.on("message", function(msg)
                         if (entry.users[i]._id === msg.author.id)
                         {
                             entry.users[i].lineCount += 1;
-                            // basically here you would recalc wpl and such
+                            console.log(entry.users[i])
+                            entry.user[i].wpl = ((entry.user[i].wpl * entry.user[i].lineCount) + (msg.content.split(" ").length)) / (entry.users[i].lineCount);
                             break;
                         }
                     }
@@ -181,7 +165,12 @@ bot.on("message", function(msg)
             });
         }
     });
+    Entry.find({_id: msg.guild.id}, function(err,entries) {
+        if (err) throw err;
+    });
 });
+
+
 /*=========================================================================*/
 //LINE AND WPL COUNTER
 bot.on("message", function(msg)
