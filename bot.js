@@ -10,11 +10,11 @@ var fs = require("fs");
 var d = new Date();
 var day = d.getDate();
 var month = d.getMonth()+1;
-// bot.on("message", function(msg)
-// {
-//     day = d.getDate();
-//     month = d.getMonth()+1;
-// });
+bot.on("message", function(msg)
+{
+    day = d.getDate();
+    month = d.getMonth()+1;
+});
 /*=========================================================================*/
 
 var commands = JSON.parse(fs.readFileSync('./data/commands.json', 'utf8'));
@@ -22,8 +22,8 @@ var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
 var itemList = require("./data/items.js");
-// var lineFile = './Lines/'+month+'/'+day+'.json';
-// var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+var lineFile = './Lines/'+month+'/'+day+'.json';
+var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 
 var act_tok = "!";
 
@@ -45,7 +45,7 @@ var checkApproved = function(msg) {
     return false;
 };
 /*=========================================================================*/
-//LINE AND WPL COUNTER
+//DATABASE
 
 var mongoose = require("mongoose");
 
@@ -157,36 +157,37 @@ bot.on("message", function(msg)
 
 
 
+/*=========================================================================*/
+//LINE AND WPL COUNTER
+day = d.getDate();
+month = d.getMonth()+1;
 
-
-    // day = d.getDate();
-    // month = d.getMonth()+1;
-
-    // lineFile = './Lines/'+month+'/'+day+'.json';
-    // lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
-
-    // var serverData = lineCounts[msg.guild.id];
-    // if (serverData == undefined)
-    // {
-    //     lineCounts[msg.guild.id] = {};
-    // }
-    // var userData = lineCounts[msg.guild.id][msg.author.id];
-    // if (userData == undefined)
-    // {
-    //     lineCounts[msg.guild.id][msg.author.id] = {
-    //         "lineCount": 0,
-    //         "wpl": 1
-    //     };
-    //     userData = {
-    //         "lineCount": 0,
-    //         "wpl": 1
-    //     };
-    // }
-    // userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    // userData.lineCount++;
-    // lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    // lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    // fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
+lineFile = './Lines/'+month+'/'+day+'.json';
+lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+bot.on("message", function(msg)
+{
+    var serverData = lineCounts[msg.guild.id];
+    if (serverData == undefined)
+    {
+        lineCounts[msg.guild.id] = {};
+    }
+    var userData = lineCounts[msg.guild.id][msg.author.id];
+    if (userData == undefined)
+    {
+        lineCounts[msg.guild.id][msg.author.id] = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+        userData = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+    }
+    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+    userData.lineCount++;
+    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
 //LEADERBOARD
