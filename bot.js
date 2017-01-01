@@ -10,11 +10,11 @@ var fs = require("fs");
 var d = new Date();
 var day = d.getDate();
 var month = d.getMonth()+1;
-// bot.on("message", function(msg)
-// {
-//     day = d.getDate();
-//     month = d.getMonth()+1;
-// });
+bot.on("message", function(msg)
+{
+    day = d.getDate();
+    month = d.getMonth()+1;
+});
 /*=========================================================================*/
 
 var commands = JSON.parse(fs.readFileSync('./data/commands.json', 'utf8'));
@@ -22,8 +22,8 @@ var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
 var itemList = require("./data/items.js");
-// var lineFile = './Lines/'+month+'/'+day+'.json';
-// var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+var lineFile = './Lines/'+month+'/'+day+'.json';
+var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 
 var act_tok = "!";
 
@@ -44,18 +44,17 @@ var checkApproved = function(msg) {
     }
     return false;
 };
-/*=========================================================================*/
-//LINE AND WPL COUNTER
+/*=========================================================================
+//DATABASE
 
 var mongoose = require("mongoose");
 
 var mongouser = process.env.mongouser;
 var mongopass = process.env.mongopass;
 
-mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com:51068/boxbot")
+mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com:51068/boxbot");
 
 var db = mongoose.connection;
-
 
 // this is the format of an entry. _id is the server id, rest self expl
 var entrySchema = mongoose.Schema(
@@ -180,42 +179,34 @@ bot.on("message", function(msg)
                 }
             })
         }
-        
-
     })
-
-
-
-
-
-    // day = d.getDate();
-    // month = d.getMonth()+1;
-
-    // lineFile = './Lines/'+month+'/'+day+'.json';
-    // lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
-
-    // var serverData = lineCounts[msg.guild.id];
-    // if (serverData == undefined)
-    // {
-    //     lineCounts[msg.guild.id] = {};
-    // }
-    // var userData = lineCounts[msg.guild.id][msg.author.id];
-    // if (userData == undefined)
-    // {
-    //     lineCounts[msg.guild.id][msg.author.id] = {
-    //         "lineCount": 0,
-    //         "wpl": 1
-    //     };
-    //     userData = {
-    //         "lineCount": 0,
-    //         "wpl": 1
-    //     };
-    // }
-    // userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    // userData.lineCount++;
-    // lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    // lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    // fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
+});
+/*=========================================================================*/
+//LINE AND WPL COUNTER
+bot.on("message", function(msg)
+{
+    var serverData = lineCounts[msg.guild.id];
+    if (serverData == undefined)
+    {
+        lineCounts[msg.guild.id] = {};
+    }
+    var userData = lineCounts[msg.guild.id][msg.author.id];
+    if (userData == undefined)
+    {
+        lineCounts[msg.guild.id][msg.author.id] = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+        userData = {
+            "lineCount": 0,
+            "wpl": 1
+        };
+    }
+    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+    userData.lineCount++;
+    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
 //LEADERBOARD
@@ -302,131 +293,69 @@ bot.on("message", function(msg)
     }
 });
 /*=========================================================================*/
-//!POKEMON COMMAND
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
-    if (msg.content.startsWith(act_tok + "pkmn"))
+//GETDATA FUNCTION
+function getData(msg,list,name) {
+    var args = msg.content.split(" ");
+    if (list[args[1]] != undefined)
     {
-        var args = msg.content.split(" ");
-        if (!(pokemonList[args[1]] == undefined))
-        {
-            var poke = pokemonList[args[1]];
-            var data = "```\n";
-            data  += poke.species + "\n" + poke.types + "\n";
-
-            var abilities = Object.keys(poke.abilities);
+        var thing = list[args[1]];
+        var data = "```\n";
+        if (name == "Pokemon") {
+            data  += thing.species + "\n" + thing.types + "\n";
+            var abilities = Object.keys(thing.abilities);
             for (var i = 0; i < abilities.length; i++)
             {
-                data  += (poke.abilities[abilities[i]]);
-                if (!(i == abilities.length - 1))
+                data  += (thing.abilities[abilities[i]]);
+                if (i != abilities.length - 1)
                 {
                     data  += " | ";
                 }
             }
             data  += "\n";
-
-            var stats = Object.keys(poke.baseStats);
+            var stats = Object.keys(thing.baseStats);
             for (var i = 0; i < 6; i++)
             {
-                data  += (stats[i] + ": " + poke.baseStats[stats[i]]);
+                data  += (stats[i] + ": " + thing.baseStats[stats[i]]);
                 if (!(i == 5))
                 {
                     data  += " | ";
                 }
             }
-
             data += "```";
             data += "\nAnalysis: ";
-            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + args[1] + "/";
+            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + thing.species.toLowerCase() + "/";
 
-            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + args[1] + ".png", "bisharp.png", data);
-        }
-        else
-        {
-            msg.channel.sendMessage("I can't seem to find that Pokemon :box:\nTry writing it like 'landorustherian' or 'aerodactylmega' instead.");
-        }
-    }
-});
-/*=========================================================================*/
-//ABILITY COMMAND
-
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
-    if (msg.content.startsWith(act_tok + "ability"))
-    {
-        var args = msg.content.split(" ");
-        if (!(abilityList[args[1]] == undefined))
-        {
-            var ability = abilityList[args[1]];
-            var data = "```\n";
-            data  += ability.name + "\n" + ability.desc + "\n```";
-            msg.channel.sendMessage(data);
-        }
-        else
-        {
-            msg.channel.sendMessage("I can't seem to find that Ability :box:\nTry writing it without spaces.");
-        }
-    }
-});
-
-// @@@@@@@@ items
-
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
-    
-    if (msg.content.startsWith(act_tok + "item"))
-    {
-
-        var items = itemList.BattleItems;
-        var args = msg.content.split(" ");
-        if (!(items[args[1]] == undefined))
-        {
-            var item = items[args[1]];
-            var data = "```\n";
-            data  += item.name + "\n" + item.desc + "\n```";
-            msg.channel.sendMessage(data);
-        }
-        else
-        {
-            msg.channel.sendMessage("I can't seem to find that Item :box:\nTry writing it without spaces.");
-        }
-    }
-});
-/*=========================================================================*/
-//MOVES COMMAND
-bot.on("message", msg => {
-    if(msg.author.bot) return;
-    if (msg.content.startsWith(act_tok+"move")) {
-        var args = msg.content.split(" ");
-        if (!(movesList[args[1]] == undefined)) {
-            var move = movesList[args[1]];
-            var data = "```\n";
-            data += move.name+"\n";
-            if (move.category == "Status") {
-                data+=move.desc+"\nType: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
-                      ", Priority: "+move.priority+" || Category: "+move.category+"```";
+            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + thing.species.toLowerCase() + ".png", args[1]+".png", data).catch(console.error);
+            return;
+        } else if (name == "Move") {
+            data += thing.name+"\n";
+            if (thing.category == "Status") {
+                data+=thing.desc+"\nType: "+thing.type+" || BP: "+thing.power+", Acc: "+thing.accuracy+
+                      ", Priority: "+thing.priority+" || Category: "+thing.category+"```";
             } else {
-                data +="Type: "+move.type+" || BP: "+move.power+", Acc: "+move.accuracy+
-                      ", Priority: "+move.priority+" || Category: "+move.category+"\n"+move.desc+"```";
+                data +="Type: "+thing.type+" || BP: "+thing.power+", Acc: "+thing.accuracy+
+                      ", Priority: "+thing.priority+" || Category: "+thing.category+"\n"+thing.desc+"```";
             }
-            msg.channel.sendMessage(data);
         } else {
-            msg.channel.sendMessage("I can't seem to find that Move :box:\nTry writing it without spaces.");
+            data  += thing.name + "\n" + thing.desc + "\n```";
         }
+        msg.channel.sendMessage(data);
     }
-});
+    else
+    {
+        msg.channel.sendMessage("I can't seem to find that " + name + " :box:\nTry writing it without spaces/dashes.");
+    }
+}
 /*=========================================================================*/
-//COMMAND RESPONSES
+//DATA COMMANDs
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
-    if (commands[msg.content])
-    {
-        msg.channel.sendMessage(commands[msg.content]);
-    }
+    if (msg.content.startsWith(act_tok + "ability")) getData(msg, abilityList, "Ability");
+    if (msg.content.startsWith(act_tok + "item")) getData(msg, itemList.BattleItems, "Item");
+    if (msg.content.startsWith(act_tok + "move")) getData(msg, movesList, "Move");
+    if (msg.content.startsWith(act_tok + "pokemon")) getData(msg, pokemonList, "Pokemon");
+    if (commands[msg.content]) msg.channel.sendMessage(commands[msg.content]);
 });
 /*=========================================================================*/
 //COMMANDS WITH ARGS
@@ -460,7 +389,6 @@ bot.on('error', function(e)
 
 function stripUsage(str)
 {
-    
     return str.replace(/\|/g, "");
 }
 
@@ -483,7 +411,7 @@ bot.on("message", function(msg)
         var search_mon = " | " + mon;
         // 40 chars
         var diff = 40 - mon.length - 1;
-        for (i = 0; i < diff; i++)
+        for (var i = 0; i < diff; i++)
         {
             search_mon += " ";
         }
@@ -512,67 +440,3 @@ bot.on("message", function(msg)
         });
     }
 });
-
-
-/*
-// var usage_data = require("./data/gen7ou-1825.json");
-// double_console(usage_data.data.Weavile.Items);
-
-// var test_url = "http://www.smogon.com/stats/2016-11/moveset/gen7ou-1825.txt";
-
-// var request = require("request");
-// request(
-// {
-//     url: test_url,
-//     json: false
-// }, function(e, res, body)
-// {
-//     console.log(body.indexOf("| Weavile                                | "));
-// })
-
-
-
-var base_url = "http://www.smogon.com/stats/2016-11/moveset/";
-bot.on("message", function(msg)
-{
-    if (msg.content.startsWith(act_tok + "stats"))
-    {
-        var args = msg.content.split(" ");
-        // check for argc
-        var tier = args[1];
-        var rating = args[2];
-        var mon = args[3];
-
-        var search_mon = " | " + mon;
-        // 40 chars
-        var diff = 40 - mon.length - 1;
-        for (var i = 0; i < diff; i++)
-        {
-            search_mon += " ";
-        }
-        search_mon += "| ";
-
-        var url = base_url + "gen7" + tier + "-" + rating + ".txt";
-        var request = require("request");
-
-        request(
-        {
-            url: url,
-            json: false
-        }, function(e, res, body)
-        {
-            if (!e && res.statusCode === 200)
-            {
-                var startInd = body.indexOf(search_mon);
-                var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
-                var sendStr = body.substring(startInd, endInd);
-                msg.channel.sendMessage(sendStr);
-                msg.channel.sendMessage("whu");
-            }
-            
-            // double_console(startInd + " " + endInd);
-            // double_console(body.substring(startInd, endInd));
-        });
-
-    }
-});*/
