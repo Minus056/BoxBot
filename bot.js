@@ -44,7 +44,7 @@ var checkApproved = function(msg) {
     }
     return false;
 };
-/*=========================================================================*/
+/*=========================================================================
 //DATABASE
 
 var mongoose = require("mongoose");
@@ -159,16 +159,8 @@ bot.on("message", function(msg)
         
 
     })
-
-
-
 /*=========================================================================*/
 //LINE AND WPL COUNTER
-day = d.getDate();
-month = d.getMonth()+1;
-
-lineFile = './Lines/'+month+'/'+day+'.json';
-lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 bot.on("message", function(msg)
 {
     var serverData = lineCounts[msg.guild.id];
@@ -375,7 +367,6 @@ bot.on('error', function(e)
 
 function stripUsage(str)
 {
-    
     return str.replace(/\|/g, "");
 }
 
@@ -427,67 +418,3 @@ bot.on("message", function(msg)
         });
     }
 });
-
-
-/*
-// var usage_data = require("./data/gen7ou-1825.json");
-// double_console(usage_data.data.Weavile.Items);
-
-// var test_url = "http://www.smogon.com/stats/2016-11/moveset/gen7ou-1825.txt";
-
-// var request = require("request");
-// request(
-// {
-//     url: test_url,
-//     json: false
-// }, function(e, res, body)
-// {
-//     console.log(body.indexOf("| Weavile                                | "));
-// })
-
-
-
-var base_url = "http://www.smogon.com/stats/2016-11/moveset/";
-bot.on("message", function(msg)
-{
-    if (msg.content.startsWith(act_tok + "stats"))
-    {
-        var args = msg.content.split(" ");
-        // check for argc
-        var tier = args[1];
-        var rating = args[2];
-        var mon = args[3];
-
-        var search_mon = " | " + mon;
-        // 40 chars
-        var diff = 40 - mon.length - 1;
-        for (var i = 0; i < diff; i++)
-        {
-            search_mon += " ";
-        }
-        search_mon += "| ";
-
-        var url = base_url + "gen7" + tier + "-" + rating + ".txt";
-        var request = require("request");
-
-        request(
-        {
-            url: url,
-            json: false
-        }, function(e, res, body)
-        {
-            if (!e && res.statusCode === 200)
-            {
-                var startInd = body.indexOf(search_mon);
-                var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
-                var sendStr = body.substring(startInd, endInd);
-                msg.channel.sendMessage(sendStr);
-                msg.channel.sendMessage("whu");
-            }
-            
-            // double_console(startInd + " " + endInd);
-            // double_console(body.substring(startInd, endInd));
-        });
-
-    }
-});*/
