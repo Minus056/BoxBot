@@ -56,10 +56,10 @@ mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com
 
 var db = mongoose.connection;
 
+
+// this is the format of an entry. _id is the server id, rest self expl
 var entrySchema = mongoose.Schema(
 {
-
-    
     _id: String,
     user:
     {
@@ -77,7 +77,9 @@ bot.on("message", function(msg)
     if (msg.author.bot) return;
     if (msg.guild == null) return;
 
-
+    // findOne finds an entry based on the query. Here it is looking
+    // for an _id of msg.guild.id
+    // if it finds something, the "entry" parameter won't be null
     Entry.findOne(
     {
 
@@ -90,6 +92,7 @@ bot.on("message", function(msg)
         if (entry === null)
         {
             console.log("making new entry");
+            // create a new entry based on the structure
             var ent = new Entry(
             {
 
@@ -101,6 +104,7 @@ bot.on("message", function(msg)
                 }
                 
             });
+            // save it, callback is just info
             ent.save(function (e, ent)
             {
                 if (e) return console.error(e);
@@ -141,6 +145,7 @@ bot.on("message", function(msg)
                 }
                 else
                 {
+                    // basically here you would recalc wpl and such
                     entry.user.lineCount += 1;
                     entry.save(function(e, ent)
                     {
