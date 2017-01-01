@@ -1,0 +1,3265 @@
+ +----------------------------------------+ 
+ | Raichu-Alola                           | 
+ +----------------------------------------+ 
+ | Raw count: 22                          | 
+ | Avg. weight: 0.511532167665            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Surge Surfer 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Electrium Z 30.372%                    | 
+ | Life Orb 22.625%                       | 
+ | Choice Specs 16.735%                   | 
+ | Aloraichium Z 11.260%                  | 
+ | Leftovers 10.223%                      | 
+ | Focus Sash  5.480%                     | 
+ | Other  3.304%                          | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hasty:0/4/0/252/0/252 45.039%          | 
+ | Timid:0/0/0/252/4/252 31.409%          | 
+ | Modest:252/0/0/252/0/4 10.223%         | 
+ | Timid:252/0/0/252/4/0  7.747%          | 
+ | Timid:0/0/0/0/0/0  5.581%              | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Thunderbolt 83.265%                    | 
+ | Fake Out 57.437%                       | 
+ | Psychic 48.139%                        | 
+ | Grass Knot 33.059%                     | 
+ | Protect 29.641%                        | 
+ | Psyshock 22.317%                       | 
+ | Thunder 20.040%                        | 
+ | Volt Switch 15.805%                    | 
+ | Encore 13.431%                         | 
+ | Nothing 11.163%                        | 
+ | Nasty Plot  8.784%                     | 
+ | Calm Mind  7.747%                      | 
+ | Focus Blast  6.609%                    | 
+ | Electric Terrain  3.304%               | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Tapu Koko +56.838%                     | 
+ | Shiinotic +23.240%                     | 
+ | Tsareena +18.163%                      | 
+ | Muk-Alola +17.227%                     | 
+ | Charizard-Mega-Y +13.710%              | 
+ | Greninja-Ash +12.292%                  | 
+ | Bruxish +9.531%                        | 
+ | Kartana +8.862%                        | 
+ | Pelipper +8.240%                       | 
+ | Golem-Alola +5.667%                    | 
+ | Flygon +3.888%                         | 
+ | Silvally-Water +3.877%                 | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Tapu Koko                              | 
+ +----------------------------------------+ 
+ | Raw count: 23                          | 
+ | Avg. weight: 0.567181597093            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Electric Surge 100.000%                | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 27.100%                       | 
+ | Air Balloon 21.394%                    | 
+ | Terrain Extender 11.586%               | 
+ | Leftovers  9.534%                      | 
+ | Sitrus Berry  8.819%                   | 
+ | Choice Scarf  6.235%                   | 
+ | Light Clay  4.815%                     | 
+ | Choice Band  4.815%                    | 
+ | Toxic Orb  2.851%                      | 
+ | Other  2.851%                          | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/4/252 64.169%          | 
+ | Hardy:0/0/0/0/0/0 21.482%              | 
+ | Naughty:252/252/0/4/0/0  6.684%        | 
+ | Timid:0/0/0/0/0/0  4.815%              | 
+ | Other  2.851%                          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Dazzling Gleam 77.985%                 | 
+ | Volt Switch 61.406%                    | 
+ | Nature's Madness 45.453%               | 
+ | Protect 33.064%                        | 
+ | Brave Bird 31.016%                     | 
+ | Thunderbolt 30.933%                    | 
+ | Wild Charge 26.201%                    | 
+ | Roost 23.085%                          | 
+ | Grass Knot 13.283%                     | 
+ | Discharge 12.564%                      | 
+ | Electro Ball 11.050%                   | 
+ | Calm Mind  7.578%                      | 
+ | Sky Drop  6.235%                       | 
+ | Reflect  4.815%                        | 
+ | Other 15.331%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Raichu-Alola +44.737%                  | 
+ | Shiinotic +18.743%                     | 
+ | Tsareena +13.339%                      | 
+ | Charizard-Mega-Y +11.057%              | 
+ | Muk-Alola +10.503%                     | 
+ | Greninja-Ash +8.845%                   | 
+ | Bruxish +7.686%                        | 
+ | Pelipper +6.396%                       | 
+ | Kartana +5.755%                        | 
+ | Flygon +3.136%                         | 
+ | Silvally-Water +2.813%                 | 
+ | Magearna +2.543%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Incineroar                             | 
+ +----------------------------------------+ 
+ | Raw count: 26                          | 
+ | Avg. weight: 0.467066083144            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Intimidate 75.390%                     | 
+ | Blaze 24.610%                          | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Incinium Z 45.012%                     | 
+ | Leftovers 17.904%                      | 
+ | Firium Z 14.489%                       | 
+ | Life Orb  6.125%                       | 
+ | Focus Sash  5.172%                     | 
+ | Lum Berry  5.172%                      | 
+ | Black Glasses  3.062%                  | 
+ | Other  3.062%                          | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 39.934%        | 
+ | Naughty:252/252/0/4/0/0 17.904%        | 
+ | Jolly:0/252/0/0/4/252 16.375%          | 
+ | Adamant:56/252/0/0/4/196 14.489%       | 
+ | Hardy:0/64/0/192/0/252  5.172%         | 
+ | Hardy:252/0/0/252/0/4  3.062%          | 
+ | Other  3.062%                          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Darkest Lariat 96.938%                 | 
+ | Flare Blitz 80.563%                    | 
+ | Cross Chop 35.722%                     | 
+ | Fake Out 29.201%                       | 
+ | Earthquake 21.458%                     | 
+ | Snarl 17.904%                          | 
+ | Flame Charge 16.375%                   | 
+ | Crunch 16.375%                         | 
+ | Sunny Day 14.489%                      | 
+ | Acrobatics 12.459%                     | 
+ | Bulk Up  8.235%                        | 
+ | Throat Chop  7.180%                    | 
+ | Brick Break  7.180%                    | 
+ | Swords Dance  6.125%                   | 
+ | Attract  5.172%                        | 
+ | Overheat  5.172%                       | 
+ | Other 19.452%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Greninja-Ash +12.275%                  | 
+ | Lurantis +11.990%                      | 
+ | Eevee +11.244%                         | 
+ | Pikachu +11.244%                       | 
+ | Tapu Fini +11.244%                     | 
+ | Shiinotic +8.394%                      | 
+ | Kommo-o +7.514%                        | 
+ | Primarina +7.103%                      | 
+ | Komala +7.038%                         | 
+ | Lycanroc +6.338%                       | 
+ | Roserade +3.777%                       | 
+ | Tapu Lele +3.552%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Primarina                              | 
+ +----------------------------------------+ 
+ | Raw count: 22                          | 
+ | Avg. weight: 0.501996448915            | 
+ | Viability Ceiling: 59                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Liquid Voice 83.051%                   | 
+ | Torrent 16.949%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Sitrus Berry 37.036%                   | 
+ | Primarium Z 24.740%                    | 
+ | Life Orb 24.641%                       | 
+ | Nothing  7.895%                        | 
+ | Eviolite  5.687%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:252/0/0/252/4/0 46.014%         | 
+ | Modest:48/0/0/252/208/0 27.779%        | 
+ | Modest:252/0/0/252/0/0  9.257%         | 
+ | Hardy:0/0/0/0/0/0  7.895%              | 
+ | Mild:252/4/0/252/0/0  5.687%           | 
+ | Other  3.367%                          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Moonblast 66.002%                      | 
+ | Hyper Voice 65.045%                    | 
+ | Dazzling Gleam 33.998%                 | 
+ | Sparkling Aria 32.635%                 | 
+ | Protect 30.532%                        | 
+ | Ice Beam 29.169%                       | 
+ | Reflect 27.779%                        | 
+ | Rain Dance 27.779%                     | 
+ | Bubble Beam 18.006%                    | 
+ | Disarming Voice 18.006%                | 
+ | Psychic 13.582%                        | 
+ | Scald  9.257%                          | 
+ | Hydro Pump  6.735%                     | 
+ | Energy Ball  5.687%                    | 
+ | Other 15.789%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Decidueye +35.069%                     | 
+ | Dragonite +19.862%                     | 
+ | Drampa +16.951%                        | 
+ | Oranguru +16.749%                      | 
+ | Dhelmise +16.593%                      | 
+ | Eevee +12.874%                         | 
+ | Pikachu +12.874%                       | 
+ | Tapu Fini +12.874%                     | 
+ | Incineroar +9.836%                     | 
+ | Komala +8.059%                         | 
+ | Silvally-Water +4.024%                 | 
+ | Sableye-Mega +2.418%                   | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Toxapex                                | 
+ +----------------------------------------+ 
+ | Raw count: 15                          | 
+ | Avg. weight: 0.631969007129            | 
+ | Viability Ceiling: 63                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Merciless 70.438%                      | 
+ | Regenerator 29.562%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Black Sludge 54.614%                   | 
+ | Leftovers 34.837%                      | 
+ | Rocky Helmet  6.626%                   | 
+ | Other  3.923%                          | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Rash:252/4/0/252/0/0 47.873%           | 
+ | Hardy:252/0/128/0/128/0 22.936%        | 
+ | Lax:252/4/252/0/0/0 11.901%            | 
+ | Impish:252/4/252/0/0/0  6.741%         | 
+ | Impish:248/8/252/0/0/0  6.626%         | 
+ | Other  3.923%                          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Liquidation 66.515%                    | 
+ | Baneful Bunker 57.218%                 | 
+ | Sludge Bomb 47.873%                    | 
+ | Frost Breath 47.873%                   | 
+ | Toxic Spikes 38.859%                   | 
+ | Recover 33.601%                        | 
+ | Scald 33.485%                          | 
+ | Infestation 22.936%                    | 
+ | Toxic 18.527%                          | 
+ | Poison Jab 13.367%                     | 
+ | Other 19.747%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Comfey +36.422%                        | 
+ | Crabominable +35.203%                  | 
+ | Toucannon +29.963%                     | 
+ | Vikavolt +28.206%                      | 
+ | Mudsdale +27.762%                      | 
+ | Shiinotic +13.426%                     | 
+ | Greninja-Ash +10.128%                  | 
+ | Lycanroc-Midnight +8.990%              | 
+ | Ninetales-Alola +8.277%                | 
+ | Tapu Koko +7.869%                      | 
+ | Wishiwashi-School +6.409%              | 
+ | Golem-Alola +5.479%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Decidueye                              | 
+ +----------------------------------------+ 
+ | Raw count: 19                          | 
+ | Avg. weight: 0.496800447994            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Long Reach 93.346%                     | 
+ | Overgrow  6.654%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 39.156%                      | 
+ | Decidium Z 31.661%                     | 
+ | Choice Scarf  7.879%                   | 
+ | Focus Sash  6.770%                     | 
+ | Quick Claw  6.654%                     | 
+ | Life Orb  3.940%                       | 
+ | Other  3.940%                          | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/8/248 32.501%          | 
+ | Lonely:248/252/0/8/0/0 21.067%         | 
+ | Adamant:248/252/0/0/8/0 17.249%        | 
+ | Jolly:0/252/0/0/4/252  7.879%          | 
+ | Hardy:4/0/252/0/252/0  6.770%          | 
+ | Hardy:0/232/80/88/28/80  6.654%        | 
+ | Other  7.879%                          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Spirit Shackle 100.000%                | 
+ | Leaf Blade 65.624%                     | 
+ | U-turn 44.321%                         | 
+ | Swords Dance 39.156%                   | 
+ | Frenzy Plant 31.661%                   | 
+ | Shadow Claw 25.006%                    | 
+ | Brave Bird 24.019%                     | 
+ | Sucker Punch 21.188%                   | 
+ | Grass Knot 21.067%                     | 
+ | Roost  7.879%                          | 
+ | Protect  6.770%                        | 
+ | Other 13.309%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Primarina +39.740%                     | 
+ | Dragonite +24.585%                     | 
+ | Drampa +21.674%                        | 
+ | Dhelmise +21.315%                      | 
+ | Oranguru +18.104%                      | 
+ | Eevee +15.935%                         | 
+ | Pikachu +15.935%                       | 
+ | Tapu Fini +15.935%                     | 
+ | Araquanid +5.034%                      | 
+ | Persian-Alola +5.034%                  | 
+ | Kommo-o +4.804%                        | 
+ | Mimikyu +4.474%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Comfey                                 | 
+ +----------------------------------------+ 
+ | Raw count: 12                          | 
+ | Avg. weight: 0.6485739435              | 
+ | Viability Ceiling: 63                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Triage 100.000%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Focus Sash 47.859%                     | 
+ | Leftovers 35.860%                      | 
+ | Sitrus Berry  8.211%                   | 
+ | Mental Herb  8.071%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Sassy:252/4/0/0/252/0 58.309%          | 
+ | Timid:252/0/0/4/0/252 33.480%          | 
+ | Timid:252/0/0/0/0/252  8.211%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Synthesis 91.929%                      | 
+ | Floral Healing 69.812%                 | 
+ | Trick Room 58.309%                     | 
+ | Helping Hand 47.859%                   | 
+ | Protect 33.480%                        | 
+ | Aromatherapy 33.480%                   | 
+ | Dazzling Gleam 33.480%                 | 
+ | After You 10.450%                      | 
+ | Leech Seed  8.211%                     | 
+ | Other 12.989%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Crabominable +45.639%                  | 
+ | Toxapex +42.058%                       | 
+ | Toucannon +39.999%                     | 
+ | Mudsdale +36.328%                      | 
+ | Vikavolt +30.146%                      | 
+ | Lycanroc +13.113%                      | 
+ | Komala +12.782%                        | 
+ | Minior +6.450%                         | 
+ | Dodrio +6.450%                         | 
+ | Dhelmise +5.095%                       | 
+ | Ninetales-Alola +3.521%                | 
+ | Kartana +2.231%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Vikavolt                               | 
+ +----------------------------------------+ 
+ | Raw count: 12                          | 
+ | Avg. weight: 0.603022197627            | 
+ | Viability Ceiling: 63                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Levitate 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Assault Vest 51.474%                   | 
+ | Life Orb 29.568%                       | 
+ | Electrium Z 10.278%                    | 
+ | Leftovers  8.680%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:252/0/0/252/4/0 60.154%         | 
+ | Quiet:252/0/0/252/4/0 20.887%          | 
+ | Quiet:132/0/0/252/0/0  8.680%          | 
+ | Hardy:0/0/0/0/0/0  5.139%              | 
+ | Hardy:112/76/72/0/0/248  5.139%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Bug Buzz 100.000%                      | 
+ | Flash Cannon 68.834%                   | 
+ | Air Slash 65.293%                      | 
+ | Discharge 65.293%                      | 
+ | Protect 29.568%                        | 
+ | Thunderbolt 26.026%                    | 
+ | Energy Ball 20.887%                    | 
+ | Thunder  8.680%                        | 
+ | Other 15.417%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Crabominable +43.943%                  | 
+ | Mudsdale +39.943%                      | 
+ | Toxapex +35.693%                       | 
+ | Toucannon +35.403%                     | 
+ | Comfey +33.282%                        | 
+ | Exeggutor-Alola +20.196%               | 
+ | Porygon2 +16.987%                      | 
+ | Oranguru +15.170%                      | 
+ | Golisopod +13.447%                     | 
+ | Marowak-Alola +10.837%                 | 
+ | Sableye-Mega +5.410%                   | 
+ | Aegislash +5.410%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Pheromosa                              | 
+ +----------------------------------------+ 
+ | Raw count: 21                          | 
+ | Avg. weight: 0.453131332698            | 
+ | Viability Ceiling: 59                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Beast Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Focus Sash 48.239%                     | 
+ | Choice Band 33.551%                    | 
+ | Life Orb 18.210%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hasty:0/252/0/4/0/252 32.240%          | 
+ | Jolly:0/252/0/0/4/252 26.622%          | 
+ | Adamant:0/252/4/0/0/252 20.120%        | 
+ | Naive:0/188/0/68/0/252 14.302%         | 
+ | Hardy:4/252/0/0/0/252  6.716%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | High Jump Kick 77.286%                 | 
+ | U-turn 61.044%                         | 
+ | Blizzard 38.956%                       | 
+ | Poison Jab 33.338%                     | 
+ | Focus Blast 32.240%                    | 
+ | Giga Impact 32.240%                    | 
+ | Lunge 30.744%                          | 
+ | Return 20.120%                         | 
+ | Protect 19.907%                        | 
+ | Brick Break 15.999%                    | 
+ | Ice Beam 14.302%                       | 
+ | Bug Buzz 14.302%                       | 
+ | Other  9.523%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Celesteela +22.880%                    | 
+ | Guzzlord +21.149%                      | 
+ | Necrozma +17.185%                      | 
+ | Buzzwole +15.715%                      | 
+ | Xurkitree +14.932%                     | 
+ | Politoed +12.231%                      | 
+ | Manectric-Mega +12.231%                | 
+ | Tapu Bulu +10.610%                     | 
+ | Kartana +6.357%                        | 
+ | Lycanroc +5.120%                       | 
+ | Raichu +5.067%                         | 
+ | Togetic +5.067%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Tsareena                               | 
+ +----------------------------------------+ 
+ | Raw count: 16                          | 
+ | Avg. weight: 0.427535241922            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Queenly Majesty 74.326%                | 
+ | Leaf Guard 25.674%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Choice Scarf 66.689%                   | 
+ | Sitrus Berry 16.819%                   | 
+ | Lum Berry 16.492%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/4/252 57.507%        | 
+ | Adamant:252/252/0/0/0/4 16.819%        | 
+ | Gentle:252/4/0/0/252/0 16.492%         | 
+ | Jolly:0/252/0/0/4/252  9.182%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Trop Kick 100.000%                     | 
+ | Play Rough 74.326%                     | 
+ | High Jump Kick 66.689%                 | 
+ | U-turn 51.723%                         | 
+ | Rapid Spin 40.967%                     | 
+ | Protect 16.819%                        | 
+ | Leaf Storm 16.492%                     | 
+ | Synthesis 16.492%                      | 
+ | Other 16.492%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Muk-Alola +36.602%                     | 
+ | Tapu Koko +30.216%                     | 
+ | Raichu-Alola +29.706%                  | 
+ | Charizard-Mega-Y +26.174%              | 
+ | Kartana +18.022%                       | 
+ | Lurantis +16.345%                      | 
+ | Lycanroc-Midnight +13.581%             | 
+ | Exeggutor-Alola +12.445%               | 
+ | Wishiwashi-School +11.000%             | 
+ | Golem-Alola +10.070%                   | 
+ | Roserade +8.042%                       | 
+ | Magearna +6.019%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Toucannon                              | 
+ +----------------------------------------+ 
+ | Raw count: 15                          | 
+ | Avg. weight: 0.433017813612            | 
+ | Viability Ceiling: 63                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Skill Link 72.910%                     | 
+ | Sheer Force 27.090%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Wacan Berry 57.346%                    | 
+ | Choice Band 27.090%                    | 
+ | Choice Scarf  9.839%                   | 
+ | Expert Belt  5.725%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:248/252/0/0/8/0 90.161%        | 
+ | Jolly:0/252/0/0/4/252  9.839%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Beak Blast 100.000%                    | 
+ | Rock Blast 72.910%                     | 
+ | Bullet Seed 72.910%                    | 
+ | Swords Dance 57.346%                   | 
+ | U-turn 36.928%                         | 
+ | Return 32.815%                         | 
+ | Steel Wing 27.090%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Mudsdale +51.541%                      | 
+ | Comfey +48.993%                        | 
+ | Crabominable +44.677%                  | 
+ | Toxapex +42.724%                       | 
+ | Vikavolt +39.633%                      | 
+ | Lurantis +17.505%                      | 
+ | Exeggutor-Alola +13.604%               | 
+ | Roserade +8.561%                       | 
+ | Tsareena +6.014%                       | 
+ | Bellossom +4.766%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Oranguru                               | 
+ +----------------------------------------+ 
+ | Raw count: 11                          | 
+ | Avg. weight: 0.541020040012            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Inner Focus 47.630%                    | 
+ | Symbiosis 29.318%                      | 
+ | Telepathy 23.052%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 51.550%                      | 
+ | Mental Herb 35.952%                    | 
+ | Sitrus Berry 12.498%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Calm:248/0/8/0/252/0 51.550%           | 
+ | Calm:252/0/0/0/252/0 25.398%           | 
+ | Sassy:248/0/0/8/252/0 10.555%          | 
+ | Calm:248/0/0/8/252/0  6.249%           | 
+ | Hardy:252/0/0/0/252/0  6.249%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Instruct 89.445%                       | 
+ | Trick Room 87.502%                     | 
+ | Light Screen 57.799%                   | 
+ | Psychic Terrain 51.550%                | 
+ | Thunderbolt 31.646%                    | 
+ | Psychic 31.646%                        | 
+ | Protect 16.803%                        | 
+ | Taunt 10.555%                          | 
+ | Psyshock 10.555%                       | 
+ | Other 12.498%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Drampa +51.277%                        | 
+ | Dragonite +43.634%                     | 
+ | Dhelmise +40.364%                      | 
+ | Primarina +32.152%                     | 
+ | Decidueye +30.733%                     | 
+ | Exeggutor-Alola +26.580%               | 
+ | Porygon2 +21.497%                      | 
+ | Vikavolt +18.239%                      | 
+ | Golisopod +17.957%                     | 
+ | Marowak-Alola +15.347%                 | 
+ | Wishiwashi-School +11.312%             | 
+ | Metagross-Mega +5.289%                 | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Kartana                                | 
+ +----------------------------------------+ 
+ | Raw count: 14                          | 
+ | Avg. weight: 0.557092543702            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Beast Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 77.782%                       | 
+ | Choice Scarf 22.218%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/4/252 58.002%          | 
+ | Jolly:0/252/4/0/0/252 24.548%          | 
+ | Adamant:4/252/0/0/0/252 17.450%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Leaf Blade 100.000%                    | 
+ | Sacred Sword 82.550%                   | 
+ | Smart Strike 54.673%                   | 
+ | Psycho Cut 50.096%                     | 
+ | Swords Dance 49.904%                   | 
+ | Night Slash 45.327%                    | 
+ | Other 17.450%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Lycanroc +24.648%                      | 
+ | Charizard-Mega-Y +22.267%              | 
+ | Muk-Alola +16.898%                     | 
+ | Politoed +15.799%                      | 
+ | Manectric-Mega +15.799%                | 
+ | Tapu Bulu +14.178%                     | 
+ | Komala +12.748%                        | 
+ | Tsareena +10.916%                      | 
+ | Pheromosa +7.016%                      | 
+ | Tapu Koko +5.076%                      | 
+ | Raichu-Alola +4.566%                   | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Greninja-Ash                           | 
+ +----------------------------------------+ 
+ | Raw count: 12                          | 
+ | Avg. weight: 0.475630501338            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Battle Bond 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 49.100%                       | 
+ | Focus Sash 26.472%                     | 
+ | Sitrus Berry 17.913%                   | 
+ | Waterium Z  6.516%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/4/252 44.194%          | 
+ | Hardy:0/64/0/236/0/208 38.094%         | 
+ | Hasty:4/0/0/252/0/252 11.196%          | 
+ | Hasty:0/4/0/252/0/252  6.516%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Water Shuriken 70.891%                 | 
+ | Protect 56.007%                        | 
+ | Scald 55.390%                          | 
+ | Dark Pulse 55.390%                     | 
+ | Ice Beam 55.390%                       | 
+ | Blizzard 44.610%                       | 
+ | Rock Slide 38.094%                     | 
+ | Acrobatics 11.196%                     | 
+ | Other 13.031%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Shiinotic +28.584%                     | 
+ | Incineroar +27.195%                    | 
+ | Tapu Koko +21.922%                     | 
+ | Raichu-Alola +21.412%                  | 
+ | Kommo-o +20.491%                       | 
+ | Toxapex +13.633%                       | 
+ | Salazzle +8.425%                       | 
+ | Ninetales-Alola +8.347%                | 
+ | Palossand +7.793%                      | 
+ | Metagross-Mega +5.556%                 | 
+ | Marowak-Alola +5.226%                  | 
+ | Pheromosa +5.061%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Crabominable                           | 
+ +----------------------------------------+ 
+ | Raw count: 7                           | 
+ | Avg. weight: 0.701426285297            | 
+ | Viability Ceiling: 63                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Anger Point 92.426%                    | 
+ | Hyper Cutter  7.574%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Fightinium Z 92.426%                   | 
+ | Groundium Z  7.574%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 92.426%        | 
+ | Hardy:252/0/156/0/0/100  7.574%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Crabhammer 100.000%                    | 
+ | Earthquake 100.000%                    | 
+ | Close Combat 100.000%                  | 
+ | Ice Punch 92.426%                      | 
+ | Other  7.574%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Comfey +74.234%                        | 
+ | Toxapex +67.965%                       | 
+ | Vikavolt +65.723%                      | 
+ | Mudsdale +64.331%                      | 
+ | Toucannon +59.791%                     | 
+ | Ninetales-Alola +9.635%                | 
+ | Snorlax +6.614%                        | 
+ | Buzzwole +6.520%                       | 
+ | Mimikyu +1.453%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Mudsdale                               | 
+ +----------------------------------------+ 
+ | Raw count: 7                           | 
+ | Avg. weight: 0.638365098394            | 
+ | Viability Ceiling: 63                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Stamina 100.000%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Iron Ball 83.356%                      | 
+ | Leftovers  8.322%                      | 
+ | Assault Vest  8.322%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Rock Slide 100.000%                    | 
+ | Heavy Slam 100.000%                    | 
+ | Close Combat 91.678%                   | 
+ | Earthquake 91.678%                     | 
+ | Other 16.644%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Toucannon +75.607%                     | 
+ | Crabominable +70.686%                  | 
+ | Vikavolt +65.643%                      | 
+ | Comfey +65.164%                        | 
+ | Toxapex +58.895%                       | 
+ | Golisopod +9.204%                      | 
+ | Silvally-Electric +7.362%              | 
+ | Kommo-o +2.532%                        | 
+ | Mimikyu +2.202%                        | 
+ | Golem-Alola +1.901%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Dhelmise                               | 
+ +----------------------------------------+ 
+ | Raw count: 8                           | 
+ | Avg. weight: 0.541880249523            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Steelworker 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Ghostium Z 70.769%                     | 
+ | Leftovers 14.741%                      | 
+ | Earth Plate 14.489%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:248/252/0/0/8/0 85.259%        | 
+ | Adamant:252/252/0/0/4/0 14.741%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Power Whip 100.000%                    | 
+ | Anchor Shot 91.422%                    | 
+ | Shadow Claw 85.259%                    | 
+ | Protect 70.769%                        | 
+ | Rapid Spin 14.741%                     | 
+ | Heavy Slam 14.741%                     | 
+ | Earthquake 14.489%                     | 
+ | Other  8.578%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Dragonite +62.853%                     | 
+ | Drampa +59.942%                        | 
+ | Oranguru +56.372%                      | 
+ | Decidueye +49.952%                     | 
+ | Primarina +45.122%                     | 
+ | Minior +12.869%                        | 
+ | Dodrio +12.869%                        | 
+ | Comfey +11.039%                        | 
+ | Lycanroc +3.650%                       | 
+ | Muk-Alola +3.510%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Lycanroc                               | 
+ +----------------------------------------+ 
+ | Raw count: 12                          | 
+ | Avg. weight: 0.450259433588            | 
+ | Viability Ceiling: 59                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Sand Rush 52.738%                      | 
+ | Steadfast 47.262%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 47.262%                       | 
+ | Choice Scarf 36.601%                   | 
+ | Focus Sash 16.137%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/4/252 52.738%        | 
+ | Jolly:0/252/4/0/0/252 35.435%          | 
+ | Jolly:0/252/0/0/4/252 11.827%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Accelerock 100.000%                    | 
+ | Sucker Punch 88.173%                   | 
+ | Rock Slide 52.738%                     | 
+ | Fire Fang 48.429%                      | 
+ | Swords Dance 35.435%                   | 
+ | Stone Edge 35.435%                     | 
+ | Crunch 16.137%                         | 
+ | Protect 11.827%                        | 
+ | Other 11.827%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Kartana +37.827%                       | 
+ | Manectric-Mega +24.571%                | 
+ | Politoed +24.571%                      | 
+ | Tapu Bulu +22.950%                     | 
+ | Komala +19.826%                        | 
+ | Comfey +16.673%                        | 
+ | Incineroar +13.000%                    | 
+ | Pheromosa +11.020%                     | 
+ | Kommo-o +10.347%                       | 
+ | Ninetales-Alola +9.208%                | 
+ | Marowak-Alola +6.086%                  | 
+ | Greninja-Ash +3.328%                   | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Muk-Alola                              | 
+ +----------------------------------------+ 
+ | Raw count: 9                           | 
+ | Avg. weight: 0.47276047295             | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Power of Alchemy 57.383%               | 
+ | Poison Touch 42.617%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 65.863%                      | 
+ | Assault Vest 25.396%                   | 
+ | Poison Barb  8.740%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 76.497%        | 
+ | Adamant:252/0/224/0/32/0 14.763%       | 
+ | Modest:252/0/0/252/4/0  8.740%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Gunk Shot 86.421%                      | 
+ | Knock Off 76.497%                      | 
+ | Shadow Sneak 61.735%                   | 
+ | Pursuit 51.101%                        | 
+ | Crunch 14.763%                         | 
+ | Protect 14.763%                        | 
+ | Explosion 14.763%                      | 
+ | Brutal Swing 14.763%                   | 
+ | Brick Break 14.763%                    | 
+ | Taunt 13.579%                          | 
+ | Poison Fang 10.634%                    | 
+ | Sludge Bomb  8.740%                    | 
+ | Other 17.480%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Tsareena +59.535%                      | 
+ | Raichu-Alola +46.524%                  | 
+ | Charizard-Mega-Y +45.490%              | 
+ | Tapu Koko +38.294%                     | 
+ | Kartana +37.338%                       | 
+ | Dodrio +13.142%                        | 
+ | Minior +13.142%                        | 
+ | Mimikyu +8.642%                        | 
+ | Incineroar +7.961%                     | 
+ | Celesteela +5.168%                     | 
+ | Lurantis +5.162%                       | 
+ | Dhelmise +3.576%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Xurkitree                              | 
+ +----------------------------------------+ 
+ | Raw count: 8                           | 
+ | Avg. weight: 0.601582335671            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Beast Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 63.746%                      | 
+ | Life Orb 23.441%                       | 
+ | Choice Scarf 12.813%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hardy:0/0/0/0/0/0 63.746%              | 
+ | Timid:0/0/0/252/4/252 23.441%          | 
+ | Modest:252/0/0/252/4/0 12.813%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Discharge 76.559%                      | 
+ | Brutal Swing 63.746%                   | 
+ | Hypnosis 63.746%                       | 
+ | Electric Terrain 63.746%               | 
+ | Tail Glow 36.254%                      | 
+ | Dazzling Gleam 36.254%                 | 
+ | Thunderbolt 23.441%                    | 
+ | Energy Ball 23.441%                    | 
+ | Other 12.813%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Necrozma +42.358%                      | 
+ | Celesteela +41.338%                    | 
+ | Guzzlord +41.068%                      | 
+ | Buzzwole +40.888%                      | 
+ | Pheromosa +33.400%                     | 
+ | Golem-Alola +29.832%                   | 
+ | Lycanroc-Midnight +20.530%             | 
+ | Wishiwashi-School +17.949%             | 
+ | Flygon +11.222%                        | 
+ | Palossand +9.601%                      | 
+ | Tsareena +6.479%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Drampa                                 | 
+ +----------------------------------------+ 
+ | Raw count: 8                           | 
+ | Avg. weight: 0.603015470632            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Berserk 76.615%                        | 
+ | Sap Sipper 23.385%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 63.595%                      | 
+ | Normalium Z 23.385%                    | 
+ | Dragonium Z 13.020%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:248/0/0/232/28/0 63.595%        | 
+ | Modest:248/0/0/252/8/0 36.405%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Hyper Voice 100.000%                   | 
+ | Protect 76.615%                        | 
+ | Dragon Pulse 63.595%                   | 
+ | Roost 63.595%                          | 
+ | Draco Meteor 36.405%                   | 
+ | Thunder 23.385%                        | 
+ | Ice Beam 23.385%                       | 
+ | Other 13.020%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Oranguru +62.218%                      | 
+ | Dragonite +55.678%                     | 
+ | Dhelmise +52.408%                      | 
+ | Decidueye +42.777%                     | 
+ | Primarina +37.947%                     | 
+ | Rotom-Wash +9.074%                     | 
+ | Ninjask +9.074%                        | 
+ | Swampert-Mega +9.074%                  | 
+ | Manectric +9.074%                      | 
+ | Wishiwashi-School +7.529%              | 
+ | Tapu Bulu +7.419%                      | 
+ | Pelipper +5.174%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Marowak-Alola                          | 
+ +----------------------------------------+ 
+ | Raw count: 8                           | 
+ | Avg. weight: 0.48685091973             | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Lightning Rod 77.614%                  | 
+ | Cursed Body 22.386%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 61.193%                       | 
+ | Thick Club 38.807%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:248/252/0/0/8/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Shadow Bone 100.000%                   | 
+ | Bonemerang 100.000%                    | 
+ | Flare Blitz 61.193%                    | 
+ | Protect 38.807%                        | 
+ | Rock Slide 38.807%                     | 
+ | Swords Dance 38.807%                   | 
+ | Brutal Swing 22.386%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Porygon2 +34.907%                      | 
+ | Bruxish +34.907%                       | 
+ | Pelipper +33.617%                      | 
+ | Golisopod +31.367%                     | 
+ | Exeggutor-Alola +29.435%               | 
+ | Shiinotic +29.296%                     | 
+ | Oranguru +24.410%                      | 
+ | Vikavolt +21.094%                      | 
+ | Kommo-o +16.596%                       | 
+ | Ninetales-Alola +15.457%               | 
+ | Lycanroc +11.294%                      | 
+ | Tapu Koko +11.237%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Buzzwole                               | 
+ +----------------------------------------+ 
+ | Raw count: 7                           | 
+ | Avg. weight: 0.644186638614            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Beast Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 68.034%                      | 
+ | Life Orb 18.036%                       | 
+ | Rocky Helmet 13.929%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Earthquake 100.000%                    | 
+ | Dynamic Punch 68.034%                  | 
+ | Counter 68.034%                        | 
+ | Thunder Punch 68.034%                  | 
+ | Rock Slide 18.036%                     | 
+ | Poison Jab 18.036%                     | 
+ | Hammer Arm 18.036%                     | 
+ | Power-Up Punch 13.929%                 | 
+ | Lunge 13.929%                          | 
+ | Other 13.929%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Necrozma +45.784%                      | 
+ | Celesteela +44.764%                    | 
+ | Guzzlord +44.494%                      | 
+ | Xurkitree +43.532%                     | 
+ | Pheromosa +36.827%                     | 
+ | Tapu Lele +12.309%                     | 
+ | Passimian +12.309%                     | 
+ | Ninetales-Alola +11.107%               | 
+ | Silvally-Water +10.059%                | 
+ | Lurantis +8.458%                       | 
+ | Crabominable +5.366%                   | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Guzzlord                               | 
+ +----------------------------------------+ 
+ | Raw count: 10                          | 
+ | Avg. weight: 0.580071432777            | 
+ | Viability Ceiling: 59                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Beast Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 52.888%                      | 
+ | Assault Vest 23.462%                   | 
+ | Rocky Helmet 15.031%                   | 
+ | Sitrus Berry  8.620%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Lonely:252/252/0/4/0/0 52.888%         | 
+ | Brave:252/104/0/0/152/0 23.462%        | 
+ | Adamant:0/0/0/0/0/0 15.031%            | 
+ | Brave:252/252/0/0/4/0  8.620%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Draco Meteor 76.350%                   | 
+ | Heavy Slam 67.918%                     | 
+ | Stockpile 52.888%                      | 
+ | Earthquake 52.888%                     | 
+ | Dragon Claw 47.112%                    | 
+ | Hammer Arm 38.492%                     | 
+ | Crunch 32.082%                         | 
+ | Stone Edge 15.031%                     | 
+ | Other 17.239%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Necrozma +48.713%                      | 
+ | Pheromosa +33.344%                     | 
+ | Celesteela +32.662%                    | 
+ | Buzzwole +32.213%                      | 
+ | Xurkitree +31.430%                     | 
+ | Silvally-Water +11.160%                | 
+ | Magearna +7.329%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Celesteela                             | 
+ +----------------------------------------+ 
+ | Raw count: 8                           | 
+ | Avg. weight: 0.541880249523            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Beast Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 70.769%                      | 
+ | Assault Vest 14.741%                   | 
+ | Life Orb 14.489%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Rash:252/4/0/252/0/0 70.769%           | 
+ | Modest:252/0/128/0/128/0 14.741%       | 
+ | Rash:0/0/0/0/0/0 14.489%               | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Fire Blast 85.259%                     | 
+ | Iron Defense 70.769%                   | 
+ | Solar Beam 70.769%                     | 
+ | Iron Head 70.769%                      | 
+ | Flash Cannon 29.231%                   | 
+ | Air Slash 29.231%                      | 
+ | Energy Ball 14.741%                    | 
+ | Flamethrower 14.741%                   | 
+ | Other 14.489%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Pheromosa +53.753%                     | 
+ | Necrozma +47.969%                      | 
+ | Guzzlord +46.679%                      | 
+ | Buzzwole +46.500%                      | 
+ | Xurkitree +45.717%                     | 
+ | Togetic +13.092%                       | 
+ | Raichu +13.092%                        | 
+ | Sableye-Mega +11.471%                  | 
+ | Aegislash +11.471%                     | 
+ | Mimikyu +8.369%                        | 
+ | Muk-Alola +3.510%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Shiinotic                              | 
+ +----------------------------------------+ 
+ | Raw count: 6                           | 
+ | Avg. weight: 0.614288258966            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Rain Dish 100.000%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hardy:252/0/148/28/80/0 58.991%        | 
+ | Calm:248/0/8/0/252/0 41.009%           | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Strength Sap 100.000%                  | 
+ | Spore 58.991%                          | 
+ | Dazzling Gleam 58.991%                 | 
+ | Spotlight 58.991%                      | 
+ | Protect 41.009%                        | 
+ | Moonlight 41.009%                      | 
+ | Substitute 41.009%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Tapu Koko +72.430%                     | 
+ | Raichu-Alola +71.920%                  | 
+ | Greninja-Ash +46.183%                  | 
+ | Bruxish +37.108%                       | 
+ | Pelipper +35.818%                      | 
+ | Toxapex +34.530%                       | 
+ | Incineroar +32.816%                    | 
+ | Marowak-Alola +30.958%                 | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Exeggutor-Alola                        | 
+ +----------------------------------------+ 
+ | Raw count: 11                          | 
+ | Avg. weight: 0.354466869312            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Frisk 54.873%                          | 
+ | Harvest 45.127%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Sitrus Berry 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Naughty:252/252/0/4/0/0 45.127%        | 
+ | Brave:252/252/0/0/4/0 38.764%          | 
+ | Relaxed:252/0/252/4/0/0 16.109%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Wood Hammer 83.891%                    | 
+ | Trick Room 54.873%                     | 
+ | Swords Dance 45.127%                   | 
+ | Flamethrower 45.127%                   | 
+ | Dragon Hammer 45.127%                  | 
+ | Explosion 38.764%                      | 
+ | Draco Meteor 38.764%                   | 
+ | Protect 16.109%                        | 
+ | Psyshock 16.109%                       | 
+ | Other 16.109%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Oranguru +40.476%                      | 
+ | Vikavolt +37.160%                      | 
+ | Porygon2 +34.864%                      | 
+ | Lurantis +32.803%                      | 
+ | Golisopod +31.324%                     | 
+ | Marowak-Alola +28.714%                 | 
+ | Toucannon +22.204%                     | 
+ | Tsareena +21.313%                      | 
+ | Roserade +15.409%                      | 
+ | Incineroar +12.100%                    | 
+ | Wishiwashi-School +10.618%             | 
+ | Tapu Bulu +10.508%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Necrozma                               | 
+ +----------------------------------------+ 
+ | Raw count: 7                           | 
+ | Avg. weight: 0.562822194349            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Prism Armor 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Rash:252/4/0/252/0/0 77.870%           | 
+ | Modest:252/0/0/252/4/0 22.130%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Prismatic Laser 100.000%               | 
+ | Flash Cannon 77.870%                   | 
+ | Psycho Cut 77.870%                     | 
+ | Earthquake 77.870%                     | 
+ | Power Gem 22.130%                      | 
+ | Moonlight 22.130%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Guzzlord +74.483%                      | 
+ | Celesteela +52.623%                    | 
+ | Buzzwole +52.173%                      | 
+ | Xurkitree +51.390%                     | 
+ | Pheromosa +44.685%                     | 
+ | Silvally-Water +18.260%                | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Dragonite                              | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.613575632396            | 
+ | Viability Ceiling: 58                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Multiscale 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Lum Berry 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/4/252 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Outrage 100.000%                       | 
+ | Dragon Dance 100.000%                  | 
+ | Roost 100.000%                         | 
+ | Extreme Speed 100.000%                 | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Drampa +89.173%                        | 
+ | Dhelmise +88.814%                      | 
+ | Oranguru +85.603%                      | 
+ | Decidueye +79.183%                     | 
+ | Primarina +74.353%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Golisopod                              | 
+ +----------------------------------------+ 
+ | Raw count: 7                           | 
+ | Avg. weight: 0.465031353802            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Emergency Exit 100.000%                | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Lum Berry 46.432%                      | 
+ | Assault Vest 19.296%                   | 
+ | Leftovers 11.424%                      | 
+ | Life Orb 11.424%                       | 
+ | Buginium Z 11.424%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 53.568%        | 
+ | Adamant:172/252/84/0/0/0 46.432%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Liquidation 77.152%                    | 
+ | First Impression 77.152%               | 
+ | Leech Life 57.856%                     | 
+ | Rock Slide 46.432%                     | 
+ | Aqua Jet 42.144%                       | 
+ | Sucker Punch 19.296%                   | 
+ | Razor Shell 11.424%                    | 
+ | Scald 11.424%                          | 
+ | X-Scissor 11.424%                      | 
+ | Bug Bite 11.424%                       | 
+ | Poison Jab 11.424%                     | 
+ | Swords Dance 11.424%                   | 
+ | Other 11.424%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Porygon2 +42.532%                      | 
+ | Exeggutor-Alola +37.060%               | 
+ | Marowak-Alola +36.382%                 | 
+ | Oranguru +32.035%                      | 
+ | Vikavolt +28.719%                      | 
+ | Kommo-o +24.930%                       | 
+ | Salazzle +16.715%                      | 
+ | Palossand +16.084%                     | 
+ | Mudsdale +11.317%                      | 
+ | Silvally-Electric +10.464%             | 
+ | Decidueye +9.903%                      | 
+ | Greninja-Ash +6.487%                   | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Ninetales-Alola                        | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.537036541048            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Snow Warning 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 55.862%                      | 
+ | Focus Sash 30.289%                     | 
+ | Never-Melt Ice 13.849%                 | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/4/252 76.608%          | 
+ | Hardy:0/0/0/0/0/0 23.392%              | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Freeze-Dry 100.000%                    | 
+ | Blizzard 62.759%                       | 
+ | Moonblast 55.862%                      | 
+ | Aurora Veil 44.138%                    | 
+ | Dazzling Gleam 44.138%                 | 
+ | Ice Beam 32.470%                       | 
+ | Nasty Plot 23.392%                     | 
+ | Toxic 23.392%                          | 
+ | Other 13.849%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Toxapex +29.220%                       | 
+ | Kommo-o +26.680%                       | 
+ | Marowak-Alola +22.420%                 | 
+ | Lycanroc +21.378%                      | 
+ | Buzzwole +20.244%                      | 
+ | Incineroar +20.144%                    | 
+ | Sableye-Mega +20.122%                  | 
+ | Aegislash +20.122%                     | 
+ | Greninja-Ash +19.661%                  | 
+ | Crabominable +17.619%                  | 
+ | Comfey +12.096%                        | 
+ | Primarina +11.594%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Golem-Alola                            | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.497706984062            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Galvanize 100.000%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Zap Plate 45.333%                      | 
+ | Choice Scarf 24.780%                   | 
+ | Focus Sash 14.944%                     | 
+ | Expert Belt 14.944%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 75.220%        | 
+ | Adamant:0/252/0/0/4/252 24.780%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Double-Edge 70.113%                    | 
+ | Volt Switch 45.333%                    | 
+ | Autotomize 45.333%                     | 
+ | Facade 45.333%                         | 
+ | Rock Slide 39.724%                     | 
+ | Explosion 29.887%                      | 
+ | Rock Polish 24.780%                    | 
+ | Bulldoze 24.780%                       | 
+ | Protect 14.944%                        | 
+ | Return 14.944%                         | 
+ | Roar 14.944%                           | 
+ | Earthquake 14.944%                     | 
+ | Other 14.944%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Xurkitree +59.285%                     | 
+ | Lycanroc-Midnight +42.422%             | 
+ | Wishiwashi-School +39.841%             | 
+ | Tsareena +28.371%                      | 
+ | Raichu-Alola +26.587%                  | 
+ | Flygon +23.189%                        | 
+ | Palossand +21.568%                     | 
+ | Toxapex +20.872%                       | 
+ | Tapu Koko +12.154%                     | 
+ | Mimikyu +8.823%                        | 
+ | Golisopod +7.503%                      | 
+ | Mudsdale +3.413%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Mimikyu                                | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.474375439692            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Disguise 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 42.161%                      | 
+ | Life Orb 42.161%                       | 
+ | Ghostium Z 15.679%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/4/252 31.357%          | 
+ | Jolly:0/0/0/0/0/0 26.482%              | 
+ | Serious:252/0/4/0/252/0 26.482%        | 
+ | Hardy:252/0/196/0/0/60 15.679%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Shadow Sneak 84.321%                   | 
+ | Play Rough 73.518%                     | 
+ | Swords Dance 42.161%                   | 
+ | Shadow Claw 42.161%                    | 
+ | Thunder Wave 26.482%                   | 
+ | Will-O-Wisp 26.482%                    | 
+ | Leech Life 26.482%                     | 
+ | Thunderbolt 15.679%                    | 
+ | Wood Hammer 15.679%                    | 
+ | Bulk Up 15.679%                        | 
+ | Pain Split 15.679%                     | 
+ | Other 15.679%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Persian-Alola +24.861%                 | 
+ | Araquanid +24.861%                     | 
+ | Decidueye +21.344%                     | 
+ | Celesteela +16.887%                    | 
+ | Muk-Alola +15.503%                     | 
+ | Silvally-Electric +14.719%             | 
+ | Snorlax +14.719%                       | 
+ | Tapu Koko +14.591%                     | 
+ | Raichu-Alola +14.081%                  | 
+ | Kommo-o +9.889%                        | 
+ | Tsareena +9.520%                       | 
+ | Golem-Alola +9.257%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Kommo-o                                | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.448750879384            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Bulletproof 83.426%                    | 
+ | Overcoat 16.574%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Lum Berry 44.568%                      | 
+ | Leftovers 38.858%                      | 
+ | Life Orb 16.574%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/4/252 44.568%        | 
+ | Naughty:252/252/0/4/0/0 38.858%        | 
+ | Naughty:0/252/0/4/0/252 16.574%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Sky Uppercut 72.006%                   | 
+ | Dragon Claw 66.852%                    | 
+ | Dragon Dance 61.142%                   | 
+ | Clanging Scales 55.432%                | 
+ | Earthquake 55.432%                     | 
+ | Poison Jab 44.568%                     | 
+ | Brick Break 27.994%                    | 
+ | Other 16.574%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Greninja-Ash +54.043%                  | 
+ | Incineroar +45.831%                    | 
+ | Golisopod +37.128%                     | 
+ | Ninetales-Alola +31.929%               | 
+ | Marowak-Alola +28.808%                 | 
+ | Lycanroc +27.766%                      | 
+ | Salazzle +25.414%                      | 
+ | Palossand +24.782%                     | 
+ | Decidueye +23.751%                     | 
+ | Silvally-Electric +15.614%             | 
+ | Mimikyu +10.453%                       | 
+ | Mudsdale +5.043%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Charizard-Mega-Y                       | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.724754824703            | 
+ | Viability Ceiling: 62                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Drought 100.000%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Charizardite Y 100.000%                | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Heat Wave 100.000%                     | 
+ | Solar Beam 100.000%                    | 
+ | Roost 100.000%                         | 
+ | Air Slash 100.000%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Muk-Alola +89.021%                     | 
+ | Kartana +86.237%                       | 
+ | Tsareena +83.038%                      | 
+ | Tapu Koko +72.430%                     | 
+ | Raichu-Alola +71.920%                  | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Tapu Bulu                              | 
+ +----------------------------------------+ 
+ | Raw count: 7                           | 
+ | Avg. weight: 0.452974840831            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Grassy Surge 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Assault Vest 60.381%                   | 
+ | Leftovers 19.809%                      | 
+ | Choice Band 19.809%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/0/4 60.381%        | 
+ | Adamant:248/252/0/0/8/0 19.809%        | 
+ | Hardy:0/0/0/220/0/252 19.809%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Wood Hammer 100.000%                   | 
+ | Horn Leech 80.191%                     | 
+ | Nature's Madness 60.381%               | 
+ | Superpower 60.381%                     | 
+ | Protect 19.809%                        | 
+ | Zen Headbutt 19.809%                   | 
+ | Leech Seed 19.809%                     | 
+ | Focus Blast 19.809%                    | 
+ | Other 19.809%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Manectric-Mega +44.672%                | 
+ | Politoed +44.672%                      | 
+ | Lycanroc +37.561%                      | 
+ | Kartana +34.890%                       | 
+ | Pheromosa +31.121%                     | 
+ | Wishiwashi-School +14.318%             | 
+ | Exeggutor-Alola +10.437%               | 
+ | Drampa +8.982%                         | 
+ | Oranguru +5.412%                       | 
+ | Vikavolt +2.096%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Wishiwashi-School                      | 
+ +----------------------------------------+ 
+ | Raw count: 4                           | 
+ | Avg. weight: 0.532030700385            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Schooling 100.000%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Waterium Z 53.010%                     | 
+ | Sitrus Berry 29.515%                   | 
+ | Leftovers 17.474%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 53.010%        | 
+ | Hardy:0/0/0/0/0/0 29.515%              | 
+ | Modest:252/0/4/252/0/0 17.474%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Beat Up 53.010%                        | 
+ | Aqua Ring 53.010%                      | 
+ | Waterfall 53.010%                      | 
+ | Aqua Tail 53.010%                      | 
+ | Scald 46.990%                          | 
+ | Protect 46.990%                        | 
+ | Ice Beam 46.990%                       | 
+ | Earthquake 29.515%                     | 
+ | Other 17.474%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Lycanroc-Midnight +50.099%             | 
+ | Golem-Alola +46.589%                   | 
+ | Xurkitree +42.183%                     | 
+ | Tsareena +36.048%                      | 
+ | Oranguru +32.593%                      | 
+ | Toxapex +28.549%                       | 
+ | Tapu Bulu +23.914%                     | 
+ | Exeggutor-Alola +20.143%               | 
+ | Drampa +18.688%                        | 
+ | Metagross-Mega +16.515%                | 
+ | Vikavolt +11.802%                      | 
+ | Greninja-Ash +4.666%                   | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Lurantis                               | 
+ +----------------------------------------+ 
+ | Raw count: 8                           | 
+ | Avg. weight: 0.298458810343            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Contrary 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 58.118%                      | 
+ | Miracle Seed 26.307%                   | 
+ | Life Orb 15.575%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:248/0/0/252/8/0 73.693%         | 
+ | Adamant:248/252/0/0/8/0 26.307%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Weather Ball 73.693%                   | 
+ | Leaf Storm 73.693%                     | 
+ | Giga Drain 58.118%                     | 
+ | Sunny Day 26.307%                      | 
+ | Poison Jab 26.307%                     | 
+ | X-Scissor 26.307%                      | 
+ | Solar Blade 26.307%                    | 
+ | Defog 15.575%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Incineroar +62.636%                    | 
+ | Exeggutor-Alola +53.132%               | 
+ | Toucannon +46.433%                     | 
+ | Tsareena +45.542%                      | 
+ | Roserade +26.255%                      | 
+ | Tapu Lele +24.686%                     | 
+ | Passimian +24.686%                     | 
+ | Silvally-Water +22.436%                | 
+ | Buzzwole +16.262%                      | 
+ | Bellossom +14.615%                     | 
+ | Muk-Alola +7.970%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Pelipper                               | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.527917576245            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Drizzle 100.000%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Damp Rock 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Rash:248/8/0/252/0/0 100.000%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | U-turn 100.000%                        | 
+ | Hurricane 100.000%                     | 
+ | Knock Off 57.261%                      | 
+ | Ice Beam 57.261%                       | 
+ | Sky Drop 42.739%                       | 
+ | Hydro Pump 42.739%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Bruxish +53.361%                       | 
+ | Shiinotic +47.751%                     | 
+ | Marowak-Alola +47.211%                 | 
+ | Tapu Koko +29.692%                     | 
+ | Raichu-Alola +29.182%                  | 
+ | Rotom-Wash +17.652%                    | 
+ | Ninjask +17.652%                       | 
+ | Manectric +17.652%                     | 
+ | Swampert-Mega +17.652%                 | 
+ | Drampa +8.115%                         | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Eevee                                  | 
+ +----------------------------------------+ 
+ | Raw count: 4                           | 
+ | Avg. weight: 0.497133730078            | 
+ | Viability Ceiling: 54                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Adaptability 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Eevium Z 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Careful:252/4/0/0/252/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Detect 100.000%                        | 
+ | Baton Pass 100.000%                    | 
+ | Last Resort 100.000%                   | 
+ | Fake Tears 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Pikachu +94.869%                       | 
+ | Tapu Fini +94.869%                     | 
+ | Decidueye +79.183%                     | 
+ | Primarina +74.353%                     | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Pikachu                                | 
+ +----------------------------------------+ 
+ | Raw count: 4                           | 
+ | Avg. weight: 0.497133730078            | 
+ | Viability Ceiling: 54                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Static 100.000%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Pikanium Z 100.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hasty:0/252/0/4/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Electro Ball 100.000%                  | 
+ | Discharge 100.000%                     | 
+ | Thunderbolt 100.000%                   | 
+ | Quick Attack 100.000%                  | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Tapu Fini +94.869%                     | 
+ | Eevee +94.869%                         | 
+ | Decidueye +79.183%                     | 
+ | Primarina +74.353%                     | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Tapu Fini                              | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.52333154437             | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Misty Surge 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Wave Incense 75.995%                   | 
+ | Life Orb 24.005%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:248/0/0/252/8/0 75.995%         | 
+ | Hardy:120/128/52/40/0/168 24.005%      | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Muddy Water 75.995%                    | 
+ | Haze 75.995%                           | 
+ | Moonblast 75.995%                      | 
+ | Ice Beam 75.995%                       | 
+ | Brine 24.005%                          | 
+ | Giga Impact 24.005%                    | 
+ | Mist 24.005%                           | 
+ | Echoed Voice 24.005%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Pikachu +70.864%                       | 
+ | Eevee +70.864%                         | 
+ | Decidueye +55.178%                     | 
+ | Primarina +50.348%                     | 
+ | Incineroar +49.820%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Politoed                               | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.382915656548            | 
+ | Viability Ceiling: 50                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Drizzle 100.000%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Damp Rock 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/4/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Scald 100.000%                         | 
+ | Psychic 100.000%                       | 
+ | Blizzard 100.000%                      | 
+ | Ice Beam 100.000%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Manectric-Mega +76.596%                | 
+ | Tapu Bulu +74.975%                     | 
+ | Lycanroc +69.485%                      | 
+ | Kartana +66.814%                       | 
+ | Pheromosa +63.044%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Manectric-Mega                         | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.382915656548            | 
+ | Viability Ceiling: 50                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Intimidate 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Manectite 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/4/252/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Thunder 100.000%                       | 
+ | Protect 100.000%                       | 
+ | Flamethrower 100.000%                  | 
+ | Volt Switch 100.000%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Politoed +76.596%                      | 
+ | Tapu Bulu +74.975%                     | 
+ | Lycanroc +69.485%                      | 
+ | Kartana +66.814%                       | 
+ | Pheromosa +63.044%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Bruxish                                | 
+ +----------------------------------------+ 
+ | Raw count: 5                           | 
+ | Avg. weight: 0.574484809404            | 
+ | Viability Ceiling: 59                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Dazzling 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Razor Fang 52.620%                     | 
+ | Leftovers 47.380%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/4/252 52.620%          | 
+ | Impish:252/0/252/0/0/4 47.380%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Psychic Fangs 100.000%                 | 
+ | Poison Fang 52.620%                    | 
+ | Disable 52.620%                        | 
+ | Ice Fang 52.620%                       | 
+ | Swords Dance 47.380%                   | 
+ | Waterfall 47.380%                      | 
+ | Rest 47.380%                           | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Pelipper +47.429%                      | 
+ | Shiinotic +43.109%                     | 
+ | Marowak-Alola +42.570%                 | 
+ | Tapu Koko +25.050%                     | 
+ | Raichu-Alola +24.540%                  | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Porygon2                               | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.503821693229            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Download 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Eviolite 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Sassy:252/0/0/4/252/0 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Trick Room 100.000%                    | 
+ | Tri Attack 100.000%                    | 
+ | Recover 100.000%                       | 
+ | Ice Beam 100.000%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Golisopod +92.560%                     | 
+ | Exeggutor-Alola +90.628%               | 
+ | Marowak-Alola +89.950%                 | 
+ | Oranguru +85.603%                      | 
+ | Vikavolt +82.287%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Silvally-Water                         | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.5                       | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | RKS System 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Water Memory 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Multi-Attack 100.000%                  | 
+ | Dragon Claw 100.000%                   | 
+ | Return 58.125%                         | 
+ | Parting Shot 58.125%                   | 
+ | Crunch 41.875%                         | 
+ | Iron Head 41.875%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Necrozma +49.550%                      | 
+ | Guzzlord +48.260%                      | 
+ | Tapu Lele +40.254%                     | 
+ | Passimian +40.254%                     | 
+ | Lurantis +36.403%                      | 
+ | Primarina +32.478%                     | 
+ | Buzzwole +31.830%                      | 
+ | Tapu Koko +30.555%                     | 
+ | Raichu-Alola +30.045%                  | 
+ | Incineroar +15.700%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Aegislash                              | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.422387944736            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Stance Change 100.000%                 | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 50.431%                       | 
+ | Leftovers 49.569%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Quiet:128/0/0/252/128/0 50.431%        | 
+ | Quiet:248/0/0/252/0/8 49.569%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Shadow Ball 100.000%                   | 
+ | King's Shield 100.000%                 | 
+ | Shadow Sneak 100.000%                  | 
+ | Flash Cannon 50.431%                   | 
+ | Iron Head 49.569%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Sableye-Mega +96.730%                  | 
+ | Raichu +48.782%                        | 
+ | Togetic +48.782%                       | 
+ | Ninetales-Alola +42.640%               | 
+ | Celesteela +40.836%                    | 
+ | Pheromosa +32.898%                     | 
+ | Vikavolt +31.856%                      | 
+ | Toxapex +25.108%                       | 
+ | Primarina +23.922%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Sableye-Mega                           | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.422387944736            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Magic Bounce 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Sablenite 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Impish:252/0/168/0/88/0 50.431%        | 
+ | Bold:248/0/252/8/0/0 49.569%           | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Foul Play 100.000%                     | 
+ | Will-O-Wisp 100.000%                   | 
+ | Knock Off 50.431%                      | 
+ | Recover 50.431%                        | 
+ | Dark Pulse 49.569%                     | 
+ | Calm Mind 49.569%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Aegislash +96.730%                     | 
+ | Raichu +48.782%                        | 
+ | Togetic +48.782%                       | 
+ | Ninetales-Alola +42.640%               | 
+ | Celesteela +40.836%                    | 
+ | Pheromosa +32.898%                     | 
+ | Vikavolt +31.856%                      | 
+ | Toxapex +25.108%                       | 
+ | Primarina +23.922%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Komala                                 | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.659205563061            | 
+ | Viability Ceiling: 59                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Comatose 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Careful:252/4/0/0/252/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Toxic 100.000%                         | 
+ | Wish 100.000%                          | 
+ | Return 100.000%                        | 
+ | Play Rough 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Lycanroc +51.852%                      | 
+ | Kartana +49.180%                       | 
+ | Comfey +44.751%                        | 
+ | Primarina +37.296%                     | 
+ | Incineroar +36.768%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Palossand                              | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.622390261695            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Water Compaction 100.000%              | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 50.461%                      | 
+ | Assault Vest 49.539%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:252/0/0/252/4/0 100.000%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Earth Power 100.000%                   | 
+ | Shadow Ball 100.000%                   | 
+ | Rest 50.461%                           | 
+ | Sleep Talk 50.461%                     | 
+ | Sludge Bomb 49.539%                    | 
+ | Ancient Power 49.539%                  | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Flygon +47.948%                        | 
+ | Salazzle +47.880%                      | 
+ | Kommo-o +44.671%                       | 
+ | Golem-Alola +43.118%                   | 
+ | Golisopod +43.020%                     | 
+ | Xurkitree +38.712%                     | 
+ | Greninja-Ash +37.652%                  | 
+ | Decidueye +29.643%                     | 
+ | Tapu Koko +21.970%                     | 
+ | Raichu-Alola +21.460%                  | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Lycanroc-Midnight                      | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.564061400769            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | No Guard 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Choice Band 100.000%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Brick Break 100.000%                   | 
+ | Sucker Punch 100.000%                  | 
+ | Stone Edge 100.000%                    | 
+ | Thunder Fang 100.000%                  | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Wishiwashi-School +94.509%             | 
+ | Golem-Alola +93.579%                   | 
+ | Xurkitree +89.173%                     | 
+ | Tsareena +83.038%                      | 
+ | Toxapex +75.539%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Salazzle                               | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.5                       | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Corrosion 100.000%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 62.812%                       | 
+ | Choice Scarf 37.188%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/4/252 62.812%          | 
+ | Timid:4/0/0/252/0/252 37.188%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Nothing 111.563%                       | 
+ | Toxic 100.000%                         | 
+ | Sludge Wave 62.812%                    | 
+ | Nasty Plot 62.812%                     | 
+ | Flamethrower 62.812%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Palossand +59.600%                     | 
+ | Kommo-o +57.022%                       | 
+ | Golisopod +55.372%                     | 
+ | Greninja-Ash +50.004%                  | 
+ | Decidueye +41.995%                     | 
+ | Sandslash-Alola +36.228%               | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Roserade                               | 
+ +----------------------------------------+ 
+ | Raw count: 3                           | 
+ | Avg. weight: 0.311737833948            | 
+ | Viability Ceiling: 46                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Natural Cure 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Choice Specs 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:252/0/0/252/4/0 100.000%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Petal Dance 100.000%                   | 
+ | Giga Drain 100.000%                    | 
+ | Dazzling Gleam 100.000%                | 
+ | Water Sport 100.000%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Lurantis +65.961%                      | 
+ | Exeggutor-Alola +62.061%               | 
+ | Toucannon +55.362%                     | 
+ | Tsareena +54.471%                      | 
+ | Incineroar +45.258%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Raichu                                 | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.319520516334            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Lightning Rod 100.000%                 | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Air Balloon 100.000%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:36/0/0/252/0/220 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Nuzzle 100.000%                        | 
+ | Toxic 100.000%                         | 
+ | Fake Out 100.000%                      | 
+ | Volt Switch 100.000%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Togetic +98.351%                       | 
+ | Aegislash +96.730%                     | 
+ | Sableye-Mega +96.730%                  | 
+ | Celesteela +90.405%                    | 
+ | Pheromosa +82.468%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Togetic                                | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.319520516334            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Serene Grace 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Eviolite 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Bold:252/0/88/0/168/0 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Reflect 100.000%                       | 
+ | Roost 100.000%                         | 
+ | Follow Me 100.000%                     | 
+ | Dazzling Gleam 100.000%                | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Raichu +98.351%                        | 
+ | Aegislash +96.730%                     | 
+ | Sableye-Mega +96.730%                  | 
+ | Celesteela +90.405%                    | 
+ | Pheromosa +82.468%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Tapu Lele                              | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Psychic Surge 100.000%                 | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Tapunium Z 50.000%                     | 
+ | Air Balloon 50.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:248/0/0/252/8/0 50.000%         | 
+ | Hardy:4/252/0/0/0/252 50.000%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Moonblast 100.000%                     | 
+ | Psyshock 50.000%                       | 
+ | Calm Mind 50.000%                      | 
+ | Giga Impact 50.000%                    | 
+ | Toxic 50.000%                          | 
+ | Draining Kiss 50.000%                  | 
+ | Nature's Madness 50.000%               | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Passimian +48.379%                     | 
+ | Silvally-Water +46.129%                | 
+ | Lurantis +44.528%                      | 
+ | Buzzwole +39.955%                      | 
+ | Incineroar +23.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Gyarados                               | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Moxie 100.000%                         | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:192/56/0/0/8/252 100.000%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Dragon Dance 100.000%                  | 
+ | Waterfall 100.000%                     | 
+ | Earthquake 100.000%                    | 
+ | Crunch 100.000%                        | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Cinccino +98.379%                      | 
+ | Arcanine +98.379%                      | 
+ | Milotic +98.379%                       | 
+ | Dragonair +98.379%                     | 
+ | Espeon +98.379%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Milotic                                | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Marvel Scale 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Calm:252/0/224/0/32/0 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Scald 100.000%                         | 
+ | Recover 100.000%                       | 
+ | Mirror Coat 100.000%                   | 
+ | Ice Beam 100.000%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Cinccino +98.379%                      | 
+ | Arcanine +98.379%                      | 
+ | Gyarados +98.379%                      | 
+ | Dragonair +98.379%                     | 
+ | Espeon +98.379%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Dragonair                              | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Shed Skin 100.000%                     | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Eviolite 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/0/136/0/96/24 100.000%     | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Outrage 100.000%                       | 
+ | Dragon Dance 100.000%                  | 
+ | Extreme Speed 100.000%                 | 
+ | Rest 100.000%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Cinccino +98.379%                      | 
+ | Arcanine +98.379%                      | 
+ | Milotic +98.379%                       | 
+ | Gyarados +98.379%                      | 
+ | Espeon +98.379%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Espeon                                 | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Magic Bounce 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Focus Sash 100.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Shadow Ball 100.000%                   | 
+ | Psychic 100.000%                       | 
+ | Protect 100.000%                       | 
+ | Wish 100.000%                          | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Cinccino +98.379%                      | 
+ | Arcanine +98.379%                      | 
+ | Milotic +98.379%                       | 
+ | Gyarados +98.379%                      | 
+ | Dragonair +98.379%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Passimian                              | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Defiant 100.000%                       | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Fightinium Z 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Impish:252/4/252/0/0/0 100.000%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Iron Head 100.000%                     | 
+ | Toxic 100.000%                         | 
+ | Brick Break 100.000%                   | 
+ | U-turn 100.000%                        | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Tapu Lele +98.379%                     | 
+ | Silvally-Water +96.129%                | 
+ | Lurantis +94.528%                      | 
+ | Buzzwole +89.955%                      | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Araquanid                              | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Water Bubble 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:248/252/0/0/8/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Leech Life 100.000%                    | 
+ | Protect 100.000%                       | 
+ | Liquidation 100.000%                   | 
+ | Poison Jab 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Persian-Alola +98.379%                 | 
+ | Mimikyu +93.880%                       | 
+ | Decidueye +79.183%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Dodrio                                 | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Early Bird 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Focus Sash 100.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/4/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Swords Dance 100.000%                  | 
+ | Drill Peck 100.000%                    | 
+ | Protect 100.000%                       | 
+ | Jump Kick 100.000%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Minior +98.379%                        | 
+ | Muk-Alola +89.021%                     | 
+ | Dhelmise +88.814%                      | 
+ | Comfey +81.808%                        | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Arcanine                               | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Intimidate 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Rocky Helmet 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Careful:248/8/0/0/252/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Morning Sun 100.000%                   | 
+ | Wild Charge 100.000%                   | 
+ | Extreme Speed 100.000%                 | 
+ | Will-O-Wisp 100.000%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Cinccino +98.379%                      | 
+ | Milotic +98.379%                       | 
+ | Espeon +98.379%                        | 
+ | Gyarados +98.379%                      | 
+ | Dragonair +98.379%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Minior                                 | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Shields Down 100.000%                  | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Focus Sash 100.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/4/252 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Acrobatics 100.000%                    | 
+ | Shell Smash 100.000%                   | 
+ | Stone Edge 100.000%                    | 
+ | Rock Slide 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Dodrio +98.379%                        | 
+ | Muk-Alola +89.021%                     | 
+ | Dhelmise +88.814%                      | 
+ | Comfey +81.808%                        | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Persian-Alola                          | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Technician 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Choice Specs 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/0/252/4/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Switcheroo 100.000%                    | 
+ | Snarl 100.000%                         | 
+ | Taunt 100.000%                         | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Araquanid +98.379%                     | 
+ | Mimikyu +93.880%                       | 
+ | Decidueye +79.183%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Cinccino                               | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.628122801539            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Skill Link 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Choice Band 100.000%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/4/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | U-turn 100.000%                        | 
+ | Tail Slap 100.000%                     | 
+ | Bullet Seed 100.000%                   | 
+ | Rock Blast 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Arcanine +98.379%                      | 
+ | Milotic +98.379%                       | 
+ | Gyarados +98.379%                      | 
+ | Dragonair +98.379%                     | 
+ | Espeon +98.379%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Flygon                                 | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.616657721851            | 
+ | Viability Ceiling: 54                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Levitate 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/4/252 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Dragon Dance 100.000%                  | 
+ | Dragon Claw 100.000%                   | 
+ | Earthquake 100.000%                    | 
+ | Rock Slide 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Palossand +96.788%                     | 
+ | Golem-Alola +93.579%                   | 
+ | Xurkitree +89.173%                     | 
+ | Tapu Koko +72.430%                     | 
+ | Raichu-Alola +71.920%                  | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Rotom-Wash                             | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.564061400769            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Levitate 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Sitrus Berry 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:252/0/100/116/40/0 100.000%     | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Thunder 100.000%                       | 
+ | Protect 100.000%                       | 
+ | Dark Pulse 100.000%                    | 
+ | Will-O-Wisp 100.000%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Ninjask +43.031%                       | 
+ | Manectric +43.031%                     | 
+ | Swampert-Mega +43.031%                 | 
+ | Pelipper +39.131%                      | 
+ | Drampa +33.494%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Manectric                              | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.564061400769            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Lightning Rod 100.000%                 | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Timid:0/0/4/252/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Thunder 100.000%                       | 
+ | Overheat 100.000%                      | 
+ | Volt Switch 100.000%                   | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Rotom-Wash +43.031%                    | 
+ | Ninjask +43.031%                       | 
+ | Swampert-Mega +43.031%                 | 
+ | Pelipper +39.131%                      | 
+ | Drampa +33.494%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Magearna                               | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.5                       | 
+ | Viability Ceiling: 50                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Soul-Heart 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Sitrus Berry 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Modest:252/0/0/252/4/0 100.000%        | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Shadow Ball 100.000%                   | 
+ | Flash Cannon 100.000%                  | 
+ | Protect 100.000%                       | 
+ | Dazzling Gleam 100.000%                | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Guzzlord +90.135%                      | 
+ | Tsareena +83.038%                      | 
+ | Pheromosa +82.468%                     | 
+ | Tapu Koko +72.430%                     | 
+ | Raichu-Alola +71.920%                  | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Swampert-Mega                          | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.564061400769            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Swift Swim 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Swampertite 100.000%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Protect 100.000%                       | 
+ | Waterfall 100.000%                     | 
+ | Earthquake 100.000%                    | 
+ | Rock Slide 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Ninjask +43.031%                       | 
+ | Manectric +43.031%                     | 
+ | Rotom-Wash +43.031%                    | 
+ | Pelipper +39.131%                      | 
+ | Drampa +33.494%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Ninjask                                | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.564061400769            | 
+ | Viability Ceiling: 55                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Speed Boost 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Choice Band 100.000%                   | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/4/0/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Leech Life 100.000%                    | 
+ | U-turn 100.000%                        | 
+ | Night Slash 100.000%                   | 
+ | Aerial Ace 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Swampert-Mega +43.031%                 | 
+ | Manectric +43.031%                     | 
+ | Rotom-Wash +43.031%                    | 
+ | Pelipper +39.131%                      | 
+ | Drampa +33.494%                        | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Oricorio                               | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Dancer 100.000%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Focus Sash 100.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:0/252/0/0/0/252 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Nothing 200.000%                       | 
+ | Swords Dance 100.000%                  | 
+ | Fly 100.000%                           | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Bibarel +99.040%                       | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Sandslash-Alola                        | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Slush Rush 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Leftovers 100.000%                     | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/4/0/0/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Leech Life 100.000%                    | 
+ | Iron Head 100.000%                     | 
+ | Hail 100.000%                          | 
+ | Icicle Crash 100.000%                  | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Salazzle +97.420%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Bellossom                              | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Healer 100.000%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Terrain Extender 100.000%              | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hardy:252/0/0/0/0/0 100.000%           | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Toxic 100.000%                         | 
+ | Giga Drain 100.000%                    | 
+ | Grassy Terrain 100.000%                | 
+ | Synthesis 100.000%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Lurantis +94.528%                      | 
+ | Exeggutor-Alola +90.628%               | 
+ | Toucannon +83.929%                     | 
+ | Tsareena +83.038%                      | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Metagross-Mega                         | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Tough Claws 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Metagrossite 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:0/252/0/0/4/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Bullet Punch 100.000%                  | 
+ | Explosion 100.000%                     | 
+ | Zen Headbutt 100.000%                  | 
+ | Earthquake 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Wishiwashi-School +94.509%             | 
+ | Greninja-Ash +87.191%                  | 
+ | Oranguru +85.603%                      | 
+ | Pheromosa +82.468%                     | 
+ | Primarina +74.353%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Bibarel                                | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Simple 100.000%                        | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Nothing 100.000%                       | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:252/0/0/0/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Swords Dance 100.000%                  | 
+ | Aqua Jet 100.000%                      | 
+ | Waterfall 100.000%                     | 
+ | Aqua Tail 100.000%                     | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Oricorio +99.040%                      | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Snorlax                                | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Immunity 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Snorlium Z 100.000%                    | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hardy:252/0/252/0/0/4 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Return 100.000%                        | 
+ | Brick Break 100.000%                   | 
+ | Giga Impact 100.000%                   | 
+ | Blizzard 100.000%                      | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Mimikyu +93.880%                       | 
+ | Crabominable +87.330%                  | 
+ | Vikavolt +82.287%                      | 
+ | Decidueye +79.183%                     | 
+ | Primarina +74.353%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Silvally-Electric                      | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.371877198461            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | RKS System 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Electric Memory 100.000%               | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Adamant:252/252/0/0/4/0 100.000%       | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Thunder Wave 100.000%                  | 
+ | Return 100.000%                        | 
+ | Fire Fang 100.000%                     | 
+ | Thunder Fang 100.000%                  | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Kommo-o +94.210%                       | 
+ | Mimikyu +93.880%                       | 
+ | Golisopod +92.560%                     | 
+ | Mudsdale +88.469%                      | 
+ | Incineroar +73.825%                    | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Gardevoir-Mega                         | 
+ +----------------------------------------+ 
+ | Raw count: 2                           | 
+ | Avg. weight: 0.319520516334            | 
+ | Viability Ceiling: 45                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Pixilate 100.000%                      | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Gardevoirite 100.000%                  | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Calm:4/0/0/252/0/252 100.000%          | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Energy Ball 100.000%                   | 
+ | Thunderbolt 100.000%                   | 
+ | Psyshock 100.000%                      | 
+ | Hyper Beam 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Bisharp +41.118%                       | 
+ | Garchomp +41.118%                      | 
+ | Greninja-Ash +28.998%                  | 
+ | Pheromosa +24.275%                     | 
+ | Decidueye +20.990%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Bisharp                                | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.267163834207            | 
+ | Viability Ceiling: 41                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Inner Focus 100.000%                   | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Jolly:4/252/0/0/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Iron Head 100.000%                     | 
+ | Sucker Punch 100.000%                  | 
+ | Psycho Cut 100.000%                    | 
+ | Poison Jab 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Gardevoir-Mega +99.311%                | 
+ | Garchomp +99.311%                      | 
+ | Greninja-Ash +87.191%                  | 
+ | Pheromosa +82.468%                     | 
+ | Decidueye +79.183%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
+ +----------------------------------------+ 
+ | Garchomp                               | 
+ +----------------------------------------+ 
+ | Raw count: 1                           | 
+ | Avg. weight: 0.267163834207            | 
+ | Viability Ceiling: 41                  | 
+ +----------------------------------------+ 
+ | Abilities                              | 
+ | Rough Skin 100.000%                    | 
+ +----------------------------------------+ 
+ | Items                                  | 
+ | Life Orb 100.000%                      | 
+ +----------------------------------------+ 
+ | Spreads                                | 
+ | Hasty:4/252/0/0/0/252 100.000%         | 
+ +----------------------------------------+ 
+ | Moves                                  | 
+ | Iron Head 100.000%                     | 
+ | Dragon Tail 100.000%                   | 
+ | Dragon Claw 100.000%                   | 
+ | Rock Slide 100.000%                    | 
+ +----------------------------------------+ 
+ | Teammates                              | 
+ | Gardevoir-Mega +99.311%                | 
+ | Bisharp +99.311%                       | 
+ | Greninja-Ash +87.191%                  | 
+ | Pheromosa +82.468%                     | 
+ | Decidueye +79.183%                     | 
+ +----------------------------------------+ 
+ | Checks and Counters                    | 
+ +----------------------------------------+ 
