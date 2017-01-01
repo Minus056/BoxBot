@@ -401,6 +401,9 @@ bot.on("message", function(msg)
 
     if (msg.content.startsWith(act_tok + "ustats"))
     {
+
+        // maybe get the date so it's part of the url
+        // though not 100% reliable cuz when do stats come up
         var args = msg.content.split(" ");
         // check for argc for possible scrambling or something
 
