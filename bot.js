@@ -10,11 +10,11 @@ var fs = require("fs");
 var d = new Date();
 var day = d.getDate();
 var month = d.getMonth()+1;
-bot.on("message", function(msg)
-{
-    day = d.getDate();
-    month = d.getMonth()+1;
-});
+// bot.on("message", function(msg)
+// {
+//     day = d.getDate();
+//     month = d.getMonth()+1;
+// });
 /*=========================================================================*/
 
 var commands = JSON.parse(fs.readFileSync('./data/commands.json', 'utf8'));
@@ -22,8 +22,8 @@ var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
 var itemList = require("./data/items.js");
-var lineFile = './Lines/'+month+'/'+day+'.json';
-var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+// var lineFile = './Lines/'+month+'/'+day+'.json';
+// var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 
 var act_tok = "!";
 
@@ -46,33 +46,147 @@ var checkApproved = function(msg) {
 };
 /*=========================================================================*/
 //LINE AND WPL COUNTER
+
+var mongoose = require("mongoose");
+
+var mongouser = process.env.mongouser;
+var mongopass = process.env.mongopass;
+
+mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com:51068/boxbot")
+
+var db = mongoose.connection;
+
+var entrySchema = mongoose.Schema(
+{
+
+    
+    _id: String,
+    user:
+    {
+        id: String,
+        lineCount: Number,
+        wpl: Number
+    }
+    
+});
+
+var Entry = mongoose.model("Entry", entrySchema);
+
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
     if (msg.guild == null) return;
 
-    var serverData = lineCounts[msg.guild.id];
-    if (serverData == undefined)
+
+    Entry.findOne(
     {
-        lineCounts[msg.guild.id] = {};
-    }
-    var userData = lineCounts[msg.guild.id][msg.author.id];
-    if (userData == undefined)
+
+        _id: msg.guild.id
+        
+        
+    }, function(e, entry)
     {
-        lineCounts[msg.guild.id][msg.author.id] = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-        userData = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-    }
-    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    userData.lineCount++;
-    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
+        if (e) return handleError(e);
+        if (entry === null)
+        {
+            console.log("making new entry");
+            var ent = new Entry(
+            {
+
+                _id: msg.guild.id,
+                user:
+                {
+                    id: msg.author.id,
+                    lineCount: 1
+                }
+                
+            });
+            ent.save(function (e, ent)
+            {
+                if (e) return console.error(e);
+                console.log("new entry created");
+            })
+        }
+        else
+        {
+            console.log("server already exists");
+            Entry.findOne(
+            {
+                
+                "user.id": msg.author.id
+                
+            }, function(e, entry)
+            {
+                if (e) return handleError(e);
+                if (entry === null)
+                {
+                    console.log("adding new user")
+                    var ent = new Entry(
+                    {
+
+                        _id: msg.guild.id,
+                        user:
+                        {
+                            id: msg.author.id,
+                            lineCount: 1
+                        }
+                        
+                    });
+
+                    ent.save(function(e, ent)
+                    {
+                        if (e) return console.error(e);
+                        console.log("new user added");
+                    })
+                }
+                else
+                {
+                    entry.user.lineCount += 1;
+                    entry.save(function(e, ent)
+                    {
+                        if (e) return console.error(e);
+                        console.log("old user updated");
+                    })
+
+                }
+            })
+        }
+        
+
+    })
+
+
+
+
+
+    // day = d.getDate();
+    // month = d.getMonth()+1;
+
+    // lineFile = './Lines/'+month+'/'+day+'.json';
+    // lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+
+    // var serverData = lineCounts[msg.guild.id];
+    // if (serverData == undefined)
+    // {
+    //     lineCounts[msg.guild.id] = {};
+    // }
+    // var userData = lineCounts[msg.guild.id][msg.author.id];
+    // if (userData == undefined)
+    // {
+    //     lineCounts[msg.guild.id][msg.author.id] = {
+    //         "lineCount": 0,
+    //         "wpl": 1
+    //     };
+    //     userData = {
+    //         "lineCount": 0,
+    //         "wpl": 1
+    //     };
+    // }
+    // userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+    // userData.lineCount++;
+    // lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+    // lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+    // fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
 });
 /*=========================================================================*/
 //LEADERBOARD
