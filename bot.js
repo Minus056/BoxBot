@@ -44,7 +44,7 @@ var checkApproved = function(msg) {
     }
     return false;
 };
-/*=========================================================================
+// @@@@@
 //DATABASE
 
 var mongoose = require("mongoose");
@@ -56,16 +56,18 @@ mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com
 
 var db = mongoose.connection;
 
-// this is the format of an entry. _id is the server id, rest self expl
+// this is the format of an entry. _id is the server id, rest is self expl
+// _id is something mongo always has, and since servers / users are unique, 
+// we can just replace it
 var entrySchema = mongoose.Schema(
 {
     _id: String,
-    user:
-    {
-        id: String,
+    users:
+    [{
+        _id: String,
         lineCount: Number,
         wpl: Number
-    }
+    }]
     
 });
 
@@ -76,8 +78,8 @@ bot.on("message", function(msg)
     if (msg.author.bot) return;
     if (msg.guild == null) return;
 
-    // findOne finds an entry based on the query. Here it is looking
-    // for an _id of msg.guild.id
+    // findOne finds an entry based on the query. 
+    // Here it is looking for the _id matching msg.guild.id
     // if it finds something, the "entry" parameter won't be null
     Entry.findOne(
     {
@@ -92,15 +94,18 @@ bot.on("message", function(msg)
         {
             console.log("making new entry");
             // create a new entry based on the structure
+            // basically just JSON
             var ent = new Entry(
             {
 
                 _id: msg.guild.id,
-                user:
-                {
-                    id: msg.author.id,
+                users:
+                [{
+
+                    _id: msg.author.id,
                     lineCount: 1
-                }
+                    
+                }]
                 
             });
             // save it, callback is just info
@@ -108,54 +113,74 @@ bot.on("message", function(msg)
             {
                 if (e) return console.error(e);
                 console.log("new entry created");
-            })
+            });
         }
         else
         {
             console.log("server already exists");
             Entry.findOne(
             {
-                
-                "user.id": msg.author.id
+                // don't think this actually does anything
+                "users._id": msg.author.id
                 
             }, function(e, entry)
             {
                 if (e) return handleError(e);
                 if (entry === null)
                 {
-                    console.log("adding new user")
-                    var ent = new Entry(
+                    console.log("adding new user");
+                    var user = 
                     {
+                        _id: msg.author.id,
+                        lineCount: 1
+                    };
 
-                        _id: msg.guild.id,
-                        user:
-                        {
-                            id: msg.author.id,
-                            lineCount: 1
-                        }
+                    Entry.update({_id: msg.guild.id},
+                        {$push: {users: user}}, function(e, data) {});
+                    // var ent = new Entry(
+                    // {
+
+                    //     _id: msg.guild.id,
+                    //     user:
+                    //     {
+                    //         id: msg.author.id,
+                    //         lineCount: 1
+                    //     }
                         
-                    });
+                    // });
 
-                    ent.save(function(e, ent)
-                    {
-                        if (e) return console.error(e);
-                        console.log("new user added");
-                    })
+                    // ent.save(function(e, ent)
+                    // {
+                    //     if (e) return console.error(e);
+                    //     console.log("new user added");
+                    // })
                 }
                 else
                 {
-                    // basically here you would recalc wpl and such
-                    entry.user.lineCount += 1;
+                    
+                    
+                    // find the right user to increment
+                    for (var i = 0; i < entry.users.length; i++)
+                    {   
+                        
+                        if (entry.users[i]._id === msg.author.id)
+                        {
+                            entry.users[i].lineCount += 1;
+                            // basically here you would recalc wpl and such
+                            break;
+                        }
+                    }
+                    
                     entry.save(function(e, ent)
                     {
                         if (e) return console.error(e);
                         console.log("old user updated");
-                    })
+                    });
 
                 }
-            })
+            });
         }
-    })
+    });
 });
 /*=========================================================================*/
 //LINE AND WPL COUNTER
@@ -323,7 +348,7 @@ function getData(msg,list,name) {
     }
 }
 /*=========================================================================*/
-//DATA COMMANDs
+//DATA COMMANDS
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
@@ -368,18 +393,41 @@ function stripUsage(str)
     return str.replace(/\|/g, "");
 }
 
-var base_url = "http://www.smogon.com/stats/2016-11/moveset/"
 
+var base_url = "http://www.smogon.com/stats/2016-11/moveset/"
+var valid_ratings = ["0", "1500", "1630", "1760", "1500", "1695", "1825"];
 bot.on("message", function(msg)
 {
+
     if (msg.content.startsWith(act_tok + "ustats"))
     {
+
+        // maybe get the date so it's part of the url
+        // though not 100% reliable cuz when do stats come up
         var args = msg.content.split(" ");
-        // check for argc
+        // check for argc for possible scrambling or something
+
+        if (args.length === 5 || args.length === 4)
+        {
+            
+        }
+        else
+        {
+            return;
+        }
+
         var tier = args[1];
         var rating = args[2];
         var mon = args[3];
         var spec = args[4];
+
+        if (valid_ratings.indexOf(rating) === -1)
+        {
+            rating = "0";
+            mon = args[2];
+            spec = args[3];
+        }
+
 
         // msg.channel.sendMessage(sendStr, {split: true}).catch(console.error);
 
@@ -393,7 +441,7 @@ bot.on("message", function(msg)
         }
         search_mon += "| ";
 
-        var url = base_url + "gen7" + tier + "-" + rating + ".txt";
+        var url = base_url + tier + "-" + rating + ".txt";
         var request = require("request");
 
         request(
@@ -403,14 +451,24 @@ bot.on("message", function(msg)
         }, function (e, res, body)
         {
             var startInd = body.indexOf(search_mon);
-            var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
-            var body = body.substring(startInd, endInd);
 
-            var specStartInd = body.indexOf(spec);
-            var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
-            var sendStr = body.substring(specStartInd, specEndInd);
-            sendStr = stripUsage(sendStr);
-            msg.channel.sendMessage("" + sendStr + "").catch(console.error);
+            if (startInd === -1)
+            {
+
+            }
+            else
+            {
+                var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
+                var body = body.substring(startInd, endInd);
+
+                var specStartInd = body.indexOf(spec);
+                var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
+                var sendStr = body.substring(specStartInd, specEndInd);
+                sendStr = stripUsage(sendStr);
+                msg.channel.sendMessage("" + sendStr + "").catch(console.error);
+            }
+
+
 
 
         });
