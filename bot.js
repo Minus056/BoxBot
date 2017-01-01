@@ -396,7 +396,7 @@ bot.on("message", function(msg)
         var args = msg.content.split(" ");
         // check for argc for possible scrambling or something
 
-        if (args.length === 5 || args.length === 4)
+        if (args.length === 5 || args.length === 4 || args.length === 6)
         {
             
         }
@@ -409,6 +409,13 @@ bot.on("message", function(msg)
         var rating = args[2];
         var mon = args[3];
         var spec = args[4];
+        if (mon === "Tapu")
+        {
+            mon = args[3] + " " + args[4];
+            spec = args[5];
+        }
+
+        
 
         if (valid_ratings.indexOf(rating) === -1)
         {
