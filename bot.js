@@ -121,11 +121,16 @@ bot.on("message", function(msg)
         var args = msg.content.split(" ");
         var m = args[1];
         var d = args[2];
-        if (args[1] == undefined || args[2] == undefined) {
+        if ((args[1] == undefined || args[1] > 12 || args[1] < 0)|| args[2] == undefined || args[2] > 31 || args[2] < 0) {
+            msg.channel.sendMessage("enter something valid");
             return;
         }
         var filename = './Lines/'+m+'/'+d+'.json';
         var lc = JSON.parse(fs.readFileSync(filename, 'utf8'));
+        if (JSON.stringify(lc) == "{}") {
+            msg.channel.sendMessage("no data");
+            return;
+        }
         var array = [];
         var members = Object.keys(lc[msg.guild.id]);
         for (var i = 0; i < members.length; i++)
@@ -140,9 +145,9 @@ bot.on("message", function(msg)
         var leaderboardText = "```name | linecount | words/line\n";
         leaderboardText += "ordered by number of words\n```";
         var max = 10;
-        if (args[3] != undefined) {
+        if (args[3] != undefined && args[3] <= array.length) {
             max = Number(args[3]);
-        } else if (array.length < 10)
+        } else if (array.length < 10 || args[3] > array.length)
         {
             max = array.length;
         }
