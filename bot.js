@@ -163,7 +163,7 @@ bot.on("message", function(msg)
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
-    if (msg.content.startsWith(act_tok + "pkmn"))
+    if (msg.content.startsWith(act_tok + "pokemon"))
     {
         var args = msg.content.split(" ");
         if (!(pokemonList[args[1]] == undefined))
@@ -171,7 +171,6 @@ bot.on("message", function(msg)
             var poke = pokemonList[args[1]];
             var data = "```\n";
             data  += poke.species + "\n" + poke.types + "\n";
-
             var abilities = Object.keys(poke.abilities);
             for (var i = 0; i < abilities.length; i++)
             {
@@ -195,9 +194,10 @@ bot.on("message", function(msg)
 
             data += "```";
             data += "\nAnalysis: ";
-            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + args[1] + "/";
+            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + poke.species.toLowerCase() + "/";
+            console.log(data);
 
-            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + args[1] + ".png", "bisharp.png", data);
+            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + poke.species.toLowerCase() + ".png", args[1]+".png", data).catch(console.error);
         }
         else
         {
