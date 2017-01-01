@@ -312,7 +312,65 @@ bot.on('error', function(e)
 {
     console.error(e);
 });
+
 /*=========================================================================*/
+
+function stripUsage(str)
+{
+    
+    return str.replace(/\|/g, "");
+}
+
+var base_url = "http://www.smogon.com/stats/2016-11/moveset/"
+
+bot.on("message", function(msg)
+{
+    if (msg.content.startsWith(act_tok + "ustats"))
+    {
+        var args = msg.content.split(" ");
+        // check for argc
+        var tier = args[1];
+        var rating = args[2];
+        var mon = args[3];
+        var spec = args[4];
+
+        // msg.channel.sendMessage(sendStr, {split: true}).catch(console.error);
+
+
+        var search_mon = " | " + mon;
+        // 40 chars
+        var diff = 40 - mon.length - 1;
+        for (i = 0; i < diff; i++)
+        {
+            search_mon += " ";
+        }
+        search_mon += "| ";
+
+        var url = base_url + "gen7" + tier + "-" + rating + ".txt";
+        var request = require("request");
+
+        request(
+        {
+            url: url,
+            json: false
+        }, function (e, res, body)
+        {
+            var startInd = body.indexOf(search_mon);
+            var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
+            var body = body.substring(startInd, endInd);
+
+            var specStartInd = body.indexOf(spec);
+            var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
+            var sendStr = body.substring(specStartInd, specEndInd);
+            sendStr = stripUsage(sendStr);
+            msg.channel.sendMessage("" + sendStr + "").catch(console.error);
+
+
+        });
+    }
+});
+
+
 /*
 // var usage_data = require("./data/gen7ou-1825.json");
 // double_console(usage_data.data.Weavile.Items);
