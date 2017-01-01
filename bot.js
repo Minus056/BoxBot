@@ -454,6 +454,9 @@ bot.on("message", function(msg)
                 var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
                 var sendStr = body.substring(specStartInd, specEndInd);
                 sendStr = stripUsage(sendStr);
+
+                sendStr = sendStr.split("\n").slice(0, 10).join("\n");
+
                 msg.channel.sendMessage("" + sendStr + "").catch(console.error);
             }
 
