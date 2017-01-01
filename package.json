@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Minus056/BoxBot#readme",
   "dependencies": {
     "discord.js": "^10.0.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.7.5",
     "node-opus": "^0.2.4",
     "opusscript": "0.0.1",
     "promise": "^7.1.1",
