@@ -52,10 +52,9 @@ var mongoose = require("mongoose");
 var mongouser = process.env.mongouser;
 var mongopass = process.env.mongopass;
 
-mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com:51068/boxbot")
+mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com:51068/boxbot");
 
 var db = mongoose.connection;
-
 
 // this is the format of an entry. _id is the server id, rest self expl
 var entrySchema = mongoose.Schema(
@@ -156,9 +155,8 @@ bot.on("message", function(msg)
                 }
             })
         }
-        
-
     })
+});
 /*=========================================================================*/
 //LINE AND WPL COUNTER
 bot.on("message", function(msg)
