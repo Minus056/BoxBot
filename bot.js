@@ -53,13 +53,14 @@ var mongouri = process.env.mongouri;
 
 mongoose.connect(mongouri);
 var db = mongoose.connection;
+var id = 0;
 
 // this is the format of an entry. _id is the server id, rest is self expl
 // _id is something mongo always has, and since servers / users are unique, 
 // we can just replace it
 var entrySchema = mongoose.Schema(
 {
-    _id: String,
+    _id: Number,
     month: Number,
     day: Number,
     servers: 
@@ -84,7 +85,7 @@ bot.on("message", function(msg)
     // findOne finds an entry based on the query. 
     // Here it is looking for the _id matching msg.guild.id
     // if it finds something, the "entry" parameter won't be null
-    Entry.findOne(
+    Entry.find(
     {
         month: d.getMonth()+1,
         day: d.getDate()
@@ -98,6 +99,7 @@ bot.on("message", function(msg)
             // create a new entry based on the structure
             // basically just JSON
             var ent = new Entry({
+                _id: id++,
                 month: d.getMonth()+1,
                 day: d.getDate(),
                 servers: 
@@ -121,16 +123,10 @@ bot.on("message", function(msg)
         else
         {
             console.log("date already exists");
-            Entry.findOne(
-            {
-                // don't think this actually does anything
-                "servers._id": msg.guild.id
-                
-            }, function(e, entry)
+            Entry.findOne({}, function(e, entry)
             {
                 if (e) return handleError(e);
-                if (entry === null)
-                {
+                if (entry === null) {
                     console.log("adding new server");
                     var server = 
                     {
@@ -145,9 +141,7 @@ bot.on("message", function(msg)
                     Entry.update({month:d.getMonth(),day:d.getDate()},
                         {$push: {servers: server}}, function(e, data) {});
                 }
-                else
-                {
-                    //
+                else {
                     console.log("server already exists");
                     Entry.findOne({
                         "users._id":msg.author.id
@@ -178,19 +172,12 @@ bot.on("message", function(msg)
                                 console.log("old user updated");
                             });
                         }
-                    }
-                    
-                    );
-                    //
+                    });
                 }
             });
         }
     });
-    Entry.find({_id: msg.guild.id}, function(err,entries) {
-        if (err) throw err;
-    });
 });
-
 /*=========================================================================*/
 //LINE AND WPL COUNTER
 bot.on("message", function(msg)
