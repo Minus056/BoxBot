@@ -273,13 +273,13 @@ bot.on("message", function(msg)
         date = Number(args[2]);
     }
     
-    if (msg.content.startsWith(act_tok+"lb") && checkApproved(msg)) {
+    if (msg.content.startsWith(act_tok+"lb")) { //&& checkApproved(msg)
         Entry.find({}, function(e, entry) {
             if (e) return handleError(e);
             for (var i = 0; i < entry.length; i++) {
-                console.log(entry[i].day,date,entry[i].month,month);
                 if (entry[i].day == date && entry[i].month == month) {
                     for (var j = 0; j < entry[i].servers.length; j++) {
+                        console.log(entry[i].servers[j]._id, msg.guild.id);
                         if (entry[i].servers[j]._id == msg.guild.id) {
                             if (entry[i].servers[j].users.length == 0) {
                                 msg.channel.sendMessage("no user data");
@@ -288,7 +288,6 @@ bot.on("message", function(msg)
                             for (var k = 0; k < entry[i].servers[j].users.length; k++) {
                                 var user = entry[i].servers[j].users[k];
                                 array.push([user._id,user.lineCount,user.wpl]); 
-                                console.log(array);
                                 array.sort(function(a,b){
                                     return (b[1]*b[2]) - (a[1]*a[2]);
                                 });
@@ -310,17 +309,14 @@ bot.on("message", function(msg)
                                 }
                             }
                             msg.channel.sendMessage(lbText);
-                            break;
-                        } else {
-                            msg.channel.sendMessage("no server data");
                             return;
                         }
+                        
                     }
-                } else {
-                    msg.channel.sendMessage("no data from this day");
-                    return;
+                    msg.channel.sendMessage("no server data");
                 }
             }
+            msg.channel.sendMessage("no data from this day");
         });
     }
 });
