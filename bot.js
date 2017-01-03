@@ -44,32 +44,39 @@ var checkApproved = function(msg) {
     }
     return false;
 };
-// @@@@@
+// @@@@@ 
 //DATABASE
 
 var mongoose = require("mongoose");
+
 
 var mongouser = process.env.mongouser;
 var mongopass = process.env.mongopass;
 var mongouri = process.env.mongouri;
 
-mongoose.connect(mongouri);
 
+mongoose.connect(mongouri);
 var db = mongoose.connection;
+var id = 0;
 
 // this is the format of an entry. _id is the server id, rest is self expl
 // _id is something mongo always has, and since servers / users are unique, 
 // we can just replace it
 var entrySchema = mongoose.Schema(
 {
-    _id: String,
-    users:
+    // _id: Number,
+    month: Number,
+    day: Number,
+    servers: 
     [{
-        _id: String,
-        lineCount: Number,
-        wpl: Number
+        _id: String, //msg.guild.id
+        users:
+        [{
+            _id: String, //msg.author.id
+            lineCount: Number,
+            wpl: Number
+        }]
     }]
-    
 });
 
 var Entry = mongoose.model("Entry", entrySchema);
@@ -82,33 +89,34 @@ bot.on("message", function(msg)
     // findOne finds an entry based on the query. 
     // Here it is looking for the _id matching msg.guild.id
     // if it finds something, the "entry" parameter won't be null
-    Entry.findOne(
+    var d = new Date();
+    Entry.find(
     {
-
-        _id: msg.guild.id
-        
+        month: d.getMonth()+1,
+        day: d.getDate()
         
     }, function(e, entry)
     {
         if (e) return handleError(e);
-        if (entry === null)
+        if (entry.length === 0)
         {
             console.log("making new entry");
             // create a new entry based on the structure
             // basically just JSON
-            var ent = new Entry(
-            {
-
-                _id: msg.guild.id,
-                users:
-                [{
-
-                    _id: msg.author.id,
-                    lineCount: 1,
-                    wpl: msg.content.split(" ").length
-                    
-                }]
+            var ent = new Entry({
                 
+                month: d.getMonth()+1,
+                day: d.getDate(),
+                servers: 
+                [{
+                    _id: msg.guild.id,
+                    users:
+                    [{
+                        _id: msg.author.id,
+                        lineCount: 1,
+                        wpl: msg.content.split(" ").length
+                    }]
+                }]
             });
             // save it, callback is just info
             ent.save(function (e, ent)
@@ -119,63 +127,76 @@ bot.on("message", function(msg)
         }
         else
         {
-            console.log("server already exists");
-            Entry.findOne(
-            {
-                // don't think this actually does anything
-                "users._id": msg.author.id
-                
-            }, function(e, entry)
+            console.log("date already exists");
+            Entry.find({}, function(e, entry)
             {
                 if (e) return handleError(e);
-                if (entry === null)
-                {
-                    console.log("adding new user");
-                    var user = 
+                if (entry === null) {
+                    console.log("adding new server");
+                    var server = 
                     {
-                        _id: msg.author.id,
-                        lineCount: 1,
-                        wpl: msg.content.split(" ").length
+                        _id: msg.guild.id,
+                        users:
+                        [{
+                            _id: msg.author.id,
+                            lineCount: 1,
+                            wpl: msg.content.split(" ").length
+                        }]
                     };
-
-                    Entry.update({_id: msg.guild.id},
-                        {$push: {users: user}}, function(e, data) {});
+                    Entry.update({month:d.getMonth(),day:d.getDate()},
+                        {$push: {servers: server}}, function(e, data) {});
                 }
-                else
-                {
-                    // find the right user to increment
-                    for (var i = 0; i < entry.users.length; i++)
-                    {   
-                        
-                        if (entry.users[i]._id === msg.author.id)
-                        {
-                            entry.users[i].lineCount += 1;
-                            console.log(entry.users[i])
-                            entry.users[i].wpl = ((entry.users[i].wpl * entry.users[i].lineCount) + (msg.content.split(" ").length)) / (entry.users[i].lineCount);
-                            break;
-                        }
-                    }
-                    
-                    entry.save(function(e, ent)
-                    {
-                        if (e) return console.error(e);
-                        console.log("old user updated");
-                    });
+                else {
+                    console.log("server already exists");
+                    console.log(entry);
 
+                    for (var i = 0; i < entry.servers.length; i++)
+                    {
+                        console.log(entry.servers[i]);
+                    }
+
+
+                    Entry.findOne({
+                        "users._id":msg.author.id
+                    }, 
+                    function (e, entry) {
+                        if (e) return handleError(e);
+                        if (entry === null) {
+                            console.log("adding new user");
+                            var user = {
+                                _id: msg.author.id,
+                                lineCount:1,
+                                wpl: msg.content.split(" ").length
+                            };
+                            Entry.update({_id:msg.guild.id},
+                                {$push: {"servers.users":user}}, function(e, data) {});
+                        }
+                        else {
+                            console.log("user already exists");
+                            for (var i = 0; i < entry.users.length; i++) {
+                                if (entry.users[i]._id === msg.author.id) {
+                                    entry.users[i].linecount += 1;
+                                    entry.users[i].wpl = ((entry.users[i].wpl * entry.users[i].lineCount) + (msg.content.split(" ").length)) / (entry.users[i].lineCount);
+                                    break;
+                                }
+                            }
+                            entry.save(function(e, ent) {
+                                if (e) return console.error(e);
+                                console.log("old user updated");
+                            });
+                        }
+                    });
                 }
             });
         }
     });
-    Entry.find({_id: msg.guild.id}, function(err,entries) {
-        if (err) throw err;
-    });
 });
-
-
 /*=========================================================================*/
 //LINE AND WPL COUNTER
 // bot.on("message", function(msg)
 // {
+//     if (msg.author.bot) return;
+//     if (msg.guild ==null) return;
 //     var serverData = lineCounts[msg.guild.id];
 //     if (serverData == undefined)
 //     {
