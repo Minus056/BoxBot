@@ -31,6 +31,9 @@ var checkApproved = function(msg) {
             return true;
         }
     }
+    if (msg.author.id == "97558452473167872" || msg.author.id == "85939885743046656") {
+        return true;
+    }
     return false;
 };
 // @@@@@ 
@@ -186,73 +189,6 @@ bot.on("message", function(msg)
         }
     });
 });
-/*=========================================================================
-LINE AND WPL COUNTER
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
-    if (msg.guild ==null) return;
-    var serverData = lineCounts[msg.guild.id];
-    if (serverData == undefined)
-    {
-        lineCounts[msg.guild.id] = {};
-    }
-    var userData = lineCounts[msg.guild.id][msg.author.id];
-    if (userData == undefined)
-    {
-        lineCounts[msg.guild.id][msg.author.id] = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-        userData = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-    }
-    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    userData.lineCount++;
-    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
-});
-/*=========================================================================
-//LEADERBOARD
-bot.on("message", function(msg)
-{
-    if (msg.content == (act_tok+"leaderboard") && checkApproved(msg))
-    {
-        var array = [];
-        var members = Object.keys(lineCounts[msg.guild.id]);
-        for (var i = 0; i < members.length; i++)
-        {
-            array.push([members[i], lineCounts[msg.guild.id][members[i]]]);
-        }
-
-        array.sort(function(a,b){
-            return (b[1].lineCount*b[1].wpl) - (a[1].lineCount*a[1].wpl);
-
-        });
-        var leaderboardText = "```name | linecount | words/line\n";
-        leaderboardText += "ordered by number of words\n```";
-        var max = 10;
-        if (array.length < 10)
-        {
-            max = array.length;
-        }
-        for (var i = 0; i < max; i++)
-        {
-            leaderboardText  += bot.users.get(array[i][0]).username + "  |  " + array[i][1].lineCount + "  |  " + (Math.round((array[i][1].wpl * 100)) / 100) + "\n";
-        }
-        msg.channel.sendMessage(leaderboardText);
-    }
-
-    if (msg.content == act_tok+"resetlb" && checkApproved(msg)) {
-
-        lineCounts[msg.guild.id] = {};
-        fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
-        msg.channel.sendMessage("leaderboard reset");
-    }
-});
 /*=========================================================================*/
 //RETRIEVE LEADERBOARD
 bot.on("message", function(msg)
@@ -273,7 +209,7 @@ bot.on("message", function(msg)
         date = Number(args[2]);
     }
     
-    if (msg.content.startsWith(act_tok+"lb")) { //&& checkApproved(msg)
+    if (msg.content.startsWith(act_tok+"lb") && checkApproved(msg)) {
         Entry.find({}, function(e, entry) {
             if (e) return handleError(e);
             for (var i = 0; i < entry.length; i++) {
