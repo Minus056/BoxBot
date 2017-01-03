@@ -92,12 +92,13 @@ bot.on("message", function(msg)
     var d = new Date();
     Entry.find(
     {
-        month: d.getMonth()+10,
+        month: d.getMonth()+1,
         day: d.getDate()
         
     }, function(e, entry)
     {
         if (e) return handleError(e);
+        console.log(entry);
         if (entry.length === 0)
         {
             console.log("making new entry");
@@ -147,14 +148,6 @@ bot.on("message", function(msg)
                 }
                 else {
                     console.log("server already exists");
-                    console.log(entry);
-
-                    for (var i = 0; i < entry.servers.length; i++)
-                    {
-                        console.log(entry.servers[i]);
-                    }
-
-
                     Entry.findOne({
                         "users._id":msg.author.id
                     }, 
