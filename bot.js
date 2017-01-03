@@ -51,8 +51,9 @@ var mongoose = require("mongoose");
 
 var mongouser = process.env.mongouser;
 var mongopass = process.env.mongopass;
+var mongouri = process.env.mongouri;
 
-mongoose.connect("mongodb://" + mongouser + ":" + mongopass +"@ds151068.mlab.com:51068/boxbot");
+mongoose.connect(mongouri);
 
 var db = mongoose.connection;
 
@@ -383,8 +384,10 @@ function stripUsage(str)
 }
 
 
+// check if current year-month gives 404, if it does, go back one month
 var base_url = "http://www.smogon.com/stats/2016-11/moveset/"
 var valid_ratings = ["0", "1500", "1630", "1760", "1500", "1695", "1825"];
+var valid_specs = ["Abilities", "Items", "Spreads", "Moves", "Teammates", "Checks and Counters"];
 bot.on("message", function(msg)
 {
 
@@ -409,6 +412,10 @@ bot.on("message", function(msg)
         var rating = args[2];
         var mon = args[3];
         var spec = args[4];
+        if (valid_specs.indexOf(spec) === -1)
+        {
+
+        }
         if (mon === "Tapu")
         {
             mon = args[3] + " " + args[4];
