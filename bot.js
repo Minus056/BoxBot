@@ -5,25 +5,14 @@ var pass = process.env.PASS;
 bot.login(pass);
 
 var fs = require("fs");
-/*=========================================================================*/
-//DETERMINE TIME
-var d = new Date();
-var day = d.getDate();
-var month = d.getMonth()+1;
-bot.on("message", function(msg)
-{
-    day = d.getDate();
-    month = d.getMonth()+1;
-});
-/*=========================================================================*/
 
 var commands = JSON.parse(fs.readFileSync('./data/commands.json', 'utf8'));
 var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
 var itemList = require("./data/items.js");
-var lineFile = './Lines/'+month+'/'+day+'.json';
-var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+//var lineFile = './Lines/'+month+'/'+day+'.json';
+//var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 
 var act_tok = "!";
 
@@ -226,7 +215,7 @@ bot.on("message", function(msg)
     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
     fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
 });
-/*=========================================================================*/
+/*=========================================================================
 //LEADERBOARD
 bot.on("message", function(msg)
 {
@@ -262,6 +251,77 @@ bot.on("message", function(msg)
         lineCounts[msg.guild.id] = {};
         fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
         msg.channel.sendMessage("leaderboard reset");
+    }
+});
+/*=========================================================================*/
+//RETRIEVE LEADERBOARD
+bot.on("message", function(msg)
+{
+    if (msg.author.bot) return;
+    if (msg.guild == null) return;
+    
+    var array = [];
+    var d = new Date();
+    var date, month;
+    
+    var args = msg.content.split(" ");
+    if ((args[1] == undefined || Number(args[1]) > 12 || Number(args[1]) < 1) || (args[2] == undefined || Number(args[2]) > 31 || Number(args[2]) < 1)) {
+        date = d.getDate();
+        month = d.getMonth()+1;
+    } else {
+        month = Number(args[1]);
+        date = Number(args[2]);
+    }
+    
+    if (msg.content.startsWith(act_tok+"lb") && checkApproved(msg)) {
+        Entry.find({}, function(e, entry) {
+            if (e) return handleError(e);
+            for (var i = 0; i < entry.length; i++) {
+                console.log(entry[i].day,date,entry[i].month,month);
+                if (entry[i].day == date && entry[i].month == month) {
+                    for (var j = 0; j < entry[i].servers.length; j++) {
+                        if (entry[i].servers[j]._id == msg.guild.id) {
+                            if (entry[i].servers[j].users.length == 0) {
+                                msg.channel.sendMessage("no user data");
+                                return;
+                            }
+                            for (var k = 0; k < entry[i].servers[j].users.length; k++) {
+                                var user = entry[i].servers[j].users[k];
+                                array.push([user._id,user.lineCount,user.wpl]); 
+                                console.log(array);
+                                array.sort(function(a,b){
+                                    return (b[1]*b[2]) - (a[1]*a[2]);
+                                });
+                                
+                                var lbText = "```name | linecount | words/line\n";
+                                lbText += "ordered by number of words\n```";
+                                var max = 10;
+                                if (array.length < 10) {
+                                    max = array.length;
+                                }
+                                if (args[3] != undefined && args[3] <= array.length) {
+                                    max = Number(args[3]);
+                                } else if (args[3] > array.length) {
+                                    max = array.length;
+                                }
+                                console.log(max);
+                                for (var l = 0; l < max; l++) {
+                                    lbText  += bot.users.get(array[l][0]).username + "  |  " + array[l][1] + "  |  " + (Math.round((array[l][2] * 100)) / 100) + "\n";
+                                }
+                            }
+                            msg.channel.sendMessage(lbText);
+                            break;
+                        } else {
+                            msg.channel.sendMessage("no server data");
+                            return;
+                        }
+                    }
+                } else {
+                    msg.channel.sendMessage("no data from this day");
+                    return;
+                }
+            }
+        });
     }
 });
 /*=========================================================================*/
