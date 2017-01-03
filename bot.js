@@ -1,7 +1,7 @@
 var Discord = require("discord.js");
 var bot = new Discord.Client();
 require("./env.js");
-var pass = process.env.PASS2;
+var pass = process.env.PASS;
 bot.login(pass);
 
 var fs = require("fs");
@@ -141,8 +141,7 @@ bot.on("message", function(msg)
                                 console.log("user already exists");
                                 
                                 var user = entry[0].servers[i].users[j];
-                                console.log(user.wpl, user.lineCount, user.wpl*user.lineCount, msg.content.split(" ").length)
-                                
+
                                 entry[0].servers[i].users[j].lineCount++;
                                 user.wpl = (((user.wpl * (user.lineCount-1)) + (msg.content.split(" ").length)) / (user.lineCount));
                                 entry[0].servers[i].users[j].wpl = user.wpl;
