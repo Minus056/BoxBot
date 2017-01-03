@@ -60,7 +60,7 @@ var id = 0;
 // we can just replace it
 var entrySchema = mongoose.Schema(
 {
-    _id: Number,
+    //_id: Number,
     month: Number,
     day: Number,
     servers: 
@@ -87,19 +87,19 @@ bot.on("message", function(msg)
     // if it finds something, the "entry" parameter won't be null
     Entry.find(
     {
-        month: d.getMonth()+1,
+        month: d.getMonth()+10,
         day: d.getDate()
         
     }, function(e, entry)
     {
         if (e) return handleError(e);
-        if (entry === null)
+        if (entry.length === 0)
         {
             console.log("making new entry");
             // create a new entry based on the structure
             // basically just JSON
             var ent = new Entry({
-                _id: id++,
+                //_id: id++,
                 month: d.getMonth()+1,
                 day: d.getDate(),
                 servers: 
@@ -123,9 +123,12 @@ bot.on("message", function(msg)
         else
         {
             console.log("date already exists");
-            Entry.findOne({}, function(e, entry)
+            Entry.findOne({
+                "servers._id": msg.guild.id
+            }, function(e, entry)
             {
                 if (e) return handleError(e);
+                console.log(entry);
                 if (entry === null) {
                     console.log("adding new server");
                     var server = 
@@ -148,6 +151,7 @@ bot.on("message", function(msg)
                     }, 
                     function (e, entry) {
                         if (e) return handleError(e);
+                        console.log(entry);
                         if (entry === null) {
                             console.log("adding new user");
                             var user = {
@@ -178,7 +182,7 @@ bot.on("message", function(msg)
         }
     });
 });
-/*=========================================================================*/
+/*=========================================================================
 //LINE AND WPL COUNTER
 bot.on("message", function(msg)
 {
