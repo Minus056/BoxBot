@@ -22,8 +22,8 @@ var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
 var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
 var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
 var itemList = require("./data/items.js");
-var lineFile = './Lines/'+month+'/'+day+'.json';
-var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
+// var lineFile = './Lines/'+month+'/'+day+'.json';
+// var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
 
 var act_tok = "!";
 
@@ -49,7 +49,11 @@ var checkApproved = function(msg) {
 
 var mongoose = require("mongoose");
 
+
+var mongouser = process.env.mongouser;
+var mongopass = process.env.mongopass;
 var mongouri = process.env.mongouri;
+
 
 mongoose.connect(mongouri);
 var db = mongoose.connection;
@@ -60,7 +64,7 @@ var id = 0;
 // we can just replace it
 var entrySchema = mongoose.Schema(
 {
-    //_id: Number,
+    // _id: Number,
     month: Number,
     day: Number,
     servers: 
@@ -85,6 +89,7 @@ bot.on("message", function(msg)
     // findOne finds an entry based on the query. 
     // Here it is looking for the _id matching msg.guild.id
     // if it finds something, the "entry" parameter won't be null
+    var d = new Date();
     Entry.find(
     {
         month: d.getMonth()+10,
@@ -99,7 +104,6 @@ bot.on("message", function(msg)
             // create a new entry based on the structure
             // basically just JSON
             var ent = new Entry({
-                //_id: id++,
                 month: d.getMonth()+1,
                 day: d.getDate(),
                 servers: 
@@ -123,10 +127,7 @@ bot.on("message", function(msg)
         else
         {
             console.log("date already exists");
-            Entry.findOne({
-                "servers._id": msg.guild.id
-            }, function(e, entry)
-            {
+            Entry.find({}, function(e, entry)            {
                 if (e) return handleError(e);
                 console.log(entry);
                 if (entry === null) {
@@ -146,6 +147,14 @@ bot.on("message", function(msg)
                 }
                 else {
                     console.log("server already exists");
+                    console.log(entry);
+
+                    for (var i = 0; i < entry.servers.length; i++)
+                    {
+                        console.log(entry.servers[i]);
+                    }
+
+
                     Entry.findOne({
                         "users._id":msg.author.id
                     }, 
@@ -160,7 +169,7 @@ bot.on("message", function(msg)
                                 wpl: msg.content.split(" ").length
                             };
                             Entry.update({_id:msg.guild.id},
-                                {$push: {users:user}}, function(e, data) {});
+                                {$push: {"servers.users":user}}, function(e, data) {});
                         }
                         else {
                             console.log("user already exists");
@@ -184,33 +193,33 @@ bot.on("message", function(msg)
 });
 /*=========================================================================
 //LINE AND WPL COUNTER
-bot.on("message", function(msg)
-{
-    if (msg.author.bot) return;
-    if (msg.guild ==null) return;
-    var serverData = lineCounts[msg.guild.id];
-    if (serverData == undefined)
-    {
-        lineCounts[msg.guild.id] = {};
-    }
-    var userData = lineCounts[msg.guild.id][msg.author.id];
-    if (userData == undefined)
-    {
-        lineCounts[msg.guild.id][msg.author.id] = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-        userData = {
-            "lineCount": 0,
-            "wpl": 1
-        };
-    }
-    userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
-    userData.lineCount++;
-    lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
-    lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
-    fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
-});
+// bot.on("message", function(msg)
+// {
+//     if (msg.author.bot) return;
+//     if (msg.guild ==null) return;
+//     var serverData = lineCounts[msg.guild.id];
+//     if (serverData == undefined)
+//     {
+//         lineCounts[msg.guild.id] = {};
+//     }
+//     var userData = lineCounts[msg.guild.id][msg.author.id];
+//     if (userData == undefined)
+//     {
+//         lineCounts[msg.guild.id][msg.author.id] = {
+//             "lineCount": 0,
+//             "wpl": 1
+//         };
+//         userData = {
+//             "lineCount": 0,
+//             "wpl": 1
+//         };
+//     }
+//     userData.wpl = ((userData.wpl * userData.lineCount) + (msg.content.split(" ").length)) / (userData.lineCount + 1);
+//     userData.lineCount++;
+//     lineCounts[msg.guild.id][msg.author.id]["lineCount"] = userData.lineCount;
+//     lineCounts[msg.guild.id][msg.author.id]["wpl"] = userData.wpl;
+//     fs.writeFile(lineFile, JSON.stringify(lineCounts), console.error);
+// });
 /*=========================================================================*/
 //LEADERBOARD
 bot.on("message", function(msg)
@@ -396,8 +405,10 @@ function stripUsage(str)
 }
 
 
+// check if current year-month gives 404, if it does, go back one month
 var base_url = "http://www.smogon.com/stats/2016-11/moveset/"
 var valid_ratings = ["0", "1500", "1630", "1760", "1500", "1695", "1825"];
+var valid_specs = ["Abilities", "Items", "Spreads", "Moves", "Teammates", "Checks and Counters"];
 bot.on("message", function(msg)
 {
 
@@ -422,6 +433,10 @@ bot.on("message", function(msg)
         var rating = args[2];
         var mon = args[3];
         var spec = args[4];
+        if (valid_specs.indexOf(spec) === -1)
+        {
+
+        }
         if (mon === "Tapu")
         {
             mon = args[3] + " " + args[4];
