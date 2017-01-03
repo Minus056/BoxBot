@@ -130,63 +130,159 @@ bot.on("message", function(msg)
             console.log("date already exists");
             Entry.find({}, function(e, entry)
             {
-                if (e) return handleError(e);
-                if (entry === null) {
-                    console.log("adding new server");
-                    var server = 
-                    {
-                        _id: msg.guild.id,
-                        users:
-                        [{
-                            _id: msg.author.id,
-                            lineCount: 1,
-                            wpl: msg.content.split(" ").length
-                        }]
-                    };
-                    Entry.update({month:d.getMonth(),day:d.getDate()},
-                        {$push: {servers: server}}, function(e, data) {});
-                }
-                else {
-                    console.log("server already exists");
-                    console.log(entry);
 
-                    for (var i = 0; i < entry.servers.length; i++)
+                for (var i = 0; i < entry[0].servers.length; i++)
+                {
+
+                    if (entry[0].servers[i]._id === msg.guild.id)
                     {
-                        console.log(entry.servers[i]);
+                        console.log("server already exists");
+
+                        for (var j = 0; j < entry[0].servers[i].users.length; j++)
+                        {
+                            if (entry[0].servers[i].users[j]._id === msg.author.id)
+                            {
+                                console.log("user already exists");
+
+                                var lc = entry[0].servers[i].users[j].lineCount;
+                                var wpl = entry[0].servers[i].users[j].wpl;
+
+                                entry[0].servers[i].users[j].lineCount = entry[0].servers[i].users[j].lineCount + 1;
+
+                                // var user = {
+                                //     _id: msg.author.id,
+                                //     lineCount:1,
+                                //     wpl: msg.content.split(" ").length
+                                // };
+
+                                
+                                entry[0].save(function(e, data)
+                                {
+                                        console.log("lc updated");
+                                        
+                                });
+
+                                break;
+                            }
+                            if (j === entry[0].servers[i].users.length - 1)
+                            {
+                                console.log("creating new user");
+                                var user = {
+                                    _id: msg.author.id,
+                                    lineCount:1,
+                                    wpl: msg.content.split(" ").length
+                                };
+
+                                entry[0].servers[i].users.push(user);
+                                entry[0].save(function(e, data)
+                                {
+                                    console.log("new user created");
+                                    
+                                });                                
+                                break;
+
+
+                            }
+
+                        }
+
+
+
+
+
+
+                        break;
+                    }                    
+
+                    if (i === entry[0].servers.length - 1)
+                    {
+                        console.log("creating new server");
+                        var server = 
+                        {
+                            _id: msg.guild.id,
+                            users:
+                            {
+                                _id: msg.author.id,
+                                lineCount: 1,
+                                wpl: msg.content.split(" ").length
+                            }
+                        };
+
+                        entry[0].servers.push(server);
+                        entry[0].save(function(e, data)
+                        {
+                            console.log("new server added");
+                        });
                     }
 
-
-                    Entry.findOne({
-                        "users._id":msg.author.id
-                    }, 
-                    function (e, entry) {
-                        if (e) return handleError(e);
-                        if (entry === null) {
-                            console.log("adding new user");
-                            var user = {
-                                _id: msg.author.id,
-                                lineCount:1,
-                                wpl: msg.content.split(" ").length
-                            };
-                            Entry.update({_id:msg.guild.id},
-                                {$push: {"servers.users":user}}, function(e, data) {});
-                        }
-                        else {
-                            console.log("user already exists");
-                            for (var i = 0; i < entry.users.length; i++) {
-                                if (entry.users[i]._id === msg.author.id) {
-                                    entry.users[i].linecount += 1;
-                                    entry.users[i].wpl = ((entry.users[i].wpl * entry.users[i].lineCount) + (msg.content.split(" ").length)) / (entry.users[i].lineCount);
-                                    break;
-                                }
-                            }
-                            entry.save(function(e, ent) {
-                                if (e) return console.error(e);
-                                console.log("old user updated");
-                            });
-                        }
-                    });
                 }
+
+
+
+
+
+                // Entry.update({month:d.getMonth(), day:d.getDate()},
+                // {
+                //     $push: {"servers": server}
+                // }, function(e, data) 
+                // {
+
+                // });
+
+                // if (e) return handleError(e);
+                // if (entry === null) {
+                //     console.log("adding new server");
+                //     var server = 
+                //     {
+                //         _id: msg.guild.id,
+                //         users:
+                //         {
+                //             _id: msg.author.id,
+                //             lineCount: 1,
+                //             wpl: msg.content.split(" ").length
+                //         }
+                //     };
+                //     Entry.update({month:d.getMonth(),day:d.getDate()},
+                //         {$push: {servers: server}}, function(e, data) {});
+                // }
+                // else {
+                //     console.log("server already exists");
+
+
+
+
+
+                //     Entry.findOne({
+                //         "users._id":msg.author.id
+                //     }, 
+                //     function (e, entry) {
+                //         if (e) return handleError(e);
+                //         if (entry === null) {
+                //             console.log("adding new user");
+                //             var user = {
+                //                 _id: msg.author.id,
+                //                 lineCount:1,
+                //                 wpl: msg.content.split(" ").length
+                //             };
+                //             Entry.update({_id:msg.guild.id},
+                //                 {$push: {"servers.users":user}}, function(e, data) {});
+                //         }
+                //         else {
+                //             console.log("user already exists");
+                //             for (var i = 0; i < entry.users.length; i++) {
+                //                 if (entry.users[i]._id === msg.author.id) {
+                //                     entry.users[i].linecount += 1;
+                //                     entry.users[i].wpl = ((entry.users[i].wpl * entry.users[i].lineCount) + (msg.content.split(" ").length)) / (entry.users[i].lineCount);
+                //                     break;
+                //                 }
+                //             }
+                //             entry.save(function(e, ent) {
+                //                 if (e) return console.error(e);
+                //                 console.log("old user updated");
+                //             });
+                //         }
+                //     });
+                // }
             });
         }
     });
