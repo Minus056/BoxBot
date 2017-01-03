@@ -1,7 +1,7 @@
 var Discord = require("discord.js");
 var bot = new Discord.Client();
 require("./env.js");
-var pass = process.env.PASS;
+var pass = process.env.PASS2;
 bot.login(pass);
 
 var fs = require("fs");
@@ -98,7 +98,6 @@ bot.on("message", function(msg)
     }, function(e, entry)
     {
         if (e) return handleError(e);
-        console.log(entry);
         if (entry.length === 0)
         {
             console.log("making new entry");
@@ -130,38 +129,29 @@ bot.on("message", function(msg)
             console.log("date already exists");
             Entry.find({}, function(e, entry)
             {
-
                 for (var i = 0; i < entry[0].servers.length; i++)
                 {
-
                     if (entry[0].servers[i]._id === msg.guild.id)
                     {
                         console.log("server already exists");
-
                         for (var j = 0; j < entry[0].servers[i].users.length; j++)
                         {
                             if (entry[0].servers[i].users[j]._id === msg.author.id)
                             {
                                 console.log("user already exists");
-
-                                var lc = entry[0].servers[i].users[j].lineCount;
-                                var wpl = entry[0].servers[i].users[j].wpl;
-
-                                entry[0].servers[i].users[j].lineCount = entry[0].servers[i].users[j].lineCount + 1;
-
-                                // var user = {
-                                //     _id: msg.author.id,
-                                //     lineCount:1,
-                                //     wpl: msg.content.split(" ").length
-                                // };
-
+                                
+                                var user = entry[0].servers[i].users[j];
+                                console.log(user.wpl, user.lineCount, user.wpl*user.lineCount, msg.content.split(" ").length)
+                                
+                                entry[0].servers[i].users[j].lineCount++;
+                                user.wpl = (((user.wpl * (user.lineCount-1)) + (msg.content.split(" ").length)) / (user.lineCount));
+                                entry[0].servers[i].users[j].wpl = user.wpl;
                                 
                                 entry[0].save(function(e, data)
                                 {
-                                        console.log("lc updated");
+                                        console.log("lc/wpl updated");
                                         
                                 });
-
                                 break;
                             }
                             if (j === entry[0].servers[i].users.length - 1)
@@ -172,18 +162,13 @@ bot.on("message", function(msg)
                                     lineCount:1,
                                     wpl: msg.content.split(" ").length
                                 };
-
                                 entry[0].servers[i].users.push(user);
                                 entry[0].save(function(e, data)
                                 {
                                     console.log("new user created");
-                                    
                                 });                                
                                 break;
-
-
                             }
-
                         }
                         break;
                     }                    
@@ -208,75 +193,7 @@ bot.on("message", function(msg)
                             console.log("new server added");
                         });
                     }
-
                 }
-
-
-
-
-
-                // Entry.update({month:d.getMonth(), day:d.getDate()},
-                // {
-                //     $push: {"servers": server}
-                // }, function(e, data) 
-                // {
-
-                // });
-
-                // if (e) return handleError(e);
-                // if (entry === null) {
-                //     console.log("adding new server");
-                //     var server = 
-                //     {
-                //         _id: msg.guild.id,
-                //         users:
-                //         {
-                //             _id: msg.author.id,
-                //             lineCount: 1,
-                //             wpl: msg.content.split(" ").length
-                //         }
-                //     };
-                //     Entry.update({month:d.getMonth(),day:d.getDate()},
-                //         {$push: {servers: server}}, function(e, data) {});
-                // }
-                // else {
-                //     console.log("server already exists");
-
-
-
-
-
-                //     Entry.findOne({
-                //         "users._id":msg.author.id
-                //     }, 
-                //     function (e, entry) {
-                //         if (e) return handleError(e);
-                //         if (entry === null) {
-                //             console.log("adding new user");
-                //             var user = {
-                //                 _id: msg.author.id,
-                //                 lineCount:1,
-                //                 wpl: msg.content.split(" ").length
-                //             };
-                //             Entry.update({_id:msg.guild.id},
-                //                 {$push: {"servers.users":user}}, function(e, data) {});
-                //         }
-                //         else {
-                //             console.log("user already exists");
-                //             for (var i = 0; i < entry.users.length; i++) {
-                //                 if (entry.users[i]._id === msg.author.id) {
-                //                     entry.users[i].linecount += 1;
-                //                     entry.users[i].wpl = ((entry.users[i].wpl * entry.users[i].lineCount) + (msg.content.split(" ").length)) / (entry.users[i].lineCount);
-                //                     break;
-                //                 }
-                //             }
-                //             entry.save(function(e, ent) {
-                //                 if (e) return console.error(e);
-                //                 console.log("old user updated");
-                //             });
-                //         }
-                //     });
-                // }
             });
         }
     });
