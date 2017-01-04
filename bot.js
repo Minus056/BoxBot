@@ -255,53 +255,7 @@ bot.on("message", function(msg)
             msg.channel.sendMessage("no data from this day");
         });
     }
-});
-/*=========================================================================*/
-//RETRIEVE LEADERBOARD
-// bot.on("message", function(msg)
-// {
-//     if (msg.author.bot) return;
-//     if (msg.content.startsWith(act_tok+"getlb") && checkApproved(msg)) {
-//         var args = msg.content.split(" ");
-//         var m = args[1];
-//         var d = args[2];
-//         if ((args[1] == undefined || args[1] > 12 || args[1] < 0)|| args[2] == undefined || args[2] > 31 || args[2] < 0) {
-//             msg.channel.sendMessage("enter something valid");
-//             return;
-//         }
-//         var filename = './Lines/'+m+'/'+d+'.json';
-//         var lc = JSON.parse(fs.readFileSync(filename, 'utf8'));
-//         if (JSON.stringify(lc) == "{}") {
-//             msg.channel.sendMessage("no data");
-//             return;
-//         }
-//         var array = [];
-//         var members = Object.keys(lc[msg.guild.id]);
-//         for (var i = 0; i < members.length; i++)
-//         {
-//             array.push([members[i], lc[msg.guild.id][members[i]]]);
-//         }
-
-//         array.sort(function(a,b){
-//             return (b[1].lineCount*b[1].wpl) - (a[1].lineCount*a[1].wpl);
-
-//         });
-//         var leaderboardText = "```name | linecount | words/line\n";
-//         leaderboardText += "ordered by number of words\n```";
-//         var max = 10;
-//         if (args[3] != undefined && args[3] <= array.length) {
-//             max = Number(args[3]);
-//         } else if (array.length < 10 || args[3] > array.length)
-//         {
-//             max = array.length;
-//         }
-//         for (var i = 0; i < max; i++)
-//         {
-//             leaderboardText  += bot.users.get(array[i][0]).username + "  |  " + array[i][1].lineCount + "  |  " + (Math.round((array[i][1].wpl * 100)) / 100) + "\n";
-//         }
-//         msg.channel.sendMessage(leaderboardText);
-//     }
-// });
+);
 /*=========================================================================*/
 //GETDATA FUNCTION
 function getData(msg,list,name) {
@@ -537,11 +491,6 @@ bot.on("message", function(msg)
                     msg.channel.sendMessage("" + sendStr + "").catch(console.error);
                 }
             }
-
-
-
-
-
         });
     }
 });
