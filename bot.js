@@ -255,7 +255,7 @@ bot.on("message", function(msg)
             msg.channel.sendMessage("no data from this day");
         });
     }
-);
+});
 /*=========================================================================*/
 //GETDATA FUNCTION
 function getData(msg,list,name) {
