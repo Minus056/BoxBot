@@ -172,11 +172,11 @@ bot.on("message", function(msg)
                         {
                             _id: msg.guild.id,
                             users:
-                            {
+                            [{
                                 _id: msg.author.id,
                                 lineCount: 1,
                                 wpl: msg.content.split(" ").length
-                            }
+                            }]
                         };
 
                         entry[0].servers.push(server);
@@ -184,6 +184,7 @@ bot.on("message", function(msg)
                         {
                             console.log("new server added");
                         });
+                        break;
                     }
                 }
             });
