@@ -359,7 +359,7 @@ function stripUsage(str)
 
 
 // check if current year-month gives 404, if it does, go back one month
-var base_url = "http://www.smogon.com/stats/2016-11/moveset/"
+var base_url = "http://www.smogon.com/stats/2016-12/moveset/"
 var valid_ratings = ["0", "1500", "1630", "1760", "1500", "1695", "1825"];
 var valid_specs = ["Abilities", "Items", "Spreads", "Moves", "Teammates", "Checks and Counters"];
 bot.on("message", function(msg)
