@@ -140,7 +140,7 @@ bot.on("message", function(msg)
                                 
                                 entry[0].save(function(e, data)
                                 {
-                                        console.log("lc/wpl updated");
+                                        console.log("lc/wpl updated: "+bot.users.get(msg.author.id).username);
                                         
                                 });
                                 break;
@@ -156,7 +156,7 @@ bot.on("message", function(msg)
                                 entry[0].servers[i].users.push(user);
                                 entry[0].save(function(e, data)
                                 {
-                                    console.log("new user created");
+                                    console.log("new user: "+bot.users.get(msg.author.id).username+" created in "+msg.guild.id);
                                 });                                
                                 break;
                             }
@@ -247,7 +247,6 @@ bot.on("message", function(msg)
                             msg.channel.sendMessage(lbText);
                             return;
                         }
-                        
                     }
                     msg.channel.sendMessage("no server data");
                 }
