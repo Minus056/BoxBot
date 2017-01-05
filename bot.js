@@ -46,8 +46,9 @@ var mongouser = process.env.mongouser;
 var mongopass = process.env.mongopass;
 var mongouri = process.env.mongouri;
 
-
-mongoose.connect(mongouri);
+var conoptions = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
+replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } }; 
+mongoose.connect(mongouri, conoptions);
 var db = mongoose.connection;
 var id = 0;
 
@@ -435,6 +436,9 @@ bot.on("message", function(msg)
         {
 
         }
+
+
+        // combination of Tapu and no cutoff
         if (mon === "Tapu")
         {
             mon = args[3] + " " + args[4];
