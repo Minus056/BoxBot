@@ -349,12 +349,23 @@ function getData(msg,list,name) {
             return;
         } else if (name == "Move") {
             data += thing.name+"\n";
+
+            var movedesc = "";
+            if (thing.disc)
+            {
+            	movedesc = thing.desc;
+            }
+            else
+            {
+            	movedesc = thing.shortDesc;
+            }
+
             if (thing.category == "Status") {
-                data+=thing.desc+"\nType: "+thing.type+" || BP: "+thing.power+", Acc: "+thing.accuracy+
+                data += movedesc +"\nType: "+thing.type+" || BP: "+thing.power+", Acc: "+thing.accuracy+
                       ", Priority: "+thing.priority+" || Category: "+thing.category+"```";
             } else {
                 data +="Type: "+thing.type+" || BP: "+thing.power+", Acc: "+thing.accuracy+
-                      ", Priority: "+thing.priority+" || Category: "+thing.category+"\n"+thing.desc+"```";
+                      ", Priority: "+thing.priority+" || Category: "+thing.category+"\n"+ movedesc +"```";
             }
         } else {
         	console.log(thing);
