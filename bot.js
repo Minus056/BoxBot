@@ -420,6 +420,10 @@ function stripUsage(str)
 {
     return str.replace(/\|/g, "");
 }
+String.prototype.indexOfNoCase = function(q)
+{
+	return this.toLowerCase().indexOf(q.toLowerCase());
+}
 
 
 // check if current year-month gives 404, if it does, go back one month
@@ -511,7 +515,7 @@ bot.on("message", function(msg)
 
 
                     // @@@@@@@@@@ make this a function
-                    var startInd = body2.indexOf(search_mon);
+                    var startInd = body2.indexOfNoCase(search_mon);
 
 
 
@@ -521,15 +525,17 @@ bot.on("message", function(msg)
                     }
                     else
                     {
-                        var endInd = body2.indexOf(" | Checks and Counters                    | ", startInd);
-                        var body2 = body2.substring(startInd, endInd);
+                    	sendStr = findRelevantUStats(body, sendStr, startInd, spec);
 
-                        var specStartInd = body2.indexOf(spec);
-                        var specEndInd = body2.indexOf(" +----------------------------------------+ ", specStartInd);
-                        sendStr += body2.substring(specStartInd, specEndInd);
-                        sendStr = stripUsage(sendStr);
+                        // var endInd = body2.indexOf(" | Checks and Counters                    | ", startInd);
+                        // var body2 = body2.substring(startInd, endInd);
 
-                        sendStr = sendStr.split("\n").slice(0, 10).join("\n");
+                        // var specStartInd = body2.indexOf(spec);
+                        // var specEndInd = body2.indexOf(" +----------------------------------------+ ", specStartInd);
+                        // sendStr += body2.substring(specStartInd, specEndInd);
+                        // sendStr = stripUsage(sendStr);
+
+                        // sendStr = sendStr.split("\n").slice(0, 10).join("\n");
 
                         msg.channel.sendMessage("" + sendStr + "").catch(console.error);
                     }
@@ -537,8 +543,7 @@ bot.on("message", function(msg)
             }
             else
             {
-
-                var startInd = body.indexOf(search_mon);
+                var startInd = body.indexOfNoCase(search_mon);
 
                 if (startInd === -1)
                 {
@@ -546,15 +551,17 @@ bot.on("message", function(msg)
                 }
                 else
                 {
-                    var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
-                    var body = body.substring(startInd, endInd);
 
-                    var specStartInd = body.indexOf(spec);
-                    var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
-                    sendStr += body.substring(specStartInd, specEndInd);
-                    sendStr = stripUsage(sendStr);
+                	sendStr = findRelevantUStats(body, sendStr, startInd, spec);
+                    // var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
+                    // var body = body.substring(startInd, endInd);
 
-                    sendStr = sendStr.split("\n").slice(0, 10).join("\n");
+                    // var specStartInd = body.indexOf(spec);
+                    // var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
+                    // sendStr += body.substring(specStartInd, specEndInd);
+                    // sendStr = stripUsage(sendStr);
+
+                    // sendStr = sendStr.split("\n").slice(0, 10).join("\n");
 
                     msg.channel.sendMessage("" + sendStr + "").catch(console.error);
                 }
@@ -562,3 +569,19 @@ bot.on("message", function(msg)
         });
     }
 });
+
+
+function findRelevantUStats(body, sendStr, startInd, spec)
+{
+    var endInd = body.indexOf(" | Checks and Counters                    | ", startInd);
+    var body = body.substring(startInd, endInd);
+
+    var specStartInd = body.indexOfNoCase(spec);
+    var specEndInd = body.indexOf(" +----------------------------------------+ ", specStartInd);
+    sendStr += body.substring(specStartInd, specEndInd);
+    sendStr = stripUsage(sendStr);
+
+    sendStr = sendStr.split("\n").slice(0, 10).join("\n");	
+    return sendStr;
+}
+
