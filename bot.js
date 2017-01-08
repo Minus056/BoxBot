@@ -351,7 +351,8 @@ function getData(msg,list,name) {
             data += thing.name+"\n";
 
             var movedesc = "";
-            if (thing.disc)
+
+            if (thing.desc)
             {
             	movedesc = thing.desc;
             }
