@@ -1,13 +1,13 @@
 # BoxBot
+* The current activator is !
 
-BoxBot can:
+# Commands
+* !pokemon [pokemon]
+* !moves [move]
+* !ability [ability]
+* !item [item]
+* !ustats [tier] [cutoff] [Pokemon] [category] (see http://www.smogon.com/stats/2016-12/moveset/)
 
-*   record the number of lines and words/line of each user. (jk redoing this)
-*   !data commands
-
-features coming soon:
-
-*   box related commands
-*   kunc
-* 	fuzzy search
-*	organizing things
+todos:
+* box related commands
+* code cleanup
