@@ -7,9 +7,13 @@ bot.login(pass);
 var fs = require("fs");
 
 var commands = JSON.parse(fs.readFileSync('./data/commands.json', 'utf8'));
-var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
-var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
-var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
+// var pokemonList = JSON.parse(fs.readFileSync('./data/pokemon.json', 'utf8'));
+// var abilityList = JSON.parse(fs.readFileSync('./data/abilities.json', 'utf8'));
+// var movesList = JSON.parse(fs.readFileSync('./data/moves.json', 'utf8'));
+
+var pokemonList = require("./data/pokedex.js");
+var abilityList = require("./data/abilities.js");
+var movesList = require("./data/moves.js");
 var itemList = require("./data/items.js");
 //var lineFile = './Lines/'+month+'/'+day+'.json';
 //var lineCounts = JSON.parse(fs.readFileSync(lineFile, 'utf8'));
@@ -257,13 +261,64 @@ bot.on("message", function(msg)
         });
     }
 });
+
+
+
+function stripQuery(q)
+{
+	var out = q.toLowerCase();
+	out = out.replace(" ", "").replace("-", "");
+	return out;
+}
+
+
 /*=========================================================================*/
 //GETDATA FUNCTION
 function getData(msg,list,name) {
     var args = msg.content.split(" ");
-    if (list[args[1]] != undefined)
+    var preprocq = args[1];
+    var query = "";
+    if (preprocq.indexOf("-") !== -1)
     {
-        var thing = list[args[1]];
+    	// if the name contains a hyphen
+    	query = stripQuery(preprocq);
+    	if (list[query] == undefined)
+    	{
+    		query = preprocq.split("-");
+    		query = query[1] + query[0];
+    		query = stripQuery(query);
+    		console.log(query);
+    	}
+
+    }
+    else
+    {
+    	query = stripQuery(preprocq);
+    }
+    
+    // var urlq = query;
+    if (args.length == 3)
+    {
+
+    	if (args[2].toLowerCase() == "arceus")
+    	{
+    		query = stripQuery(args[2] + args[1]);
+    	}
+    	else
+    	{
+    		query = stripQuery(args[1] + " " + args[2]);
+    	}
+
+    
+
+    }
+
+    console.log(query);
+    if (list[query] != undefined)
+    {
+    	
+        var thing = list[query];
+
         var data = "```\n";
         if (name == "Pokemon") {
             data  += thing.species + "\n" + thing.types + "\n";
@@ -288,9 +343,9 @@ function getData(msg,list,name) {
             }
             data += "```";
             data += "\nAnalysis: ";
-            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + thing.species.toLowerCase() + "/";
+            data += "\nhttp://www.smogon.com/dex/sm/pokemon/" + thing.species.toLowerCase().replace(" ", "_") + "/";
 
-            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + thing.species.toLowerCase() + ".png", args[1]+".png", data).catch(console.error);
+            msg.channel.sendFile("http://www.smogon.com/dex/media/sprites/xyicons/" + thing.species.toLowerCase().replace(" ", "_") + ".png", args[1]+".png", data).catch(console.error);
             return;
         } else if (name == "Move") {
             data += thing.name+"\n";
@@ -302,13 +357,22 @@ function getData(msg,list,name) {
                       ", Priority: "+thing.priority+" || Category: "+thing.category+"\n"+thing.desc+"```";
             }
         } else {
-            data  += thing.name + "\n" + thing.desc + "\n```";
+        	console.log(thing);
+        	if (thing.desc)
+        	{
+        		data  += thing.name + "\n" + thing.desc + "\n```";
+        	}
+        	else
+        	{
+        		data  += thing.name + "\n" + thing.shortDesc + "\n```";
+        	}
+            
         }
         msg.channel.sendMessage(data);
     }
     else
     {
-        msg.channel.sendMessage("I can't seem to find that " + name + " :box:\nTry writing it without spaces/dashes.");
+        // msg.channel.sendMessage("I can't seem to find that " + name + " :box:\nTry writing it without spaces/dashes.");
     }
 }
 /*=========================================================================*/
@@ -316,10 +380,10 @@ function getData(msg,list,name) {
 bot.on("message", function(msg)
 {
     if (msg.author.bot) return;
-    if (msg.content.startsWith(act_tok + "ability")) getData(msg, abilityList, "Ability");
+    if (msg.content.startsWith(act_tok + "ability")) getData(msg, abilityList.BattleAbilities, "Ability");
     if (msg.content.startsWith(act_tok + "item")) getData(msg, itemList.BattleItems, "Item");
-    if (msg.content.startsWith(act_tok + "move")) getData(msg, movesList, "Move");
-    if (msg.content.startsWith(act_tok + "pokemon")) getData(msg, pokemonList, "Pokemon");
+    if (msg.content.startsWith(act_tok + "move")) getData(msg, movesList.BattleMovedex, "Move");
+    if (msg.content.startsWith(act_tok + "pokemon")) getData(msg, pokemonList.BattlePokedex, "Pokemon");
     if (commands[msg.content]) msg.channel.sendMessage(commands[msg.content]);
 });
 /*=========================================================================*/
