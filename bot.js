@@ -20,11 +20,43 @@ var itemList = require("./data/items.js");
 
 var act_tok = "!";
 
+var arr_of_pokes = JSON.parse(fs.readFileSync("./data/pokelist.json", "utf8"));
+// console.log(arr_of_pokes);
+
+
 /*=========================================================================*/
 //BOT READY
 bot.on('ready', function()
 {
     console.log('I am ready!');
+
+	// var templist = "";
+	// // templist += "[\n"
+	// for (p in pokemonList.BattlePokedex)
+	// {
+	// 	templist += "{\n";
+	// 	templist += "\"name\":" + "\"" + pokemonList.BattlePokedex[p].species + "\"\n";
+	// 	templist += "},\n";
+	// 	if (pokemonList.BattlePokedex[p].species.indexOf("Arceus") !== -1)
+	// 	{
+	// 		templist += "{\n";
+	// 		templist += "\"name\":" + "\"" + p + "\"\n";
+	// 		templist += "},\n";
+	// 	}
+
+	// }
+	// // templist += "]"
+	// // console.log(templist);
+	// fs.writeFile("./data/pokelist.json", templist, function(err)
+	// {
+	// 	if (err)
+	// 	{
+
+	// 	}
+	// 	console.log("saved");
+	// });
+
+
 });
 /*=========================================================================*/
 //CHECKAPPROVED FUNCTION
@@ -271,49 +303,76 @@ function stripQuery(q)
 	return out;
 }
 
-
+var Fuse = require("fuse.js");
 /*=========================================================================*/
 //GETDATA FUNCTION
 function getData(msg,list,name) {
-    var args = msg.content.split(" ");
-    var preprocq = args[1];
-    var query = "";
-    if (preprocq.indexOf("-") !== -1)
-    {
-    	// if the name contains a hyphen
-    	query = stripQuery(preprocq);
-    	if (list[query] == undefined)
-    	{
-    		query = preprocq.split("-");
-    		query = query[1] + query[0];
-    		query = stripQuery(query);
-    		console.log(query);
-    	}
 
+	var options = {
+	  shouldSort: true,
+	  threshold: 0.6,
+	  location: 0,
+	  distance: 100,
+	  maxPatternLength: 32,
+	  minMatchCharLength: 4,
+	  keys: [
+	    "name"
+	]
+	};
+	var fuse = new Fuse(arr_of_pokes, options); // "list" is the item array
+	
+    var args = msg.content.split(" ");
+    var q = "";
+    if (args.length == 3)
+    {
+    	q = args[1] + " " + args[2];
     }
     else
     {
-    	query = stripQuery(preprocq);
+    	q = args[1];
     }
-    
-    // var urlq = query;
-    if (args.length == 3)
-    {
-
-    	if (args[2].toLowerCase() == "arceus")
-    	{
-    		query = stripQuery(args[2] + args[1]);
-    	}
-    	else
-    	{
-    		query = stripQuery(args[1] + " " + args[2]);
-    	}
-
-    
-
-    }
-
+    var query = fuse.search(q);
     console.log(query);
+    query = query[0].name;
+    query = stripQuery(query);
+
+
+    // var preprocq = args[1];
+    // var query = "";
+    // if (preprocq.indexOf("-") !== -1)
+    // {
+    // 	// if the name contains a hyphen
+    // 	query = stripQuery(preprocq);
+    // 	if (list[query] == undefined)
+    // 	{
+    // 		query = preprocq.split("-");
+    // 		query = query[1] + query[0];
+    // 		query = stripQuery(query);
+    // 	}
+
+    // }
+    // else
+    // {
+    // 	query = stripQuery(preprocq);
+    // }
+    
+    // // var urlq = query;
+    // if (args.length == 3)
+    // {
+
+    // 	if (args[2].toLowerCase() == "arceus")
+    // 	{
+    // 		query = stripQuery(args[2] + args[1]);
+    // 	}
+    // 	else
+    // 	{
+    // 		query = stripQuery(args[1] + " " + args[2]);
+    // 	}
+
+    
+
+    // }
+
     if (list[query] != undefined)
     {
     	
